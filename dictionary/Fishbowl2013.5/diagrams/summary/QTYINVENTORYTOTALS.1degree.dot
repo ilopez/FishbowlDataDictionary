@@ -1,0 +1,37 @@
+// dot 2.26.3 on Linux 3.5.0-34-generic
+// SchemaSpy rev 590
+digraph "QTYINVENTORYTOTALS" {
+  graph [
+    rankdir="RL"
+    bgcolor="#f7f7f7"
+    nodesep="0.18"
+    ranksep="0.46"
+    fontname="Helvetica"
+    fontsize="11"
+  ];
+  node [
+    fontname="Helvetica"
+    fontsize="11"
+    shape="plaintext"
+  ];
+  edge [
+    arrowsize="0.8"
+  ];
+  "QTYINVENTORYTOTALS" [
+    label=<
+    <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
+      <TR><TD COLSPAN="3" BGCOLOR="#9bab96" ALIGN="CENTER">QTYINVENTORYTOTALS</TD></TR>
+      <TR><TD PORT="PARTID" COLSPAN="3" ALIGN="LEFT">PARTID</TD></TR>
+      <TR><TD PORT="LOCATIONGROUPID" COLSPAN="3" ALIGN="LEFT">LOCATIONGROUPID</TD></TR>
+      <TR><TD PORT="QTYONHAND" COLSPAN="3" ALIGN="LEFT">QTYONHAND</TD></TR>
+      <TR><TD PORT="QTYALLOCATED" COLSPAN="3" ALIGN="LEFT">QTYALLOCATED</TD></TR>
+      <TR><TD PORT="QTYNOTAVAILABLE" COLSPAN="3" ALIGN="LEFT">QTYNOTAVAILABLE</TD></TR>
+      <TR><TD PORT="QTYNOTAVAILABLETOPICK" COLSPAN="3" ALIGN="LEFT">QTYNOTAVAILABLETOPICK</TD></TR>
+      <TR><TD PORT="QTYDROPSHIP" COLSPAN="3" ALIGN="LEFT">QTYDROPSHIP</TD></TR>
+      <TR><TD PORT="QTYONORDER" COLSPAN="3" ALIGN="LEFT">QTYONORDER</TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">view</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD></TR>
+    </TABLE>>
+    URL="tables/QTYINVENTORYTOTALS.html"
+    tooltip="QTYINVENTORYTOTALS"
+  ];
+}

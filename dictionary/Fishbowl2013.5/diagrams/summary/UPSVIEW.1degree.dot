@@ -1,0 +1,33 @@
+// dot 2.26.3 on Linux 3.5.0-34-generic
+// SchemaSpy rev 590
+digraph "UPSVIEW" {
+  graph [
+    rankdir="RL"
+    bgcolor="#f7f7f7"
+    nodesep="0.18"
+    ranksep="0.46"
+    fontname="Helvetica"
+    fontsize="11"
+  ];
+  node [
+    fontname="Helvetica"
+    fontsize="11"
+    shape="plaintext"
+  ];
+  edge [
+    arrowsize="0.8"
+  ];
+  "UPSVIEW" [
+    label=<
+    <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
+      <TR><TD COLSPAN="3" BGCOLOR="#9bab96" ALIGN="CENTER">UPSVIEW</TD></TR>
+      <TR><TD PORT="ID" COLSPAN="3" ALIGN="LEFT">ID</TD></TR>
+      <TR><TD PORT="ORDERNUM" COLSPAN="3" ALIGN="LEFT">ORDERNUM</TD></TR>
+      <TR><TD PORT="ORDERID" COLSPAN="3" ALIGN="LEFT">ORDERID</TD></TR>
+      <TR><TD PORT="CARRIERID" COLSPAN="3" ALIGN="LEFT">CARRIERID</TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">view</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD></TR>
+    </TABLE>>
+    URL="tables/UPSVIEW.html"
+    tooltip="UPSVIEW"
+  ];
+}

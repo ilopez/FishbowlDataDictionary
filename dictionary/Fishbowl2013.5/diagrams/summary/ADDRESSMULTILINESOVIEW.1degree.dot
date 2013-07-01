@@ -1,0 +1,33 @@
+// dot 2.26.3 on Linux 3.5.0-34-generic
+// SchemaSpy rev 590
+digraph "ADDRESSMULTILINESOVIEW" {
+  graph [
+    rankdir="RL"
+    bgcolor="#f7f7f7"
+    nodesep="0.18"
+    ranksep="0.46"
+    fontname="Helvetica"
+    fontsize="11"
+  ];
+  node [
+    fontname="Helvetica"
+    fontsize="11"
+    shape="plaintext"
+  ];
+  edge [
+    arrowsize="0.8"
+  ];
+  "ADDRESSMULTILINESOVIEW" [
+    label=<
+    <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
+      <TR><TD COLSPAN="3" BGCOLOR="#9bab96" ALIGN="CENTER">ADDRESSMULTILINESOVIEW</TD></TR>
+      <TR><TD PORT="SOID" COLSPAN="3" ALIGN="LEFT">SOID</TD></TR>
+      <TR><TD PORT="SHIPTOADDRESS1" COLSPAN="3" ALIGN="LEFT">SHIPTOADDRESS1</TD></TR>
+      <TR><TD PORT="SHIPTOADDRESS2" COLSPAN="3" ALIGN="LEFT">SHIPTOADDRESS2</TD></TR>
+      <TR><TD PORT="SHIPTOADDRESS3" COLSPAN="3" ALIGN="LEFT">SHIPTOADDRESS3</TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">view</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD></TR>
+    </TABLE>>
+    URL="tables/ADDRESSMULTILINESOVIEW.html"
+    tooltip="ADDRESSMULTILINESOVIEW"
+  ];
+}

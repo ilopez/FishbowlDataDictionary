@@ -1,0 +1,42 @@
+// dot 2.26.3 on Linux 3.5.0-34-generic
+// SchemaSpy rev 590
+digraph "ADDRESSMULTILINEVIEW" {
+  graph [
+    rankdir="RL"
+    bgcolor="#f7f7f7"
+    nodesep="0.18"
+    ranksep="0.46"
+    fontname="Helvetica"
+    fontsize="11"
+  ];
+  node [
+    fontname="Helvetica"
+    fontsize="11"
+    shape="plaintext"
+  ];
+  edge [
+    arrowsize="0.8"
+  ];
+  "ADDRESSMULTILINEVIEW" [
+    label=<
+    <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
+      <TR><TD COLSPAN="3" BGCOLOR="#9bab96" ALIGN="CENTER">ADDRESSMULTILINEVIEW</TD></TR>
+      <TR><TD PORT="ID" COLSPAN="3" ALIGN="LEFT">ID</TD></TR>
+      <TR><TD PORT="ACCOUNTID" COLSPAN="3" ALIGN="LEFT">ACCOUNTID</TD></TR>
+      <TR><TD PORT="TYPEID" COLSPAN="3" ALIGN="LEFT">TYPEID</TD></TR>
+      <TR><TD PORT="NAME" COLSPAN="3" ALIGN="LEFT">NAME</TD></TR>
+      <TR><TD PORT="ADDRESS1" COLSPAN="3" ALIGN="LEFT">ADDRESS1</TD></TR>
+      <TR><TD PORT="ADDRESS2" COLSPAN="3" ALIGN="LEFT">ADDRESS2</TD></TR>
+      <TR><TD PORT="ADDRESS3" COLSPAN="3" ALIGN="LEFT">ADDRESS3</TD></TR>
+      <TR><TD PORT="CITY" COLSPAN="3" ALIGN="LEFT">CITY</TD></TR>
+      <TR><TD PORT="STATEID" COLSPAN="3" ALIGN="LEFT">STATEID</TD></TR>
+      <TR><TD PORT="ZIP" COLSPAN="3" ALIGN="LEFT">ZIP</TD></TR>
+      <TR><TD PORT="COUNTRYID" COLSPAN="3" ALIGN="LEFT">COUNTRYID</TD></TR>
+      <TR><TD PORT="DEFAULTFLAG" COLSPAN="3" ALIGN="LEFT">DEFAULTFLAG</TD></TR>
+      <TR><TD PORT="RESIDENTIALFLAG" COLSPAN="3" ALIGN="LEFT">RESIDENTIALFLAG</TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">view</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD></TR>
+    </TABLE>>
+    URL="tables/ADDRESSMULTILINEVIEW.html"
+    tooltip="ADDRESSMULTILINEVIEW"
+  ];
+}

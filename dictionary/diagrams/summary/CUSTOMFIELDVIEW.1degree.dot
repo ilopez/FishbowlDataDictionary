@@ -1,0 +1,39 @@
+// dot 2.26.3 on Linux 3.5.0-34-generic
+// SchemaSpy rev 590
+digraph "CUSTOMFIELDVIEW" {
+  graph [
+    rankdir="RL"
+    bgcolor="#f7f7f7"
+    nodesep="0.18"
+    ranksep="0.46"
+    fontname="Helvetica"
+    fontsize="11"
+  ];
+  node [
+    fontname="Helvetica"
+    fontsize="11"
+    shape="plaintext"
+  ];
+  edge [
+    arrowsize="0.8"
+  ];
+  "CUSTOMFIELDVIEW" [
+    label=<
+    <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
+      <TR><TD COLSPAN="3" BGCOLOR="#9bab96" ALIGN="CENTER">CUSTOMFIELDVIEW</TD></TR>
+      <TR><TD PORT="CFID" COLSPAN="3" ALIGN="LEFT">CFID</TD></TR>
+      <TR><TD PORT="CFNAME" COLSPAN="3" ALIGN="LEFT">CFNAME</TD></TR>
+      <TR><TD PORT="CFDESCRIPTION" COLSPAN="3" ALIGN="LEFT">CFDESCRIPTION</TD></TR>
+      <TR><TD PORT="CFSORTORDER" COLSPAN="3" ALIGN="LEFT">CFSORTORDER</TD></TR>
+      <TR><TD PORT="CFTABLEID" COLSPAN="3" ALIGN="LEFT">CFTABLEID</TD></TR>
+      <TR><TD PORT="CFTYPEID" COLSPAN="3" ALIGN="LEFT">CFTYPEID</TD></TR>
+      <TR><TD PORT="CFREQUIRED" COLSPAN="3" ALIGN="LEFT">CFREQUIRED</TD></TR>
+      <TR><TD PORT="RECORDID" COLSPAN="3" ALIGN="LEFT">RECORDID</TD></TR>
+      <TR><TD PORT="INFO" COLSPAN="3" ALIGN="LEFT">INFO</TD></TR>
+      <TR><TD PORT="INFOFORMATTED" COLSPAN="3" ALIGN="LEFT">INFOFORMATTED</TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">view</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD></TR>
+    </TABLE>>
+    URL="tables/CUSTOMFIELDVIEW.html"
+    tooltip="CUSTOMFIELDVIEW"
+  ];
+}

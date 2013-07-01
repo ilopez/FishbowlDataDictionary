@@ -1,0 +1,44 @@
+// dot 2.26.3 on Linux 3.5.0-34-generic
+// SchemaSpy rev 590
+digraph "FEDEXVIEW" {
+  graph [
+    rankdir="RL"
+    bgcolor="#f7f7f7"
+    nodesep="0.18"
+    ranksep="0.46"
+    fontname="Helvetica"
+    fontsize="11"
+  ];
+  node [
+    fontname="Helvetica"
+    fontsize="11"
+    shape="plaintext"
+  ];
+  edge [
+    arrowsize="0.8"
+  ];
+  "FEDEXVIEW" [
+    label=<
+    <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
+      <TR><TD COLSPAN="3" BGCOLOR="#9bab96" ALIGN="CENTER">FEDEXVIEW</TD></TR>
+      <TR><TD PORT="ID" COLSPAN="3" ALIGN="LEFT">ID</TD></TR>
+      <TR><TD PORT="ORDERNUM" COLSPAN="3" ALIGN="LEFT">ORDERNUM</TD></TR>
+      <TR><TD PORT="PONUM" COLSPAN="3" ALIGN="LEFT">PONUM</TD></TR>
+      <TR><TD PORT="COMPANYNAME" COLSPAN="3" ALIGN="LEFT">COMPANYNAME</TD></TR>
+      <TR><TD PORT="CONTACTNAME" COLSPAN="3" ALIGN="LEFT">CONTACTNAME</TD></TR>
+      <TR><TD PORT="SHIPTOADDRESS" COLSPAN="3" ALIGN="LEFT">SHIPTOADDRESS</TD></TR>
+      <TR><TD PORT="SHIPTOCITY" COLSPAN="3" ALIGN="LEFT">SHIPTOCITY</TD></TR>
+      <TR><TD PORT="SHIPTOSTATE" COLSPAN="3" ALIGN="LEFT">SHIPTOSTATE</TD></TR>
+      <TR><TD PORT="SHIPTOZIP" COLSPAN="3" ALIGN="LEFT">SHIPTOZIP</TD></TR>
+      <TR><TD PORT="SHIPTOCOUNTRY" COLSPAN="3" ALIGN="LEFT">SHIPTOCOUNTRY</TD></TR>
+      <TR><TD PORT="SERVICETYPE" COLSPAN="3" ALIGN="LEFT">SERVICETYPE</TD></TR>
+      <TR><TD PORT="WEIGHT" COLSPAN="3" ALIGN="LEFT">WEIGHT</TD></TR>
+      <TR><TD PORT="CARTONID" COLSPAN="3" ALIGN="LEFT">CARTONID</TD></TR>
+      <TR><TD PORT="CARTONCOUNT" COLSPAN="3" ALIGN="LEFT">CARTONCOUNT</TD></TR>
+      <TR><TD PORT="PHONE" COLSPAN="3" ALIGN="LEFT">PHONE</TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">view</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD></TR>
+    </TABLE>>
+    URL="tables/FEDEXVIEW.html"
+    tooltip="FEDEXVIEW"
+  ];
+}

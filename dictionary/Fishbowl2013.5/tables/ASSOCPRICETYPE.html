@@ -102,7 +102,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 </tr>
 </thead>
 <tbody valign='top'>
-<tr class='odd'>
+<tr class='even'>
  <td class='primaryKey' title='Primary Key'>ID</td>
  <td class='detail'>integer</td>
  <td class='detail' align='right'>10</td>
@@ -111,7 +111,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
  <td class='detail'></td>
  <td class='detail'>
   <table border='0' width='100%' cellspacing='0' cellpadding='0'>
-   <tr class='relative odd' valign='top'>
+   <tr class='relative even' valign='top'>
     <td class='relatedTable detail' title="ASSOCPRICE.ASSOCPRICETYPEID refs ASSOCPRICETYPE.ID via INTEG_849"><a href='ASSOCPRICE.html'>ASSOCPRICE</a><span class='relatedKey'>.ASSOCPRICETYPEID</span>
     </td>
     <td class='constraint detail'>INTEG_849<span title='Restrict delete:
@@ -122,7 +122,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
  <td class='detail'> </td>
  <td class='comment detail'></td>
 </tr>
-<tr class='even'>
+<tr class='odd'>
  <td class='indexedColumn' title='Indexed'>NAME</td>
  <td class='detail'>varchar</td>
  <td class='detail' align='right'>41</td>
@@ -133,7 +133,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
  <td class='detail'> </td>
  <td class='comment detail'></td>
 </tr>
-<tr class='odd'>
+<tr class='even'>
  <td class='detail'>DESCRIPTION</td>
  <td class='detail'>varchar</td>
  <td class='detail' align='right'>256</td>
@@ -144,8 +144,8 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
  <td class='detail'> </td>
  <td class='comment detail'></td>
 </tr>
-<tr class='even'>
- <td class='indexedColumn' title='Indexed'>ACCOUNTID</td>
+<tr class='odd'>
+ <td class='detail'>ACCOUNTID</td>
  <td class='detail'>integer</td>
  <td class='detail' align='right'>10</td>
  <td class='detail' align='center' title='nullable'>&nbsp;&radic;&nbsp;</td>
@@ -154,7 +154,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
  <td class='detail'></td>
  <td class='detail'>
   <table border='0' width='100%' cellspacing='0' cellpadding='0'>
-   <tr class='relative even' valign='top'>
+   <tr class='relative odd' valign='top'>
     <td class='relatedTable detail' title="ASSOCPRICETYPE.ACCOUNTID refs ASACCOUNT.ID via INTEG_843"><a href='ASACCOUNT.html'>ASACCOUNT</a><span class='relatedKey'>.ID</span>
     </td>
     <td class='constraint detail'>INTEG_843<span title='Restrict delete:
@@ -164,7 +164,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
  </td>
  <td class='comment detail'></td>
 </tr>
-<tr class='odd'>
+<tr class='even'>
  <td class='detail'>TAXABLEFLAG</td>
  <td class='detail'>smallint</td>
  <td class='detail' align='right'>5</td>
@@ -176,7 +176,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
  <td class='comment detail'></td>
 </tr>
 </table>
-<p title='5 columns'>Analyzed at Mon Jul 01 09:44 PDT 2013<p/>
+<p title='5 columns'>Analyzed at Mon Jul 01 12:49 PDT 2013<p/>
 </td></tr></table>
 <div class='indent'>
 <b>Indexes:</b>
@@ -191,28 +191,16 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 </thead>
 <tbody>
  <tr>
-  <td class='indexedColumn'>ACCOUNTID</td>
-  <td class='detail'>Performance</td>
-  <td class='detail' style='text-align:left;'><span title='Ascending'>Asc</span></td>
-  <td class='constraint' style='text-align:left;'>ASSOCPRICETYPEACCOUNTID</td>
- </tr>
- <tr>
   <td class='indexedColumn'>NAME</td>
   <td class='detail'>Must be unique</td>
   <td class='detail' style='text-align:left;'><span title='Ascending'>Asc</span></td>
-  <td class='constraint' style='text-align:left;'>RDB$415</td>
- </tr>
- <tr>
-  <td class='indexedColumn'>ACCOUNTID</td>
-  <td class='detail'>Performance</td>
-  <td class='detail' style='text-align:left;'><span title='Ascending'>Asc</span></td>
-  <td class='constraint' style='text-align:left;'>RDB$FOREIGN416</td>
+  <td class='constraint' style='text-align:left;'>RDB$72</td>
  </tr>
  <tr>
   <td class='indexedColumn'>ID</td>
   <td class='detail'>Must be unique</td>
   <td class='detail' style='text-align:left;'><span title='Ascending'>Asc</span></td>
-  <td class='constraint' style='text-align:left;'>RDB$PRIMARY414</td>
+  <td class='constraint' style='text-align:left;'>RDB$PRIMARY71</td>
  </tr>
 </table>
 </div>
@@ -231,7 +219,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 <area shape="rect" id="node4" href="ASSOCPRICE.html" title="ASSOCPRICE" alt="" coords="1108,103,1295,251">
 <area shape="rect" id="node6" href="ASSOCPRICETYPE.html" title="ASSOCPRICETYPE" alt="" coords="832,185,1064,361">
 <area shape="rect" id="node8" href="PRODUCT.html" title="PRODUCT" alt="" coords="893,88,1003,168">
-<area shape="rect" id="node14" href="TAXRATE.html" title="TAXRATE" alt="" coords="477,81,584,161">
+<area shape="rect" id="node14" href="TAXRATE.html" title="TAXRATE" alt="" coords="473,81,588,161">
 <area shape="rect" id="node15" href="PART.html" title="PART" alt="" coords="667,178,781,258">
 <area shape="rect" id="node10" href="ITEMADJUST.html" title="ITEMADJUST" alt="" coords="661,22,787,102">
 <area shape="rect" id="node23" href="POSTRANSACTION.html" title="POSTRANSACTION" alt="" coords="445,314,616,394">

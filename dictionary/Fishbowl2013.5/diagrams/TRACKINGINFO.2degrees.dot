@@ -22,8 +22,11 @@ digraph "twoDegreesRelationshipsDiagram" {
   "PARTTOTRACKING":"elipses":w -> "PARTTRACKING":"ID":e [arrowhead=none dir=back arrowtail=crowodot];
   "PARTTRACKING":"TYPEID":w -> "PARTTRACKINGTYPE":"elipses":e [arrowhead=none dir=back arrowtail=crowodot];
   "SERIALNUM":"elipses":w -> "PARTTRACKING":"ID":e [arrowhead=none dir=back arrowtail=crowodot];
+  "TIINVENTORYLOG":"elipses":w -> "PARTTRACKING":"ID":e [arrowhead=none dir=back arrowtail=crowodot];
   "TIINVENTORYLOGSN":"elipses":w -> "PARTTRACKING":"ID":e [arrowhead=none dir=back arrowtail=crowodot];
+  "TIINVENTORYLOGSN":"elipses":w -> "TIINVENTORYLOG":"elipses":e [arrowhead=none dir=back arrowtail=crowodot];
   "TRACKINGDATE":"elipses":w -> "PARTTRACKING":"ID":e [arrowhead=none dir=back arrowtail=crowodot];
+  "TRACKINGDECIMAL":"elipses":w -> "PARTTRACKING":"ID":e [arrowhead=none dir=back arrowtail=crowodot];
   "TRACKINGINFO":"PARTTRACKINGID":w -> "PARTTRACKING":"ID":e [arrowhead=none dir=back arrowtail=crowodot];
   "TRACKINGINFOSN":"PARTTRACKINGID":w -> "PARTTRACKING":"ID":e [arrowhead=none dir=back arrowtail=crowodot];
   "TRACKINGINFOSN":"TRACKINGINFOID":w -> "TRACKINGINFO":"ID.type":e [arrowhead=none dir=back arrowtail=crowodot];
@@ -45,12 +48,12 @@ digraph "twoDegreesRelationshipsDiagram" {
       <TR><TD COLSPAN="3" BGCOLOR="#9bab96" ALIGN="CENTER">PARTTRACKING</TD></TR>
       <TR><TD PORT="ID" COLSPAN="3" BGCOLOR="#bed1b8" ALIGN="LEFT">ID</TD></TR>
       <TR><TD PORT="TYPEID" COLSPAN="3" BGCOLOR="#f4f7da" ALIGN="LEFT">TYPEID</TD></TR>
-      <TR><TD PORT="NAME" COLSPAN="3" ALIGN="LEFT">NAME</TD></TR>
+      <TR><TD PORT="NAME" COLSPAN="3" BGCOLOR="#f4f7da" ALIGN="LEFT">NAME</TD></TR>
       <TR><TD PORT="ABBR" COLSPAN="3" ALIGN="LEFT">ABBR</TD></TR>
       <TR><TD PORT="DESCRIPTION" COLSPAN="3" ALIGN="LEFT">DESCRIPTION</TD></TR>
       <TR><TD PORT="SORTORDER" COLSPAN="3" ALIGN="LEFT">SORTORDER</TD></TR>
       <TR><TD PORT="ACTIVEFLAG" COLSPAN="3" ALIGN="LEFT">ACTIVEFLAG</TD></TR>
-      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">&lt; 1</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">8 &gt;</TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">&lt; 1</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">10 &gt;</TD></TR>
     </TABLE>>
     URL="PARTTRACKING.html"
     tooltip="PARTTRACKING"
@@ -75,6 +78,16 @@ digraph "twoDegreesRelationshipsDiagram" {
     URL="SERIALNUM.html"
     tooltip="SERIALNUM"
   ];
+  "TIINVENTORYLOG" [
+    label=<
+    <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
+      <TR><TD COLSPAN="3" BGCOLOR="#9bab96" ALIGN="CENTER">TIINVENTORYLOG</TD></TR>
+      <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">&lt; 2</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">1 &gt;</TD></TR>
+    </TABLE>>
+    URL="TIINVENTORYLOG.html"
+    tooltip="TIINVENTORYLOG"
+  ];
   "TIINVENTORYLOGSN" [
     label=<
     <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
@@ -94,6 +107,16 @@ digraph "twoDegreesRelationshipsDiagram" {
     </TABLE>>
     URL="TRACKINGDATE.html"
     tooltip="TRACKINGDATE"
+  ];
+  "TRACKINGDECIMAL" [
+    label=<
+    <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
+      <TR><TD COLSPAN="3" BGCOLOR="#9bab96" ALIGN="CENTER">TRACKINGDECIMAL</TD></TR>
+      <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">&lt; 2</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD></TR>
+    </TABLE>>
+    URL="TRACKINGDECIMAL.html"
+    tooltip="TRACKINGDECIMAL"
   ];
   "TRACKINGINFO" [
     label=<

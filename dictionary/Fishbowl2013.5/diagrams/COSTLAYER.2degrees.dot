@@ -51,6 +51,9 @@ digraph "twoDegreesRelationshipsDiagram" {
   "PARTTOTRACKING":"elipses":w -> "PART":"ID":e [arrowhead=none dir=back arrowtail=crowodot];
   "PICKITEM":"elipses":w -> "PART":"ID":e [arrowhead=none dir=back arrowtail=crowodot];
   "PICKITEM":"elipses":w -> "UOM":"elipses":e [arrowhead=none dir=back arrowtail=crowodot];
+  "POITEM":"elipses":w -> "PART":"ID":e [arrowhead=none dir=back arrowtail=crowodot];
+  "POITEM":"elipses":w -> "TAXRATE":"elipses":e [arrowhead=none dir=back arrowtail=crowodot];
+  "POITEM":"elipses":w -> "UOM":"elipses":e [arrowhead=none dir=back arrowtail=crowodot];
   "PRODUCT":"elipses":w -> "ASACCOUNT":"elipses":e [arrowhead=none dir=back arrowtail=crowodot];
   "PRODUCT":"elipses":w -> "PART":"ID":e [arrowhead=none dir=back arrowtail=crowodot];
   "PRODUCT":"elipses":w -> "UOM":"elipses":e [arrowhead=none dir=back arrowtail=crowodot];
@@ -68,8 +71,6 @@ digraph "twoDegreesRelationshipsDiagram" {
   "WATCH":"elipses":w -> "PART":"ID":e [arrowhead=none dir=back arrowtail=crowodot];
   "WOITEM":"elipses":w -> "PART":"ID":e [arrowhead=none dir=back arrowtail=crowodot];
   "WOITEM":"elipses":w -> "UOM":"elipses":e [arrowhead=none dir=back arrowtail=crowodot];
-  "XOITEM":"elipses":w -> "PART":"ID":e [arrowhead=none dir=back arrowtail=crowodot];
-  "XOITEM":"elipses":w -> "UOM":"elipses":e [arrowhead=none dir=back arrowtail=crowodot];
   "ASACCOUNT" [
     label=<
     <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
@@ -105,12 +106,12 @@ digraph "twoDegreesRelationshipsDiagram" {
     <TABLE BORDER="2" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
       <TR><TD COLSPAN="3" BGCOLOR="#9bab96" ALIGN="CENTER">COSTLAYER</TD></TR>
       <TR><TD PORT="ID" COLSPAN="2" BGCOLOR="#bed1b8" ALIGN="LEFT">ID</TD><TD PORT="ID.type" ALIGN="LEFT">integer[10]</TD></TR>
-      <TR><TD PORT="PARTID" COLSPAN="2" ALIGN="LEFT">PARTID</TD><TD PORT="PARTID.type" ALIGN="LEFT">integer[10]</TD></TR>
-      <TR><TD PORT="TABLEID" COLSPAN="2" ALIGN="LEFT">TABLEID</TD><TD PORT="TABLEID.type" ALIGN="LEFT">integer[10]</TD></TR>
-      <TR><TD PORT="RECORDID" COLSPAN="2" ALIGN="LEFT">RECORDID</TD><TD PORT="RECORDID.type" ALIGN="LEFT">integer[10]</TD></TR>
-      <TR><TD PORT="DATECREATED" COLSPAN="2" ALIGN="LEFT">DATECREATED</TD><TD PORT="DATECREATED.type" ALIGN="LEFT">timestamp[19]</TD></TR>
+      <TR><TD PORT="PARTID" COLSPAN="2" BGCOLOR="#f4f7da" ALIGN="LEFT">PARTID</TD><TD PORT="PARTID.type" ALIGN="LEFT">integer[10]</TD></TR>
+      <TR><TD PORT="TABLEID" COLSPAN="2" BGCOLOR="#f4f7da" ALIGN="LEFT">TABLEID</TD><TD PORT="TABLEID.type" ALIGN="LEFT">integer[10]</TD></TR>
+      <TR><TD PORT="RECORDID" COLSPAN="2" BGCOLOR="#f4f7da" ALIGN="LEFT">RECORDID</TD><TD PORT="RECORDID.type" ALIGN="LEFT">integer[10]</TD></TR>
+      <TR><TD PORT="DATECREATED" COLSPAN="2" BGCOLOR="#f4f7da" ALIGN="LEFT">DATECREATED</TD><TD PORT="DATECREATED.type" ALIGN="LEFT">timestamp[19]</TD></TR>
       <TR><TD PORT="DATELASTMODIFIED" COLSPAN="2" ALIGN="LEFT">DATELASTMODIFIED</TD><TD PORT="DATELASTMODIFIED.type" ALIGN="LEFT">timestamp[19]</TD></TR>
-      <TR><TD PORT="STATUSID" COLSPAN="2" ALIGN="LEFT">STATUSID</TD><TD PORT="STATUSID.type" ALIGN="LEFT">integer[10]</TD></TR>
+      <TR><TD PORT="STATUSID" COLSPAN="2" BGCOLOR="#f4f7da" ALIGN="LEFT">STATUSID</TD><TD PORT="STATUSID.type" ALIGN="LEFT">integer[10]</TD></TR>
       <TR><TD PORT="ORGQTY" COLSPAN="2" ALIGN="LEFT">ORGQTY</TD><TD PORT="ORGQTY.type" ALIGN="LEFT">double precision[15]</TD></TR>
       <TR><TD PORT="QTY" COLSPAN="2" ALIGN="LEFT">QTY</TD><TD PORT="QTY.type" ALIGN="LEFT">double precision[15]</TD></TR>
       <TR><TD PORT="ORGTOTALCOST" COLSPAN="2" ALIGN="LEFT">ORGTOTALCOST</TD><TD PORT="ORGTOTALCOST.type" ALIGN="LEFT">double precision[15]</TD></TR>
@@ -125,7 +126,7 @@ digraph "twoDegreesRelationshipsDiagram" {
     <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
       <TR><TD COLSPAN="3" BGCOLOR="#9bab96" ALIGN="CENTER">COSTLAYERSTATUS</TD></TR>
       <TR><TD PORT="ID" COLSPAN="3" BGCOLOR="#bed1b8" ALIGN="LEFT">ID</TD></TR>
-      <TR><TD PORT="NAME" COLSPAN="3" ALIGN="LEFT">NAME</TD></TR>
+      <TR><TD PORT="NAME" COLSPAN="3" BGCOLOR="#f4f7da" ALIGN="LEFT">NAME</TD></TR>
       <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">1 &gt;</TD></TR>
     </TABLE>>
     URL="COSTLAYERSTATUS.html"
@@ -136,7 +137,7 @@ digraph "twoDegreesRelationshipsDiagram" {
     <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
       <TR><TD COLSPAN="3" BGCOLOR="#9bab96" ALIGN="CENTER">CUSTOMFIELD</TD></TR>
       <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
-      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">&lt; 3</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">6 &gt;</TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">&lt; 3</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">5 &gt;</TD></TR>
     </TABLE>>
     URL="CUSTOMFIELD.html"
     tooltip="CUSTOMFIELD"
@@ -166,7 +167,7 @@ digraph "twoDegreesRelationshipsDiagram" {
     <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
       <TR><TD COLSPAN="3" BGCOLOR="#9bab96" ALIGN="CENTER">INVENTORYLOG</TD></TR>
       <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
-      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">&lt; 6</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">1 &gt;</TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">&lt; 6</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">2 &gt;</TD></TR>
     </TABLE>>
     URL="INVENTORYLOG.html"
     tooltip="INVENTORYLOG"
@@ -298,6 +299,16 @@ digraph "twoDegreesRelationshipsDiagram" {
     URL="PICKITEM.html"
     tooltip="PICKITEM"
   ];
+  "POITEM" [
+    label=<
+    <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
+      <TR><TD COLSPAN="3" BGCOLOR="#9bab96" ALIGN="CENTER">POITEM</TD></TR>
+      <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">&lt; 8</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">1 &gt;</TD></TR>
+    </TABLE>>
+    URL="POITEM.html"
+    tooltip="POITEM"
+  ];
   "PRODUCT" [
     label=<
     <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
@@ -323,7 +334,7 @@ digraph "twoDegreesRelationshipsDiagram" {
     <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
       <TR><TD COLSPAN="3" BGCOLOR="#9bab96" ALIGN="CENTER">TABLEREFERENCE</TD></TR>
       <TR><TD PORT="ID" COLSPAN="3" BGCOLOR="#bed1b8" ALIGN="LEFT">ID</TD></TR>
-      <TR><TD PORT="TABLEID" COLSPAN="3" BGCOLOR="#f4f7da" ALIGN="LEFT">TABLEID</TD></TR>
+      <TR><TD PORT="TABLEID" COLSPAN="3" ALIGN="LEFT">TABLEID</TD></TR>
       <TR><TD PORT="TABLEREFNAME" COLSPAN="3" ALIGN="LEFT">TABLEREFNAME</TD></TR>
       <TR><TD PORT="CLASSNAME" COLSPAN="3" ALIGN="LEFT">CLASSNAME</TD></TR>
       <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">5 &gt;</TD></TR>
@@ -336,7 +347,7 @@ digraph "twoDegreesRelationshipsDiagram" {
     <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
       <TR><TD COLSPAN="3" BGCOLOR="#9bab96" ALIGN="CENTER">TAG</TD></TR>
       <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
-      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">&lt; 5</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">5 &gt;</TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">&lt; 5</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">6 &gt;</TD></TR>
     </TABLE>>
     URL="TAG.html"
     tooltip="TAG"
@@ -346,7 +357,7 @@ digraph "twoDegreesRelationshipsDiagram" {
     <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
       <TR><TD COLSPAN="3" BGCOLOR="#9bab96" ALIGN="CENTER">TAXRATE</TD></TR>
       <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
-      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">&lt; 4</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">9 &gt;</TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">&lt; 4</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">10 &gt;</TD></TR>
     </TABLE>>
     URL="TAXRATE.html"
     tooltip="TAXRATE"
@@ -390,15 +401,5 @@ digraph "twoDegreesRelationshipsDiagram" {
     </TABLE>>
     URL="WOITEM.html"
     tooltip="WOITEM"
-  ];
-  "XOITEM" [
-    label=<
-    <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
-      <TR><TD COLSPAN="3" BGCOLOR="#9bab96" ALIGN="CENTER">XOITEM</TD></TR>
-      <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
-      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">&lt; 5</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">1 &gt;</TD></TR>
-    </TABLE>>
-    URL="XOITEM.html"
-    tooltip="XOITEM"
   ];
 }

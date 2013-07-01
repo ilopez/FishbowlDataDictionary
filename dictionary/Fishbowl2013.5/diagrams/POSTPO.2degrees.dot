@@ -24,21 +24,29 @@ digraph "twoDegreesRelationshipsDiagram" {
   "PO":"CURRENCYID":w -> "CURRENCY":"elipses":e [arrowhead=none dir=back arrowtail=crowodot];
   "PO":"FOBPOINTID":w -> "FOBPOINT":"elipses":e [arrowhead=none dir=back arrowtail=crowodot];
   "PO":"LOCATIONGROUPID":w -> "LOCATIONGROUP":"elipses":e [arrowhead=none dir=back arrowtail=crowodot];
-  "PO":"PAYMENTTERMSID":w -> "null.PAYMENTTERMS":"elipses":e [arrowhead=none dir=back arrowtail=crowodot];
+  "PO":"PAYMENTTERMSID":w -> "PAYMENTTERMS":"elipses":e [arrowhead=none dir=back arrowtail=crowodot];
   "PO":"QBCLASSID":w -> "QBCLASS":"elipses":e [arrowhead=none dir=back arrowtail=crowodot];
   "PO":"SHIPTERMSID":w -> "SHIPTERMS":"elipses":e [arrowhead=none dir=back arrowtail=crowodot];
-  "PO":"STATUSID":w -> "null.POSTATUS":"elipses":e [arrowhead=none dir=back arrowtail=crowodot];
+  "PO":"STATUSID":w -> "POSTATUS":"elipses":e [arrowhead=none dir=back arrowtail=crowodot];
   "PO":"TAXRATEID":w -> "TAXRATE":"elipses":e [arrowhead=none dir=back arrowtail=crowodot];
   "PO":"TYPEID":w -> "POTYPE":"elipses":e [arrowhead=none dir=back arrowtail=crowodot];
-  "PO":"VENDORID":w -> "null.VENDOR":"elipses":e [arrowhead=none dir=back arrowtail=crowodot];
+  "PO":"VENDORID":w -> "VENDOR":"elipses":e [arrowhead=none dir=back arrowtail=crowodot];
+  "POITEM":"elipses":w -> "PO":"ID":e [arrowhead=none dir=back arrowtail=crowodot];
+  "POITEM":"elipses":w -> "QBCLASS":"elipses":e [arrowhead=none dir=back arrowtail=crowodot];
+  "POITEM":"elipses":w -> "TAXRATE":"elipses":e [arrowhead=none dir=back arrowtail=crowodot];
   "POSTPO":"POID":w -> "PO":"ID":e [arrowhead=none dir=back arrowtail=crowodot];
   "POSTPO":"STATUSID":w -> "POSTORDERSTATUS":"ID":e [arrowhead=none dir=back arrowtail=crowodot];
-  "POSTPOITEM":"POITEMID":w -> "null.POITEM":"elipses":e [arrowhead=none dir=back arrowtail=crowodot];
+  "POSTPOITEM":"POITEMID":w -> "POITEM":"elipses":e [arrowhead=none dir=back arrowtail=crowodot];
   "POSTPOITEM":"POSTPOID":w -> "POSTPO":"ID.type":e [arrowhead=none dir=back arrowtail=crowodot];
   "POSTSO":"elipses":w -> "POSTORDERSTATUS":"ID":e [arrowhead=none dir=back arrowtail=crowodot];
   "POSTWO":"elipses":w -> "POSTORDERSTATUS":"ID":e [arrowhead=none dir=back arrowtail=crowodot];
   "POSTXO":"elipses":w -> "POSTORDERSTATUS":"ID":e [arrowhead=none dir=back arrowtail=crowodot];
-  "TAXRATE":"elipses":w -> "null.VENDOR":"elipses":e [arrowhead=none dir=back arrowtail=crowodot];
+  "TAXRATE":"elipses":w -> "VENDOR":"elipses":e [arrowhead=none dir=back arrowtail=crowodot];
+  "VENDOR":"elipses":w -> "CURRENCY":"elipses":e [arrowhead=none dir=back arrowtail=crowodot];
+  "VENDOR":"elipses":w -> "CARRIER":"elipses":e [arrowhead=none dir=back arrowtail=crowodot];
+  "VENDOR":"elipses":w -> "PAYMENTTERMS":"elipses":e [arrowhead=none dir=back arrowtail=crowodot];
+  "VENDOR":"elipses":w -> "SHIPTERMS":"elipses":e [arrowhead=none dir=back arrowtail=crowodot];
+  "VENDOR":"elipses":w -> "TAXRATE":"elipses":e [arrowhead=none dir=back arrowtail=crowodot];
   "CARRIER" [
     label=<
     <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
@@ -54,7 +62,7 @@ digraph "twoDegreesRelationshipsDiagram" {
     <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
       <TR><TD COLSPAN="3" BGCOLOR="#9bab96" ALIGN="CENTER">CURRENCY</TD></TR>
       <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
-      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">&lt; 1</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">1 &gt;</TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">&lt; 1</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">2 &gt;</TD></TR>
     </TABLE>>
     URL="CURRENCY.html"
     tooltip="CURRENCY"
@@ -64,7 +72,7 @@ digraph "twoDegreesRelationshipsDiagram" {
     <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
       <TR><TD COLSPAN="3" BGCOLOR="#9bab96" ALIGN="CENTER">FOBPOINT</TD></TR>
       <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
-      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">3 &gt;</TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">2 &gt;</TD></TR>
     </TABLE>>
     URL="FOBPOINT.html"
     tooltip="FOBPOINT"
@@ -74,19 +82,20 @@ digraph "twoDegreesRelationshipsDiagram" {
     <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
       <TR><TD COLSPAN="3" BGCOLOR="#9bab96" ALIGN="CENTER">LOCATIONGROUP</TD></TR>
       <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
-      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">&lt; 1</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">19 &gt;</TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">&lt; 1</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">18 &gt;</TD></TR>
     </TABLE>>
     URL="LOCATIONGROUP.html"
     tooltip="LOCATIONGROUP"
   ];
-  "null.PAYMENTTERMS" [
+  "PAYMENTTERMS" [
     label=<
     <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
-      <TR><TD COLSPAN="3" BGCOLOR="#9bab96" ALIGN="CENTER">null.PAYMENTTERMS</TD></TR>
+      <TR><TD COLSPAN="3" BGCOLOR="#9bab96" ALIGN="CENTER">PAYMENTTERMS</TD></TR>
       <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
-      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">3 &gt;</TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">&lt; 1</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">3 &gt;</TD></TR>
     </TABLE>>
-    tooltip="null.PAYMENTTERMS"
+    URL="PAYMENTTERMS.html"
+    tooltip="PAYMENTTERMS"
   ];
   "PO" [
     label=<
@@ -137,28 +146,30 @@ digraph "twoDegreesRelationshipsDiagram" {
       <TR><TD PORT="TOTALINCLUDESTAX" COLSPAN="3" ALIGN="LEFT">TOTALINCLUDESTAX</TD></TR>
       <TR><TD PORT="CURRENCYID" COLSPAN="3" BGCOLOR="#f4f7da" ALIGN="LEFT">CURRENCYID</TD></TR>
       <TR><TD PORT="CURRENCYRATE" COLSPAN="3" ALIGN="LEFT">CURRENCYRATE</TD></TR>
-      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">&lt; 11</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">1 &gt;</TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">&lt; 11</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">2 &gt;</TD></TR>
     </TABLE>>
     URL="PO.html"
     tooltip="PO"
   ];
-  "null.POITEM" [
+  "POITEM" [
     label=<
     <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
-      <TR><TD COLSPAN="3" BGCOLOR="#9bab96" ALIGN="CENTER">null.POITEM</TD></TR>
+      <TR><TD COLSPAN="3" BGCOLOR="#9bab96" ALIGN="CENTER">POITEM</TD></TR>
       <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
-      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">1 &gt;</TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">&lt; 8</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">1 &gt;</TD></TR>
     </TABLE>>
-    tooltip="null.POITEM"
+    URL="POITEM.html"
+    tooltip="POITEM"
   ];
-  "null.POSTATUS" [
+  "POSTATUS" [
     label=<
     <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
-      <TR><TD COLSPAN="3" BGCOLOR="#9bab96" ALIGN="CENTER">null.POSTATUS</TD></TR>
+      <TR><TD COLSPAN="3" BGCOLOR="#9bab96" ALIGN="CENTER">POSTATUS</TD></TR>
       <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
       <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">1 &gt;</TD></TR>
     </TABLE>>
-    tooltip="null.POSTATUS"
+    URL="POSTATUS.html"
+    tooltip="POSTATUS"
   ];
   "POSTORDERSTATUS" [
     label=<
@@ -278,18 +289,19 @@ digraph "twoDegreesRelationshipsDiagram" {
     <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
       <TR><TD COLSPAN="3" BGCOLOR="#9bab96" ALIGN="CENTER">TAXRATE</TD></TR>
       <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
-      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">&lt; 4</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">9 &gt;</TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">&lt; 4</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">10 &gt;</TD></TR>
     </TABLE>>
     URL="TAXRATE.html"
     tooltip="TAXRATE"
   ];
-  "null.VENDOR" [
+  "VENDOR" [
     label=<
     <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
-      <TR><TD COLSPAN="3" BGCOLOR="#9bab96" ALIGN="CENTER">null.VENDOR</TD></TR>
+      <TR><TD COLSPAN="3" BGCOLOR="#9bab96" ALIGN="CENTER">VENDOR</TD></TR>
       <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
-      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">5 &gt;</TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">&lt; 7</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">5 &gt;</TD></TR>
     </TABLE>>
-    tooltip="null.VENDOR"
+    URL="VENDOR.html"
+    tooltip="VENDOR"
   ];
 }

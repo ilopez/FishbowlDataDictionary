@@ -24,15 +24,23 @@ digraph "oneDegreeRelationshipsDiagram" {
   "PO":"CURRENCYID":w -> "CURRENCY":"ID":e [arrowhead=none dir=back arrowtail=crowodot];
   "PO":"FOBPOINTID":w -> "FOBPOINT":"ID":e [arrowhead=none dir=back arrowtail=crowodot];
   "PO":"LOCATIONGROUPID":w -> "LOCATIONGROUP":"ID":e [arrowhead=none dir=back arrowtail=crowodot];
-  "PO":"PAYMENTTERMSID":w -> "null.PAYMENTTERMS":"ID":e [arrowhead=none dir=back arrowtail=crowodot];
+  "PO":"PAYMENTTERMSID":w -> "PAYMENTTERMS":"ID":e [arrowhead=none dir=back arrowtail=crowodot];
   "PO":"QBCLASSID":w -> "QBCLASS":"ID":e [arrowhead=none dir=back arrowtail=crowodot];
   "PO":"SHIPTERMSID":w -> "SHIPTERMS":"ID":e [arrowhead=none dir=back arrowtail=crowodot];
-  "PO":"STATUSID":w -> "null.POSTATUS":"ID":e [arrowhead=none dir=back arrowtail=crowodot];
+  "PO":"STATUSID":w -> "POSTATUS":"ID":e [arrowhead=none dir=back arrowtail=crowodot];
   "PO":"TAXRATEID":w -> "TAXRATE":"ID":e [arrowhead=none dir=back arrowtail=crowodot];
   "PO":"TYPEID":w -> "POTYPE":"ID":e [arrowhead=none dir=back arrowtail=crowodot];
-  "PO":"VENDORID":w -> "null.VENDOR":"ID":e [arrowhead=none dir=back arrowtail=crowodot];
+  "PO":"VENDORID":w -> "VENDOR":"ID":e [arrowhead=none dir=back arrowtail=crowodot];
+  "POITEM":"POID":w -> "PO":"ID.type":e [arrowhead=none dir=back arrowtail=crowodot];
+  "POITEM":"QBCLASSID":w -> "QBCLASS":"ID":e [arrowhead=none dir=back arrowtail=crowodot];
+  "POITEM":"TAXID":w -> "TAXRATE":"ID":e [arrowhead=none dir=back arrowtail=crowodot];
   "POSTPO":"POID":w -> "PO":"ID.type":e [arrowhead=none dir=back arrowtail=crowodot];
-  "TAXRATE":"VENDORID":w -> "null.VENDOR":"ID":e [arrowhead=none dir=back arrowtail=crowodot];
+  "TAXRATE":"VENDORID":w -> "VENDOR":"ID":e [arrowhead=none dir=back arrowtail=crowodot];
+  "VENDOR":"CURRENCYID":w -> "CURRENCY":"ID":e [arrowhead=none dir=back arrowtail=crowodot];
+  "VENDOR":"DEFAULTCARRIERID":w -> "CARRIER":"ID":e [arrowhead=none dir=back arrowtail=crowodot];
+  "VENDOR":"DEFAULTPAYMENTTERMSID":w -> "PAYMENTTERMS":"ID":e [arrowhead=none dir=back arrowtail=crowodot];
+  "VENDOR":"DEFAULTSHIPTERMSID":w -> "SHIPTERMS":"ID":e [arrowhead=none dir=back arrowtail=crowodot];
+  "VENDOR":"TAXRATEID":w -> "TAXRATE":"ID":e [arrowhead=none dir=back arrowtail=crowodot];
   "CARRIER" [
     label=<
     <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
@@ -57,11 +65,11 @@ digraph "oneDegreeRelationshipsDiagram" {
       <TR><TD PORT="CODE" COLSPAN="3" ALIGN="LEFT">CODE</TD></TR>
       <TR><TD PORT="RATE" COLSPAN="3" ALIGN="LEFT">RATE</TD></TR>
       <TR><TD PORT="ACTIVEFLAG" COLSPAN="3" ALIGN="LEFT">ACTIVEFLAG</TD></TR>
-      <TR><TD PORT="LASTCHANGEDUSERID" COLSPAN="3" ALIGN="LEFT">LASTCHANGEDUSERID</TD></TR>
+      <TR><TD PORT="LASTCHANGEDUSERID" COLSPAN="3" BGCOLOR="#f4f7da" ALIGN="LEFT">LASTCHANGEDUSERID</TD></TR>
       <TR><TD PORT="DATECREATED" COLSPAN="3" ALIGN="LEFT">DATECREATED</TD></TR>
       <TR><TD PORT="DATELASTMODIFIED" COLSPAN="3" ALIGN="LEFT">DATELASTMODIFIED</TD></TR>
       <TR><TD PORT="SYMBOL" COLSPAN="3" ALIGN="LEFT">SYMBOL</TD></TR>
-      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">&lt; 1</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">1 &gt;</TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">&lt; 1</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">2 &gt;</TD></TR>
     </TABLE>>
     URL="CURRENCY.html"
     tooltip="CURRENCY"
@@ -72,7 +80,7 @@ digraph "oneDegreeRelationshipsDiagram" {
       <TR><TD COLSPAN="3" BGCOLOR="#9bab96" ALIGN="CENTER">FOBPOINT</TD></TR>
       <TR><TD PORT="ID" COLSPAN="3" BGCOLOR="#bed1b8" ALIGN="LEFT">ID</TD></TR>
       <TR><TD PORT="NAME" COLSPAN="3" BGCOLOR="#f4f7da" ALIGN="LEFT">NAME</TD></TR>
-      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">3 &gt;</TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">2 &gt;</TD></TR>
     </TABLE>>
     URL="FOBPOINT.html"
     tooltip="FOBPOINT"
@@ -86,15 +94,15 @@ digraph "oneDegreeRelationshipsDiagram" {
       <TR><TD PORT="ACTIVEFLAG" COLSPAN="3" ALIGN="LEFT">ACTIVEFLAG</TD></TR>
       <TR><TD PORT="QBCLASSID" COLSPAN="3" ALIGN="LEFT">QBCLASSID</TD></TR>
       <TR><TD PORT="DATELASTMODIFIED" COLSPAN="3" ALIGN="LEFT">DATELASTMODIFIED</TD></TR>
-      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">&lt; 1</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">19 &gt;</TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">&lt; 1</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">18 &gt;</TD></TR>
     </TABLE>>
     URL="LOCATIONGROUP.html"
     tooltip="LOCATIONGROUP"
   ];
-  "null.PAYMENTTERMS" [
+  "PAYMENTTERMS" [
     label=<
     <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
-      <TR><TD COLSPAN="3" BGCOLOR="#9bab96" ALIGN="CENTER">null.PAYMENTTERMS</TD></TR>
+      <TR><TD COLSPAN="3" BGCOLOR="#9bab96" ALIGN="CENTER">PAYMENTTERMS</TD></TR>
       <TR><TD PORT="ID" COLSPAN="3" BGCOLOR="#bed1b8" ALIGN="LEFT">ID</TD></TR>
       <TR><TD PORT="TYPEID" COLSPAN="3" ALIGN="LEFT">TYPEID</TD></TR>
       <TR><TD PORT="NAME" COLSPAN="3" ALIGN="LEFT">NAME</TD></TR>
@@ -109,9 +117,10 @@ digraph "oneDegreeRelationshipsDiagram" {
       <TR><TD PORT="ACCOUNTINGID" COLSPAN="3" ALIGN="LEFT">ACCOUNTINGID</TD></TR>
       <TR><TD PORT="ACCOUNTINGHASH" COLSPAN="3" ALIGN="LEFT">ACCOUNTINGHASH</TD></TR>
       <TR><TD PORT="ACTIVEFLAG" COLSPAN="3" ALIGN="LEFT">ACTIVEFLAG</TD></TR>
-      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">3 &gt;</TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">&lt; 1</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">3 &gt;</TD></TR>
     </TABLE>>
-    tooltip="null.PAYMENTTERMS"
+    URL="PAYMENTTERMS.html"
+    tooltip="PAYMENTTERMS"
   ];
   "PO" [
     label=<
@@ -162,20 +171,55 @@ digraph "oneDegreeRelationshipsDiagram" {
       <TR><TD PORT="TOTALINCLUDESTAX" COLSPAN="2" ALIGN="LEFT">TOTALINCLUDESTAX</TD><TD PORT="TOTALINCLUDESTAX.type" ALIGN="LEFT">smallint[5]</TD></TR>
       <TR><TD PORT="CURRENCYID" COLSPAN="2" BGCOLOR="#f4f7da" ALIGN="LEFT">CURRENCYID</TD><TD PORT="CURRENCYID.type" ALIGN="LEFT">integer[10]</TD></TR>
       <TR><TD PORT="CURRENCYRATE" COLSPAN="2" ALIGN="LEFT">CURRENCYRATE</TD><TD PORT="CURRENCYRATE.type" ALIGN="LEFT">double precision[15]</TD></TR>
-      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">&lt; 11</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">1 &gt;</TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">&lt; 11</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">2 &gt;</TD></TR>
     </TABLE>>
     URL="PO.html"
     tooltip="PO"
   ];
-  "null.POSTATUS" [
+  "POITEM" [
     label=<
     <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
-      <TR><TD COLSPAN="3" BGCOLOR="#9bab96" ALIGN="CENTER">null.POSTATUS</TD></TR>
+      <TR><TD COLSPAN="3" BGCOLOR="#9bab96" ALIGN="CENTER">POITEM</TD></TR>
       <TR><TD PORT="ID" COLSPAN="3" BGCOLOR="#bed1b8" ALIGN="LEFT">ID</TD></TR>
-      <TR><TD PORT="NAME" COLSPAN="3" ALIGN="LEFT">NAME</TD></TR>
+      <TR><TD PORT="PARTID" COLSPAN="3" ALIGN="LEFT">PARTID</TD></TR>
+      <TR><TD PORT="POID" COLSPAN="3" ALIGN="LEFT">POID</TD></TR>
+      <TR><TD PORT="TYPEID" COLSPAN="3" ALIGN="LEFT">TYPEID</TD></TR>
+      <TR><TD PORT="STATUSID" COLSPAN="3" ALIGN="LEFT">STATUSID</TD></TR>
+      <TR><TD PORT="UOMID" COLSPAN="3" ALIGN="LEFT">UOMID</TD></TR>
+      <TR><TD PORT="POLINEITEM" COLSPAN="3" ALIGN="LEFT">POLINEITEM</TD></TR>
+      <TR><TD PORT="DESCRIPTION" COLSPAN="3" ALIGN="LEFT">DESCRIPTION</TD></TR>
+      <TR><TD PORT="PARTNUM" COLSPAN="3" ALIGN="LEFT">PARTNUM</TD></TR>
+      <TR><TD PORT="VENDORPARTNUM" COLSPAN="3" ALIGN="LEFT">VENDORPARTNUM</TD></TR>
+      <TR><TD PORT="DATELASTFULFILLMENT" COLSPAN="3" ALIGN="LEFT">DATELASTFULFILLMENT</TD></TR>
+      <TR><TD PORT="DATESCHEDULEDFULFILLMENT" COLSPAN="3" ALIGN="LEFT">DATESCHEDULEDFULFILLMENT</TD></TR>
+      <TR><TD PORT="REVLEVEL" COLSPAN="3" ALIGN="LEFT">REVLEVEL</TD></TR>
+      <TR><TD PORT="REPAIRFLAG" COLSPAN="3" ALIGN="LEFT">REPAIRFLAG</TD></TR>
+      <TR><TD PORT="TBDCOSTFLAG" COLSPAN="3" ALIGN="LEFT">TBDCOSTFLAG</TD></TR>
+      <TR><TD PORT="QBCLASSID" COLSPAN="3" ALIGN="LEFT">QBCLASSID</TD></TR>
+      <TR><TD PORT="NOTE" COLSPAN="3" ALIGN="LEFT">NOTE</TD></TR>
+      <TR><TD PORT="QTYTOFULFILL" COLSPAN="3" ALIGN="LEFT">QTYTOFULFILL</TD></TR>
+      <TR><TD PORT="QTYFULFILLED" COLSPAN="3" ALIGN="LEFT">QTYFULFILLED</TD></TR>
+      <TR><TD PORT="QTYPICKED" COLSPAN="3" ALIGN="LEFT">QTYPICKED</TD></TR>
+      <TR><TD PORT="UNITCOST" COLSPAN="3" ALIGN="LEFT">UNITCOST</TD></TR>
+      <TR><TD PORT="TOTALCOST" COLSPAN="3" ALIGN="LEFT">TOTALCOST</TD></TR>
+      <TR><TD PORT="CUSTOMERID" COLSPAN="3" ALIGN="LEFT">CUSTOMERID</TD></TR>
+      <TR><TD PORT="TAXID" COLSPAN="3" ALIGN="LEFT">TAXID</TD></TR>
+      <TR><TD PORT="TAXRATE" COLSPAN="3" ALIGN="LEFT">TAXRATE</TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">&lt; 8</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">1 &gt;</TD></TR>
+    </TABLE>>
+    URL="POITEM.html"
+    tooltip="POITEM"
+  ];
+  "POSTATUS" [
+    label=<
+    <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
+      <TR><TD COLSPAN="3" BGCOLOR="#9bab96" ALIGN="CENTER">POSTATUS</TD></TR>
+      <TR><TD PORT="ID" COLSPAN="3" BGCOLOR="#bed1b8" ALIGN="LEFT">ID</TD></TR>
+      <TR><TD PORT="NAME" COLSPAN="3" BGCOLOR="#f4f7da" ALIGN="LEFT">NAME</TD></TR>
       <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">1 &gt;</TD></TR>
     </TABLE>>
-    tooltip="null.POSTATUS"
+    URL="POSTATUS.html"
+    tooltip="POSTATUS"
   ];
   "POSTPO" [
     label=<
@@ -202,7 +246,7 @@ digraph "oneDegreeRelationshipsDiagram" {
     <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
       <TR><TD COLSPAN="3" BGCOLOR="#9bab96" ALIGN="CENTER">POTYPE</TD></TR>
       <TR><TD PORT="ID" COLSPAN="3" BGCOLOR="#bed1b8" ALIGN="LEFT">ID</TD></TR>
-      <TR><TD PORT="NAME" COLSPAN="3" ALIGN="LEFT">NAME</TD></TR>
+      <TR><TD PORT="NAME" COLSPAN="3" BGCOLOR="#f4f7da" ALIGN="LEFT">NAME</TD></TR>
       <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">1 &gt;</TD></TR>
     </TABLE>>
     URL="POTYPE.html"
@@ -214,7 +258,7 @@ digraph "oneDegreeRelationshipsDiagram" {
       <TR><TD COLSPAN="3" BGCOLOR="#9bab96" ALIGN="CENTER">QBCLASS</TD></TR>
       <TR><TD PORT="ID" COLSPAN="3" BGCOLOR="#bed1b8" ALIGN="LEFT">ID</TD></TR>
       <TR><TD PORT="NAME" COLSPAN="3" BGCOLOR="#f4f7da" ALIGN="LEFT">NAME</TD></TR>
-      <TR><TD PORT="PARENTID" COLSPAN="3" BGCOLOR="#f4f7da" ALIGN="LEFT">PARENTID</TD></TR>
+      <TR><TD PORT="PARENTID" COLSPAN="3" ALIGN="LEFT">PARENTID</TD></TR>
       <TR><TD PORT="ACTIVEFLAG" COLSPAN="3" ALIGN="LEFT">ACTIVEFLAG</TD></TR>
       <TR><TD PORT="DATECREATED" COLSPAN="3" ALIGN="LEFT">DATECREATED</TD></TR>
       <TR><TD PORT="DATELASTMODIFIED" COLSPAN="3" ALIGN="LEFT">DATELASTMODIFIED</TD></TR>
@@ -230,7 +274,7 @@ digraph "oneDegreeRelationshipsDiagram" {
     <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
       <TR><TD COLSPAN="3" BGCOLOR="#9bab96" ALIGN="CENTER">SHIPTERMS</TD></TR>
       <TR><TD PORT="ID" COLSPAN="3" BGCOLOR="#bed1b8" ALIGN="LEFT">ID</TD></TR>
-      <TR><TD PORT="NAME" COLSPAN="3" BGCOLOR="#f4f7da" ALIGN="LEFT">NAME</TD></TR>
+      <TR><TD PORT="NAME" COLSPAN="3" ALIGN="LEFT">NAME</TD></TR>
       <TR><TD PORT="ACTIVEFLAG" COLSPAN="3" ALIGN="LEFT">ACTIVEFLAG</TD></TR>
       <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">3 &gt;</TD></TR>
     </TABLE>>
@@ -242,30 +286,30 @@ digraph "oneDegreeRelationshipsDiagram" {
     <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
       <TR><TD COLSPAN="3" BGCOLOR="#9bab96" ALIGN="CENTER">TAXRATE</TD></TR>
       <TR><TD PORT="ID" COLSPAN="3" BGCOLOR="#bed1b8" ALIGN="LEFT">ID</TD></TR>
-      <TR><TD PORT="NAME" COLSPAN="3" BGCOLOR="#f4f7da" ALIGN="LEFT">NAME</TD></TR>
+      <TR><TD PORT="NAME" COLSPAN="3" ALIGN="LEFT">NAME</TD></TR>
       <TR><TD PORT="DEFAULTFLAG" COLSPAN="3" ALIGN="LEFT">DEFAULTFLAG</TD></TR>
-      <TR><TD PORT="VENDORID" COLSPAN="3" BGCOLOR="#f4f7da" ALIGN="LEFT">VENDORID</TD></TR>
+      <TR><TD PORT="VENDORID" COLSPAN="3" ALIGN="LEFT">VENDORID</TD></TR>
       <TR><TD PORT="DATECREATED" COLSPAN="3" ALIGN="LEFT">DATECREATED</TD></TR>
       <TR><TD PORT="DATELASTMODIFIED" COLSPAN="3" ALIGN="LEFT">DATELASTMODIFIED</TD></TR>
       <TR><TD PORT="ACCOUNTINGID" COLSPAN="3" ALIGN="LEFT">ACCOUNTINGID</TD></TR>
       <TR><TD PORT="ACCOUNTINGHASH" COLSPAN="3" ALIGN="LEFT">ACCOUNTINGHASH</TD></TR>
       <TR><TD PORT="ACTIVEFLAG" COLSPAN="3" ALIGN="LEFT">ACTIVEFLAG</TD></TR>
-      <TR><TD PORT="TYPEID" COLSPAN="3" BGCOLOR="#f4f7da" ALIGN="LEFT">TYPEID</TD></TR>
+      <TR><TD PORT="TYPEID" COLSPAN="3" ALIGN="LEFT">TYPEID</TD></TR>
       <TR><TD PORT="DESCRIPTION" COLSPAN="3" ALIGN="LEFT">DESCRIPTION</TD></TR>
-      <TR><TD PORT="TAXACCOUNTID" COLSPAN="3" BGCOLOR="#f4f7da" ALIGN="LEFT">TAXACCOUNTID</TD></TR>
+      <TR><TD PORT="TAXACCOUNTID" COLSPAN="3" ALIGN="LEFT">TAXACCOUNTID</TD></TR>
       <TR><TD PORT="UNITCOST" COLSPAN="3" ALIGN="LEFT">UNITCOST</TD></TR>
       <TR><TD PORT="RATE" COLSPAN="3" ALIGN="LEFT">RATE</TD></TR>
       <TR><TD PORT="CODE" COLSPAN="3" ALIGN="LEFT">CODE</TD></TR>
-      <TR><TD PORT="ORDERTYPEID" COLSPAN="3" BGCOLOR="#f4f7da" ALIGN="LEFT">ORDERTYPEID</TD></TR>
-      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">&lt; 4</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">9 &gt;</TD></TR>
+      <TR><TD PORT="ORDERTYPEID" COLSPAN="3" ALIGN="LEFT">ORDERTYPEID</TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">&lt; 4</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">10 &gt;</TD></TR>
     </TABLE>>
     URL="TAXRATE.html"
     tooltip="TAXRATE"
   ];
-  "null.VENDOR" [
+  "VENDOR" [
     label=<
     <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
-      <TR><TD COLSPAN="3" BGCOLOR="#9bab96" ALIGN="CENTER">null.VENDOR</TD></TR>
+      <TR><TD COLSPAN="3" BGCOLOR="#9bab96" ALIGN="CENTER">VENDOR</TD></TR>
       <TR><TD PORT="ID" COLSPAN="3" BGCOLOR="#bed1b8" ALIGN="LEFT">ID</TD></TR>
       <TR><TD PORT="ACCOUNTID" COLSPAN="3" ALIGN="LEFT">ACCOUNTID</TD></TR>
       <TR><TD PORT="STATUSID" COLSPAN="3" ALIGN="LEFT">STATUSID</TD></TR>
@@ -289,8 +333,9 @@ digraph "oneDegreeRelationshipsDiagram" {
       <TR><TD PORT="TAXRATEID" COLSPAN="3" ALIGN="LEFT">TAXRATEID</TD></TR>
       <TR><TD PORT="CURRENCYID" COLSPAN="3" ALIGN="LEFT">CURRENCYID</TD></TR>
       <TR><TD PORT="CURRENCYRATE" COLSPAN="3" ALIGN="LEFT">CURRENCYRATE</TD></TR>
-      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">5 &gt;</TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">&lt; 7</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">5 &gt;</TD></TR>
     </TABLE>>
-    tooltip="null.VENDOR"
+    URL="VENDOR.html"
+    tooltip="VENDOR"
   ];
 }

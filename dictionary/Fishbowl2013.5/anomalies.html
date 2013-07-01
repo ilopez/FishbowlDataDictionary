@@ -67,50 +67,62 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 </thead>
 <tbody>
  <tr>
-  <td class='detail'><a href='tables/CALCATEGORY.html'>CALCATEGORY</a></td>
+  <td class='detail'><a href='tables/BOMAUTOCREATETYPE.html'>BOMAUTOCREATETYPE</a></td>
  </tr>
  <tr>
-  <td class='detail'><a href='tables/COSTLAYERSTATUS.html'>COSTLAYERSTATUS</a></td>
+  <td class='detail'><a href='tables/CUSTOMFIELDTYPE.html'>CUSTOMFIELDTYPE</a></td>
  </tr>
  <tr>
-  <td class='detail'><a href='tables/COUNTRYCONST.html'>COUNTRYCONST</a></td>
+  <td class='detail'><a href='tables/LOCATIONGROUP.html'>LOCATIONGROUP</a></td>
  </tr>
  <tr>
-  <td class='detail'><a href='tables/CUSTOMFIELD.html'>CUSTOMFIELD</a></td>
+  <td class='detail'><a href='tables/PICK.html'>PICK</a></td>
  </tr>
  <tr>
-  <td class='detail'><a href='tables/CUSTOMTIMESTAMP.html'>CUSTOMTIMESTAMP</a></td>
+  <td class='detail'><a href='tables/PICKITEMSTATUS.html'>PICKITEMSTATUS</a></td>
  </tr>
  <tr>
-  <td class='detail'><a href='tables/MEMO.html'>MEMO</a></td>
+  <td class='detail'><a href='tables/PICKSTATUS.html'>PICKSTATUS</a></td>
  </tr>
  <tr>
-  <td class='detail'><a href='tables/PARTCATEGORY.html'>PARTCATEGORY</a></td>
+  <td class='detail'><a href='tables/PROPERTYCATEGORY.html'>PROPERTYCATEGORY</a></td>
  </tr>
  <tr>
-  <td class='detail'><a href='tables/PAYMENTTERMSTYPE.html'>PAYMENTTERMSTYPE</a></td>
+  <td class='detail'><a href='tables/RECEIPTITEMTYPE.html'>RECEIPTITEMTYPE</a></td>
  </tr>
  <tr>
-  <td class='detail'><a href='tables/POST.html'>POST</a></td>
+  <td class='detail'><a href='tables/RNDTYPE.html'>RNDTYPE</a></td>
  </tr>
  <tr>
   <td class='detail'><a href='tables/SHIPITEM.html'>SHIPITEM</a></td>
  </tr>
  <tr>
-  <td class='detail'><a href='tables/TAG.html'>TAG</a></td>
+  <td class='detail'><a href='tables/SHIPPINGIMPORT.html'>SHIPPINGIMPORT</a></td>
  </tr>
  <tr>
-  <td class='detail'><a href='tables/UPSRETURNSHIPMENT.html'>UPSRETURNSHIPMENT</a></td>
+  <td class='detail'><a href='tables/TIINVENTORYLOGSN.html'>TIINVENTORYLOGSN</a></td>
+ </tr>
+ <tr>
+  <td class='detail'><a href='tables/USERLOG.html'>USERLOG</a></td>
+ </tr>
+ <tr>
+  <td class='detail'><a href='tables/VENDOR.html'>VENDOR</a></td>
+ </tr>
+ <tr>
+  <td class='detail'><a href='tables/VENDORSTATUS.html'>VENDORSTATUS</a></td>
  </tr>
  <tr>
   <td class='detail'><a href='tables/WATCH.html'>WATCH</a></td>
  </tr>
  <tr>
-  <td class='detail'><a href='tables/WOASSIGNEDUSERS.html'>WOASSIGNEDUSERS</a></td>
+  <td class='detail'><a href='tables/XOITEMTYPE.html'>XOITEMTYPE</a></td>
+ </tr>
+ <tr>
+  <td class='detail'><a href='tables/XOSTATUS.html'>XOSTATUS</a></td>
  </tr>
 </tbody>
 </table>
-14 instances of anomaly detected<p></li>
+18 instances of anomaly detected<p></li>
 <li>
 <b>Columns that are flagged as both 'nullable' and 'must be unique':</b>
 <table class='dataTable' border='1' rules='groups'>
@@ -124,17 +136,14 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
   <td class='detail'><a href='tables/CURRENCY.html'>CURRENCY</a>.NAME</td>
  </tr>
  <tr>
-  <td class='detail'><a href='tables/DEFAULTLOCATION.html'>DEFAULTLOCATION</a>.ID</td>
- </tr>
- <tr>
   <td class='detail'><a href='tables/SHIP.html'>SHIP</a>.BILLOFLADING</td>
  </tr>
  <tr>
-  <td class='detail'><a href='tables/SHIPPINGIMPORT.html'>SHIPPINGIMPORT</a>.ID</td>
+  <td class='detail'><a href='tables/SHIPCARTON.html'>SHIPCARTON</a>.SSCC</td>
  </tr>
 </tbody>
 </table>
-4 instances of anomaly detected<p></li>
+3 instances of anomaly detected<p></li>
 <li>
 <b>Tables that contain a single column:</b><br>Anomaly not detected<p></li>
 <li>
@@ -246,9 +255,6 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
   <td class='detail'><a href='tables/COSTLAYER.html'>COSTLAYER</a>.DATELASTMODIFIED</td>
  </tr>
  <tr>
-  <td class='detail'><a href='tables/COUNTRYCONST.html'>COUNTRYCONST</a>.ABBREVIATION</td>
- </tr>
- <tr>
   <td class='detail'><a href='tables/CURRENCY.html'>CURRENCY</a>.CODE</td>
  </tr>
  <tr>
@@ -291,6 +297,15 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
   <td class='detail'><a href='tables/CUSTOMER.html'>CUSTOMER</a>.TAXEXEMPTNUMBER</td>
  </tr>
  <tr>
+  <td class='detail'><a href='tables/CUSTOMERPARTS.html'>CUSTOMERPARTS</a>.DATECREATED</td>
+ </tr>
+ <tr>
+  <td class='detail'><a href='tables/CUSTOMERPARTS.html'>CUSTOMERPARTS</a>.DATELASTMODIFIED</td>
+ </tr>
+ <tr>
+  <td class='detail'><a href='tables/CUSTOMERPARTS.html'>CUSTOMERPARTS</a>.DATELASTPURCHASED</td>
+ </tr>
+ <tr>
   <td class='detail'><a href='tables/DATABASEVERSION.html'>DATABASEVERSION</a>.DATEUPDATED</td>
  </tr>
  <tr>
@@ -316,12 +331,6 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
  </tr>
  <tr>
   <td class='detail'><a href='tables/KITITEM.html'>KITITEM</a>.DATELASTMODIFIED</td>
- </tr>
- <tr>
-  <td class='detail'><a href='tables/KITOPTION.html'>KITOPTION</a>.DATECREATED</td>
- </tr>
- <tr>
-  <td class='detail'><a href='tables/KITOPTION.html'>KITOPTION</a>.DATELASTMODIFIED</td>
  </tr>
  <tr>
   <td class='detail'><a href='tables/LOCATION.html'>LOCATION</a>.DATELASTMODIFIED</td>
@@ -391,6 +400,18 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
  </tr>
  <tr>
   <td class='detail'><a href='tables/PARTCOST.html'>PARTCOST</a>.DATELASTMODIFIED</td>
+ </tr>
+ <tr>
+  <td class='detail'><a href='tables/PAYMENTTERMS.html'>PAYMENTTERMS</a>.ACCOUNTINGHASH</td>
+ </tr>
+ <tr>
+  <td class='detail'><a href='tables/PAYMENTTERMS.html'>PAYMENTTERMS</a>.ACCOUNTINGID</td>
+ </tr>
+ <tr>
+  <td class='detail'><a href='tables/PAYMENTTERMS.html'>PAYMENTTERMS</a>.DATECREATED</td>
+ </tr>
+ <tr>
+  <td class='detail'><a href='tables/PAYMENTTERMS.html'>PAYMENTTERMS</a>.DATELASTMODIFIED</td>
  </tr>
  <tr>
   <td class='detail'><a href='tables/PICK.html'>PICK</a>.DATECREATED</td>
@@ -472,6 +493,18 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
  </tr>
  <tr>
   <td class='detail'><a href='tables/PO.html'>PO</a>.VENDORSO</td>
+ </tr>
+ <tr>
+  <td class='detail'><a href='tables/POITEM.html'>POITEM</a>.CUSTOMERID</td>
+ </tr>
+ <tr>
+  <td class='detail'><a href='tables/POITEM.html'>POITEM</a>.DATELASTFULFILLMENT</td>
+ </tr>
+ <tr>
+  <td class='detail'><a href='tables/POITEM.html'>POITEM</a>.DESCRIPTION</td>
+ </tr>
+ <tr>
+  <td class='detail'><a href='tables/POITEM.html'>POITEM</a>.REVLEVEL</td>
  </tr>
  <tr>
   <td class='detail'><a href='tables/POST.html'>POST</a>.CUSTOMERID</td>
@@ -783,66 +816,6 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
   <td class='detail'><a href='tables/SHIPUPSDETAILS.html'>SHIPUPSDETAILS</a>.ZIP</td>
  </tr>
  <tr>
-  <td class='detail'><a href='tables/SO.html'>SO</a>.BILLTOADDRESS</td>
- </tr>
- <tr>
-  <td class='detail'><a href='tables/SO.html'>SO</a>.BILLTOCITY</td>
- </tr>
- <tr>
-  <td class='detail'><a href='tables/SO.html'>SO</a>.BILLTONAME</td>
- </tr>
- <tr>
-  <td class='detail'><a href='tables/SO.html'>SO</a>.BILLTOZIP</td>
- </tr>
- <tr>
-  <td class='detail'><a href='tables/SO.html'>SO</a>.CUSTOMERCONTACT</td>
- </tr>
- <tr>
-  <td class='detail'><a href='tables/SO.html'>SO</a>.CUSTOMERPO</td>
- </tr>
- <tr>
-  <td class='detail'><a href='tables/SO.html'>SO</a>.DATECOMPLETED</td>
- </tr>
- <tr>
-  <td class='detail'><a href='tables/SO.html'>SO</a>.DATECREATED</td>
- </tr>
- <tr>
-  <td class='detail'><a href='tables/SO.html'>SO</a>.DATEFIRSTSHIP</td>
- </tr>
- <tr>
-  <td class='detail'><a href='tables/SO.html'>SO</a>.DATEISSUED</td>
- </tr>
- <tr>
-  <td class='detail'><a href='tables/SO.html'>SO</a>.DATELASTMODIFIED</td>
- </tr>
- <tr>
-  <td class='detail'><a href='tables/SO.html'>SO</a>.DATEREVISION</td>
- </tr>
- <tr>
-  <td class='detail'><a href='tables/SO.html'>SO</a>.SALESMAN</td>
- </tr>
- <tr>
-  <td class='detail'><a href='tables/SO.html'>SO</a>.SALESMANINITIALS</td>
- </tr>
- <tr>
-  <td class='detail'><a href='tables/SO.html'>SO</a>.SHIPTOADDRESS</td>
- </tr>
- <tr>
-  <td class='detail'><a href='tables/SO.html'>SO</a>.SHIPTOCITY</td>
- </tr>
- <tr>
-  <td class='detail'><a href='tables/SO.html'>SO</a>.SHIPTONAME</td>
- </tr>
- <tr>
-  <td class='detail'><a href='tables/SO.html'>SO</a>.SHIPTOZIP</td>
- </tr>
- <tr>
-  <td class='detail'><a href='tables/SO.html'>SO</a>.USERNAME</td>
- </tr>
- <tr>
-  <td class='detail'><a href='tables/SO.html'>SO</a>.VENDORPO</td>
- </tr>
- <tr>
   <td class='detail'><a href='tables/SOITEM.html'>SOITEM</a>.CUSTOMERPARTNUM</td>
  </tr>
  <tr>
@@ -888,10 +861,31 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
   <td class='detail'><a href='tables/TAXRATE.html'>TAXRATE</a>.DATELASTMODIFIED</td>
  </tr>
  <tr>
+  <td class='detail'><a href='tables/TIINVENTORYLOG.html'>TIINVENTORYLOG</a>.INFODATE</td>
+ </tr>
+ <tr>
   <td class='detail'><a href='tables/TRACKINGINFO.html'>TRACKINGINFO</a>.INFODATE</td>
  </tr>
  <tr>
   <td class='detail'><a href='tables/UPSRETURNSHIPMENT.html'>UPSRETURNSHIPMENT</a>.SHIPMENTIDENTIFICATIONNUMBER</td>
+ </tr>
+ <tr>
+  <td class='detail'><a href='tables/VENDOR.html'>VENDOR</a>.ACCOUNTINGHASH</td>
+ </tr>
+ <tr>
+  <td class='detail'><a href='tables/VENDOR.html'>VENDOR</a>.ACCOUNTINGID</td>
+ </tr>
+ <tr>
+  <td class='detail'><a href='tables/VENDOR.html'>VENDOR</a>.DATEENTERED</td>
+ </tr>
+ <tr>
+  <td class='detail'><a href='tables/VENDOR.html'>VENDOR</a>.DATELASTMODIFIED</td>
+ </tr>
+ <tr>
+  <td class='detail'><a href='tables/VENDOR.html'>VENDOR</a>.LASTCHANGEDUSER</td>
+ </tr>
+ <tr>
+  <td class='detail'><a href='tables/VENDOR.html'>VENDOR</a>.NOTE</td>
  </tr>
  <tr>
   <td class='detail'><a href='tables/VENDORCOSTRULE.html'>VENDORCOSTRULE</a>.DATECREATED</td>
@@ -977,15 +971,9 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
  <tr>
   <td class='detail'><a href='tables/XO.html'>XO</a>.SHIPTOZIP</td>
  </tr>
- <tr>
-  <td class='detail'><a href='tables/XOITEM.html'>XOITEM</a>.DATELASTFULFILLMENT</td>
- </tr>
- <tr>
-  <td class='detail'><a href='tables/XOITEM.html'>XOITEM</a>.DESCRIPTION</td>
- </tr>
 </tbody>
 </table>
-269 instances of anomaly detected<p></li>
+262 instances of anomaly detected<p></li>
 </ul>
 </div>
 </body>

@@ -102,7 +102,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 </tr>
 </thead>
 <tbody valign='top'>
-<tr class='even'>
+<tr class='odd'>
  <td class='primaryKey' title='Primary Key'>ID</td>
  <td class='detail'>integer</td>
  <td class='detail' align='right'>10</td>
@@ -111,7 +111,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
  <td class='detail'></td>
  <td class='detail'>
   <table border='0' width='100%' cellspacing='0' cellpadding='0'>
-   <tr class='relative even' valign='top'>
+   <tr class='relative odd' valign='top'>
     <td class='relatedTable detail' title="CUSTOMER.STATUSID refs CUSTOMERSTATUS.ID via INTEG_393"><a href='CUSTOMER.html'>CUSTOMER</a><span class='relatedKey'>.STATUSID</span>
     </td>
     <td class='constraint detail'>INTEG_393<span title='Restrict delete:
@@ -122,8 +122,8 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
  <td class='detail'> </td>
  <td class='comment detail'></td>
 </tr>
-<tr class='odd'>
- <td class='detail'>NAME</td>
+<tr class='even'>
+ <td class='indexedColumn' title='Indexed'>NAME</td>
  <td class='detail'>varchar</td>
  <td class='detail' align='right'>15</td>
  <td class='detail' align='center'></td>
@@ -134,83 +134,31 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
  <td class='comment detail'></td>
 </tr>
 </table>
-<p title='2 columns'>Analyzed at Mon Jul 01 09:44 PDT 2013<p/>
+<p title='2 columns'>Analyzed at Mon Jul 01 12:49 PDT 2013<p/>
 </td></tr></table>
 <div class='indent'>
 <b>Indexes:</b>
-<table class='dataTable' border='1' rules='groups'><colgroup><colgroup><colgroup><colgroup><colgroup>
+<table class='dataTable' border='1' rules='groups'><colgroup><colgroup><colgroup><colgroup>
 <thead>
  <tr>
   <th>Column(s)</th>
   <th>Type</th>
   <th>Sort</th>
   <th class='constraint' style='text-align:left;'>Constraint Name</th>
-  <th>Anomalies</th>
  </tr>
 </thead>
 <tbody>
  <tr>
-  <td class='indexedColumn'></td>
-  <td class='detail'>Performance</td>
-  <td class='detail' style='text-align:left;'></td>
-  <td class='constraint' style='text-align:left;'>CUSTOMERPARTSCUSTOMERID</td>
-  <td>&nbsp;</td>
- </tr>
- <tr>
-  <td class='indexedColumn'></td>
-  <td class='detail'>Performance</td>
-  <td class='detail' style='text-align:left;'></td>
-  <td class='constraint' style='text-align:left;'>CUSTOMERPARTSCUSTOMERPARTNU</td>
-  <td>&nbsp;</td>
- </tr>
- <tr>
-  <td class='indexedColumn'></td>
-  <td class='detail'>Performance</td>
-  <td class='detail' style='text-align:left;'></td>
-  <td class='constraint' style='text-align:left;'>CUSTOMERPARTSLASTCHANGEDUSE</td>
-  <td>&nbsp;</td>
- </tr>
- <tr>
-  <td class='indexedColumn'></td>
-  <td class='detail'>Performance</td>
-  <td class='detail' style='text-align:left;'></td>
-  <td class='constraint' style='text-align:left;'>CUSTOMERPARTSPRODUCTID</td>
-  <td>&nbsp;</td>
- </tr>
- <tr>
-  <td class='indexedColumn'></td>
+  <td class='indexedColumn'>NAME</td>
   <td class='detail'>Must be unique</td>
-  <td class='detail' style='text-align:left;'></td>
-  <td class='constraint' style='text-align:left;'>CUSTOMERPRODUCTCONSTRAINT</td>
-  <td class='detail'>These unique columns are also nullable</td>
- </tr>
- <tr>
-  <td class='indexedColumn'></td>
-  <td class='detail'>Performance</td>
-  <td class='detail' style='text-align:left;'></td>
-  <td class='constraint' style='text-align:left;'>RDB$FOREIGN217</td>
-  <td>&nbsp;</td>
- </tr>
- <tr>
-  <td class='indexedColumn'></td>
-  <td class='detail'>Performance</td>
-  <td class='detail' style='text-align:left;'></td>
-  <td class='constraint' style='text-align:left;'>RDB$FOREIGN218</td>
-  <td>&nbsp;</td>
- </tr>
- <tr>
-  <td class='indexedColumn'></td>
-  <td class='detail'>Performance</td>
-  <td class='detail' style='text-align:left;'></td>
-  <td class='constraint' style='text-align:left;'>RDB$FOREIGN251</td>
-  <td>&nbsp;</td>
+  <td class='detail' style='text-align:left;'><span title='Ascending'>Asc</span></td>
+  <td class='constraint' style='text-align:left;'>RDB$16</td>
  </tr>
  <tr>
   <td class='indexedColumn'>ID</td>
   <td class='detail'>Must be unique</td>
   <td class='detail' style='text-align:left;'><span title='Ascending'>Asc</span></td>
-  <td class='constraint' style='text-align:left;'>RDB$PRIMARY214</td>
-  <td>&nbsp;</td>
+  <td class='constraint' style='text-align:left;'>RDB$PRIMARY15</td>
  </tr>
 </table>
 </div>
@@ -223,21 +171,22 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 </map>
   <a name='diagram'><img id='oneDegreeImg' src='../diagrams/CUSTOMERSTATUS.1degree.png' usemap='#oneDegreeRelationshipsDiagram' class='diagram' border='0' alt='' align='left'></a>
 <map id="twoDegreesRelationshipsDiagram" name="twoDegreesRelationshipsDiagram">
-<area shape="rect" id="node1" href="CUSTOMER.html" title="CUSTOMER" alt="" coords="264,189,501,835">
-<area shape="rect" id="node3" href="ACCOUNT.html" title="ACCOUNT" alt="" coords="57,219,167,299">
-<area shape="rect" id="node5" href="CARRIER.html" title="CARRIER" alt="" coords="60,620,164,700">
-<area shape="rect" id="node7" title="null.PAYMENTTERMS" alt="" coords="21,724,203,804">
-<area shape="rect" id="node9" href="UPSSERVICES.html" title="UPSSERVICES" alt="" coords="43,957,181,1037">
-<area shape="rect" id="node11" href="SHIPTERMS.html" title="SHIPTERMS" alt="" coords="53,835,171,915">
-<area shape="rect" id="node13" href="CUSTOMERSTATUS.html" title="CUSTOMERSTATUS" alt="" coords="5,315,219,423">
-<area shape="rect" id="node15" href="TAXRATE.html" title="TAXRATE" alt="" coords="59,484,165,564">
-<area shape="rect" id="node16" href="LOCATION.html" title="LOCATION" alt="" coords="560,395,669,475">
-<area shape="rect" id="node18" href="POST.html" title="POST" alt="" coords="572,103,657,183">
-<area shape="rect" id="node20" href="QUICKLIST.html" title="QUICKLIST" alt="" coords="560,200,669,280">
-<area shape="rect" id="node22" href="RECEIPTITEM.html" title="RECEIPTITEM" alt="" coords="548,5,681,85">
-<area shape="rect" id="node26" href="RMA.html" title="RMA" alt="" coords="565,297,664,377">
-<area shape="rect" id="node28" href="SO.html" title="SO" alt="" coords="561,875,668,955">
-<area shape="rect" id="node35" href="WO.html" title="WO" alt="" coords="727,428,825,508">
+<area shape="rect" id="node1" href="CUSTOMER.html" title="CUSTOMER" alt="" coords="264,249,501,895">
+<area shape="rect" id="node3" href="ACCOUNT.html" title="ACCOUNT" alt="" coords="57,191,167,271">
+<area shape="rect" id="node5" href="CARRIER.html" title="CARRIER" alt="" coords="60,971,164,1051">
+<area shape="rect" id="node7" href="PAYMENTTERMS.html" title="PAYMENTTERMS" alt="" coords="33,412,191,492">
+<area shape="rect" id="node9" href="UPSSERVICES.html" title="UPSSERVICES" alt="" coords="43,776,181,856">
+<area shape="rect" id="node11" href="SHIPTERMS.html" title="SHIPTERMS" alt="" coords="53,509,171,589">
+<area shape="rect" id="node13" href="CUSTOMERSTATUS.html" title="CUSTOMERSTATUS" alt="" coords="5,287,219,395">
+<area shape="rect" id="node15" href="TAXRATE.html" title="TAXRATE" alt="" coords="55,873,169,953">
+<area shape="rect" id="node16" href="CUSTOMERPARTS.html" title="CUSTOMERPARTS" alt="" coords="548,5,713,85">
+<area shape="rect" id="node18" href="LOCATION.html" title="LOCATION" alt="" coords="576,103,685,183">
+<area shape="rect" id="node20" href="POITEM.html" title="POITEM" alt="" coords="579,673,683,753">
+<area shape="rect" id="node23" href="POST.html" title="POST" alt="" coords="588,200,673,280">
+<area shape="rect" id="node25" href="QUICKLIST.html" title="QUICKLIST" alt="" coords="576,297,685,377">
+<area shape="rect" id="node27" href="RECEIPTITEM.html" title="RECEIPTITEM" alt="" coords="564,916,697,996">
+<area shape="rect" id="node31" href="RMA.html" title="RMA" alt="" coords="581,395,680,475">
+<area shape="rect" id="node33" href="WO.html" title="WO" alt="" coords="759,281,857,361">
 </map>
 
   <a name='diagram'><img id='twoDegreesImg' src='../diagrams/CUSTOMERSTATUS.2degrees.png' usemap='#twoDegreesRelationshipsDiagram' class='diagram' border='0' alt='' align='left'></a>

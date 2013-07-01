@@ -8,7 +8,7 @@ DATABASEPATH="/home/ilopez/git/fishbowldatadictionary/data/Fishbowl2013.5.FDB";
 HOST="localhost:3050"; 
 USERNAME="sysdba";
 PASSWORD="habcabom";
-OUTPUTDIRECTORY="../dictionary/"
+OUTPUTDIRECTORY="../dictionary/Fishbowl2013.5/"
 DRIVER="/opt/jars/jaybird/jaybird-full-2.2.3.jar";
 SCHEMADESC="Community Fishbowl Inventory Data Dictionary";
 

@@ -114,7 +114,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
  <td class='comment detail'></td>
 </tr>
 <tr class='even'>
- <td class='detail'>TABLEID1</td>
+ <td class='indexedColumn' title='Indexed'>TABLEID1</td>
  <td class='detail'>integer</td>
  <td class='detail' align='right'>10</td>
  <td class='detail' align='center'></td>
@@ -134,7 +134,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
  <td class='comment detail'></td>
 </tr>
 <tr class='odd'>
- <td class='detail'>RECORDID1</td>
+ <td class='indexedColumn' title='Indexed'>RECORDID1</td>
  <td class='detail'>integer</td>
  <td class='detail' align='right'>10</td>
  <td class='detail' align='center'></td>
@@ -145,7 +145,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
  <td class='comment detail'></td>
 </tr>
 <tr class='even'>
- <td class='detail'>TABLEID2</td>
+ <td class='indexedColumn' title='Indexed'>TABLEID2</td>
  <td class='detail'>integer</td>
  <td class='detail' align='right'>10</td>
  <td class='detail' align='center'></td>
@@ -165,7 +165,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
  <td class='comment detail'></td>
 </tr>
 <tr class='odd'>
- <td class='detail'>RECORDID2</td>
+ <td class='indexedColumn' title='Indexed'>RECORDID2</td>
  <td class='detail'>integer</td>
  <td class='detail' align='right'>10</td>
  <td class='detail' align='center'></td>
@@ -176,7 +176,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
  <td class='comment detail'></td>
 </tr>
 <tr class='even'>
- <td class='detail'>TYPEID</td>
+ <td class='indexedColumn' title='Indexed'>TYPEID</td>
  <td class='detail'>integer</td>
  <td class='detail' align='right'>10</td>
  <td class='detail' align='center'></td>
@@ -207,34 +207,73 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
  <td class='comment detail'></td>
 </tr>
 </table>
-<p title='7 columns'>Analyzed at Mon Jul 01 09:44 PDT 2013<p/>
+<p title='7 columns'>Analyzed at Mon Jul 01 12:49 PDT 2013<p/>
 </td></tr></table>
 <div class='indent'>
 <b>Indexes:</b>
-<table class='dataTable' border='1' rules='groups'><colgroup><colgroup><colgroup><colgroup><colgroup>
+<table class='dataTable' border='1' rules='groups'><colgroup><colgroup><colgroup><colgroup>
 <thead>
  <tr>
   <th>Column(s)</th>
   <th>Type</th>
   <th>Sort</th>
   <th class='constraint' style='text-align:left;'>Constraint Name</th>
-  <th>Anomalies</th>
  </tr>
 </thead>
 <tbody>
  <tr>
-  <td class='indexedColumn'></td>
-  <td class='detail'>Must be unique</td>
-  <td class='detail' style='text-align:left;'></td>
-  <td class='constraint' style='text-align:left;'>RDB$108</td>
-  <td class='detail'>These unique columns are also nullable</td>
+  <td class='indexedColumn'>RECORDID1</td>
+  <td class='detail'>Performance</td>
+  <td class='detail' style='text-align:left;'><span title='Ascending'>Asc</span></td>
+  <td class='constraint' style='text-align:left;'>OBJECTTOOBJECTRECORDID1_IDX</td>
+ </tr>
+ <tr>
+  <td class='indexedColumn'>RECORDID2</td>
+  <td class='detail'>Performance</td>
+  <td class='detail' style='text-align:left;'><span title='Ascending'>Asc</span></td>
+  <td class='constraint' style='text-align:left;'>OBJECTTOOBJECTRECORDID2_IDX</td>
+ </tr>
+ <tr>
+  <td class='indexedColumn'>TABLEID1</td>
+  <td class='detail'>Performance</td>
+  <td class='detail' style='text-align:left;'><span title='Ascending'>Asc</span></td>
+  <td class='constraint' style='text-align:left;'>OBJECTTOOBJECTTABLEID1</td>
+ </tr>
+ <tr>
+  <td class='indexedColumn'>TABLEID2</td>
+  <td class='detail'>Performance</td>
+  <td class='detail' style='text-align:left;'><span title='Ascending'>Asc</span></td>
+  <td class='constraint' style='text-align:left;'>OBJECTTOOBJECTTABLEID2</td>
+ </tr>
+ <tr>
+  <td class='indexedColumn'>TYPEID</td>
+  <td class='detail'>Performance</td>
+  <td class='detail' style='text-align:left;'><span title='Ascending'>Asc</span></td>
+  <td class='constraint' style='text-align:left;'>OBJECTTOOBJECTTYPEID_IDX</td>
+ </tr>
+ <tr>
+  <td class='indexedColumn'>TABLEID1</td>
+  <td class='detail'>Performance</td>
+  <td class='detail' style='text-align:left;'><span title='Ascending'>Asc</span></td>
+  <td class='constraint' style='text-align:left;'>RDB$FOREIGN582</td>
+ </tr>
+ <tr>
+  <td class='indexedColumn'>TABLEID2</td>
+  <td class='detail'>Performance</td>
+  <td class='detail' style='text-align:left;'><span title='Ascending'>Asc</span></td>
+  <td class='constraint' style='text-align:left;'>RDB$FOREIGN583</td>
+ </tr>
+ <tr>
+  <td class='indexedColumn'>TYPEID</td>
+  <td class='detail'>Performance</td>
+  <td class='detail' style='text-align:left;'><span title='Ascending'>Asc</span></td>
+  <td class='constraint' style='text-align:left;'>RDB$FOREIGN584</td>
  </tr>
  <tr>
   <td class='indexedColumn'>ID</td>
   <td class='detail'>Must be unique</td>
   <td class='detail' style='text-align:left;'><span title='Ascending'>Asc</span></td>
-  <td class='constraint' style='text-align:left;'>RDB$PRIMARY107</td>
-  <td>&nbsp;</td>
+  <td class='constraint' style='text-align:left;'>RDB$PRIMARY581</td>
  </tr>
 </table>
 </div>

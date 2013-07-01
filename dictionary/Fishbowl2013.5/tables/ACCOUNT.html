@@ -147,6 +147,12 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
     <td class='constraint detail'>INTEG_404<span title='Restrict delete:
  Parent cannot be deleted if children exist'>&nbsp;R</span></td>
    </tr>
+   <tr class='relative even' valign='top'>
+    <td class='relatedTable detail' title="VENDOR.ACCOUNTID refs ACCOUNT.ID via INTEG_371"><a href='VENDOR.html'>VENDOR</a><span class='relatedKey'>.ACCOUNTID</span>
+    </td>
+    <td class='constraint detail'>INTEG_371<span title='Restrict delete:
+ Parent cannot be deleted if children exist'>&nbsp;R</span></td>
+   </tr>
   </table>
 </td>
  <td class='detail'> </td>
@@ -173,7 +179,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
  <td class='comment detail'></td>
 </tr>
 </table>
-<p title='2 columns'>Analyzed at Mon Jul 01 09:44 PDT 2013<p/>
+<p title='2 columns'>Analyzed at Mon Jul 01 12:49 PDT 2013<p/>
 </td></tr></table>
 <div class='indent'>
 <b>Indexes:</b>
@@ -211,50 +217,59 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 <br><form action='get'><b>Close relationships</b><span class='degrees' id='degrees' title='Detail diminishes with increased separation from ACCOUNT'>
 &nbsp;within <label for='oneDegree'><input type='radio' name='degrees' id='oneDegree' checked>one</label>  <label for='twoDegrees'><input type='radio' name='degrees' id='twoDegrees'>two degrees</label> of separation</span><b>:</b></form>
 <map id="oneDegreeRelationshipsDiagram" name="oneDegreeRelationshipsDiagram">
-<area shape="rect" id="node1" href="ACCOUNT.html" title="ACCOUNT" alt="" coords="197,731,365,839">
-<area shape="rect" id="node3" href="ACCOUNTTYPE.html" title="ACCOUNTTYPE" alt="" coords="5,758,152,861">
+<area shape="rect" id="node1" href="ACCOUNT.html" title="ACCOUNT" alt="" coords="197,903,365,1011">
+<area shape="rect" id="node3" href="ACCOUNTTYPE.html" title="ACCOUNTTYPE" alt="" coords="5,930,152,1033">
 <area shape="rect" id="node4" href="ACCOUNTGROUPRELATION.html" title="ACCOUNTGROUPRELATION" alt="" coords="413,5,648,131">
 <area shape="rect" id="node6" href="ADDRESS.html" title="ADDRESS" alt="" coords="428,147,633,522">
 <area shape="rect" id="node8" href="COMPANY.html" title="COMPANY" alt="" coords="437,538,624,867">
 <area shape="rect" id="node10" href="CONTACT.html" title="CONTACT" alt="" coords="457,884,604,1100">
 <area shape="rect" id="node12" href="CUSTOMER.html" title="CUSTOMER" alt="" coords="412,1117,649,1763">
 <area shape="rect" id="node14" href="TAG.html" title="TAG" alt="" coords="424,1780,637,2177">
+<area shape="rect" id="node16" href="VENDOR.html" title="VENDOR" alt="" coords="412,2195,649,2773">
 </map>
   <a name='diagram'><img id='oneDegreeImg' src='../diagrams/ACCOUNT.1degree.png' usemap='#oneDegreeRelationshipsDiagram' class='diagram' border='0' alt='' align='left'></a>
 <map id="twoDegreesRelationshipsDiagram" name="twoDegreesRelationshipsDiagram">
-<area shape="rect" id="node1" href="ACCOUNT.html" title="ACCOUNT" alt="" coords="204,414,372,522">
-<area shape="rect" id="node3" href="ACCOUNTTYPE.html" title="ACCOUNTTYPE" alt="" coords="5,441,152,543">
-<area shape="rect" id="node4" href="ACCOUNTGROUPRELATION.html" title="ACCOUNTGROUPRELATION" alt="" coords="427,5,661,131">
-<area shape="rect" id="node7" href="ACCOUNTGROUP.html" title="ACCOUNTGROUP" alt="" coords="207,28,369,108">
-<area shape="rect" id="node8" href="ADDRESS.html" title="ADDRESS" alt="" coords="709,287,915,662">
-<area shape="rect" id="node11" href="LOCATIONGROUP.html" title="LOCATIONGROUP" alt="" coords="463,1065,625,1145">
-<area shape="rect" id="node13" href="ADDRESSTYPE.html" title="ADDRESSTYPE" alt="" coords="471,417,617,497">
-<area shape="rect" id="node14" href="COMPANY.html" title="COMPANY" alt="" coords="451,647,637,977">
-<area shape="rect" id="node17" href="CARRIER.html" title="CARRIER" alt="" coords="236,1593,340,1673">
-<area shape="rect" id="node18" href="CONTACT.html" title="CONTACT" alt="" coords="471,148,617,364">
-<area shape="rect" id="node21" href="CONTACTTYPE.html" title="CONTACTTYPE" alt="" coords="217,216,359,296">
-<area shape="rect" id="node22" href="CUSTOMER.html" title="CUSTOMER" alt="" coords="425,1162,663,1809">
-<area shape="rect" id="node26" title="null.PAYMENTTERMS" alt="" coords="197,1703,379,1783">
-<area shape="rect" id="node28" href="UPSSERVICES.html" title="UPSSERVICES" alt="" coords="219,1963,357,2043">
-<area shape="rect" id="node30" href="SHIPTERMS.html" title="SHIPTERMS" alt="" coords="229,1844,347,1924">
-<area shape="rect" id="node32" href="CUSTOMERSTATUS.html" title="CUSTOMERSTATUS" alt="" coords="199,1252,377,1332">
-<area shape="rect" id="node34" href="TAXRATE.html" title="TAXRATE" alt="" coords="235,1059,341,1139">
-<area shape="rect" id="node35" href="LOCATION.html" title="LOCATION" alt="" coords="757,956,867,1036">
-<area shape="rect" id="node38" href="PART.html" title="PART" alt="" coords="487,551,601,631">
-<area shape="rect" id="node40" href="POST.html" title="POST" alt="" coords="769,1372,855,1452">
-<area shape="rect" id="node42" href="QUICKLIST.html" title="QUICKLIST" alt="" coords="757,1275,867,1355">
-<area shape="rect" id="node44" href="RECEIPTITEM.html" title="RECEIPTITEM" alt="" coords="745,859,879,939">
-<area shape="rect" id="node49" href="RMA.html" title="RMA" alt="" coords="763,1141,861,1221">
-<area shape="rect" id="node52" href="SERIAL.html" title="SERIAL" alt="" coords="1551,799,1652,879">
-<area shape="rect" id="node54" href="TAG.html" title="TAG" alt="" coords="1255,653,1468,1051">
-<area shape="rect" id="node67" href="TAGTYPE.html" title="TAGTYPE" alt="" coords="1104,815,1208,895">
-<area shape="rect" id="node69" href="WOITEM.html" title="WOITEM" alt="" coords="1104,948,1208,1028">
-<area shape="rect" id="node55" href="SO.html" title="SO" alt="" coords="759,1865,865,1945">
-<area shape="rect" id="node76" href="WO.html" title="WO" alt="" coords="960,965,1059,1045">
-<area shape="rect" id="node70" href="TRACKINGDATE.html" title="TRACKINGDATE" alt="" coords="1527,507,1676,587">
-<area shape="rect" id="node72" href="TRACKINGINTEGER.html" title="TRACKINGINTEGER" alt="" coords="1515,604,1688,684">
-<area shape="rect" id="node74" href="TRACKINGTEXT.html" title="TRACKINGTEXT" alt="" coords="1528,701,1675,781">
-<area shape="rect" id="node82" href="XO.html" title="XO" alt="" coords="1552,1065,1651,1145">
+<area shape="rect" id="node1" href="ACCOUNT.html" title="ACCOUNT" alt="" coords="197,378,365,486">
+<area shape="rect" id="node3" href="ACCOUNTTYPE.html" title="ACCOUNTTYPE" alt="" coords="5,405,152,507">
+<area shape="rect" id="node4" href="ACCOUNTGROUPRELATION.html" title="ACCOUNTGROUPRELATION" alt="" coords="413,5,648,131">
+<area shape="rect" id="node7" href="ACCOUNTGROUP.html" title="ACCOUNTGROUP" alt="" coords="200,28,363,108">
+<area shape="rect" id="node8" href="ADDRESS.html" title="ADDRESS" alt="" coords="935,417,1140,791">
+<area shape="rect" id="node11" href="LOCATIONGROUP.html" title="LOCATIONGROUP" alt="" coords="703,1971,865,2051">
+<area shape="rect" id="node13" href="ADDRESSTYPE.html" title="ADDRESSTYPE" alt="" coords="711,461,857,541">
+<area shape="rect" id="node14" href="COMPANY.html" title="COMPANY" alt="" coords="437,1085,624,1414">
+<area shape="rect" id="node17" href="CARRIER.html" title="CARRIER" alt="" coords="229,1612,333,1692">
+<area shape="rect" id="node18" href="CONTACT.html" title="CONTACT" alt="" coords="457,148,604,364">
+<area shape="rect" id="node21" href="CONTACTTYPE.html" title="CONTACTTYPE" alt="" coords="211,216,352,296">
+<area shape="rect" id="node22" href="CUSTOMER.html" title="CUSTOMER" alt="" coords="919,1303,1156,1950">
+<area shape="rect" id="node26" href="PAYMENTTERMS.html" title="PAYMENTTERMS" alt="" coords="203,1412,360,1492">
+<area shape="rect" id="node28" href="UPSSERVICES.html" title="UPSSERVICES" alt="" coords="715,1871,853,1951">
+<area shape="rect" id="node30" href="SHIPTERMS.html" title="SHIPTERMS" alt="" coords="223,1509,340,1589">
+<area shape="rect" id="node32" href="CUSTOMERSTATUS.html" title="CUSTOMERSTATUS" alt="" coords="695,1448,873,1528">
+<area shape="rect" id="node34" href="TAXRATE.html" title="TAXRATE" alt="" coords="727,1099,841,1179">
+<area shape="rect" id="node40" href="VENDOR.html" title="VENDOR" alt="" coords="412,453,649,1032">
+<area shape="rect" id="node35" href="CUSTOMERPARTS.html" title="CUSTOMERPARTS" alt="" coords="1208,1207,1373,1287">
+<area shape="rect" id="node37" href="LOCATION.html" title="LOCATION" alt="" coords="1236,1304,1345,1384">
+<area shape="rect" id="node47" href="CURRENCY.html" title="CURRENCY" alt="" coords="223,1119,340,1199">
+<area shape="rect" id="node98" href="VENDORSTATUS.html" title="VENDORSTATUS" alt="" coords="204,503,359,583">
+<area shape="rect" id="node42" href="PART.html" title="PART" alt="" coords="980,944,1095,1024">
+<area shape="rect" id="node44" href="PO.html" title="PO" alt="" coords="984,1171,1091,1251">
+<area shape="rect" id="node53" href="POITEM.html" title="POITEM" alt="" coords="1239,1012,1343,1092">
+<area shape="rect" id="node58" href="POST.html" title="POST" alt="" coords="1248,1401,1333,1481">
+<area shape="rect" id="node60" href="QUICKLIST.html" title="QUICKLIST" alt="" coords="1236,1499,1345,1579">
+<area shape="rect" id="node62" href="RECEIPTITEM.html" title="RECEIPTITEM" alt="" coords="1224,1109,1357,1189">
+<area shape="rect" id="node67" href="RMA.html" title="RMA" alt="" coords="1241,1596,1340,1676">
+<area shape="rect" id="node70" href="RMAITEM.html" title="RMAITEM" alt="" coords="1425,791,1529,871">
+<area shape="rect" id="node73" href="SERIAL.html" title="SERIAL" alt="" coords="2023,729,2124,809">
+<area shape="rect" id="node75" href="TAG.html" title="TAG" alt="" coords="1727,828,1940,1225">
+<area shape="rect" id="node80" href="TAGTYPE.html" title="TAGTYPE" alt="" coords="1576,976,1680,1056">
+<area shape="rect" id="node82" href="WOITEM.html" title="WOITEM" alt="" coords="1576,1123,1680,1203">
+<area shape="rect" id="node103" href="WO.html" title="WO" alt="" coords="1428,1483,1527,1563">
+<area shape="rect" id="node84" href="TRACKINGDATE.html" title="TRACKINGDATE" alt="" coords="1999,827,2148,907">
+<area shape="rect" id="node86" href="TRACKINGDECIMAL.html" title="TRACKINGDECIMAL" alt="" coords="1987,924,2160,1004">
+<area shape="rect" id="node88" href="TRACKINGINTEGER.html" title="TRACKINGINTEGER" alt="" coords="1987,1021,2160,1101">
+<area shape="rect" id="node90" href="TRACKINGTEXT.html" title="TRACKINGTEXT" alt="" coords="2000,632,2147,712">
+<area shape="rect" id="node100" href="VENDORCOSTRULE.html" title="VENDORCOSTRULE" alt="" coords="1201,843,1380,923">
+<area shape="rect" id="node109" href="XO.html" title="XO" alt="" coords="2024,2051,2123,2131">
 </map>
 
   <a name='diagram'><img id='twoDegreesImg' src='../diagrams/ACCOUNT.2degrees.png' usemap='#twoDegreesRelationshipsDiagram' class='diagram' border='0' alt='' align='left'></a>

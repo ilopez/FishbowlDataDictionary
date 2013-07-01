@@ -102,7 +102,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 </tr>
 </thead>
 <tbody valign='top'>
-<tr class='odd'>
+<tr class='even'>
  <td class='primaryKey' title='Primary Key'>ID</td>
  <td class='detail'>integer</td>
  <td class='detail' align='right'>10</td>
@@ -113,7 +113,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
  <td class='detail'> </td>
  <td class='comment detail'></td>
 </tr>
-<tr class='even'>
+<tr class='odd'>
  <td class='detail'>MEMO</td>
  <td class='detail'>blob sub_type 1</td>
  <td class='detail' align='right'>0</td>
@@ -124,7 +124,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
  <td class='detail'> </td>
  <td class='comment detail'></td>
 </tr>
-<tr class='odd'>
+<tr class='even'>
  <td class='detail'>USERNAME</td>
  <td class='detail'>varchar</td>
  <td class='detail' align='right'>15</td>
@@ -135,7 +135,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
  <td class='detail'> </td>
  <td class='comment detail'></td>
 </tr>
-<tr class='even'>
+<tr class='odd'>
  <td class='detail'>DATECREATED</td>
  <td class='detail'>timestamp</td>
  <td class='detail' align='right'>19</td>
@@ -146,8 +146,8 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
  <td class='detail'> </td>
  <td class='comment detail'></td>
 </tr>
-<tr class='odd'>
- <td class='detail'>TABLEID</td>
+<tr class='even'>
+ <td class='indexedColumn' title='Indexed'>TABLEID</td>
  <td class='detail'>integer</td>
  <td class='detail' align='right'>10</td>
  <td class='detail' align='center'></td>
@@ -157,8 +157,8 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
  <td class='detail'> </td>
  <td class='comment detail'></td>
 </tr>
-<tr class='even'>
- <td class='detail'>RECORDID</td>
+<tr class='odd'>
+ <td class='indexedColumn' title='Indexed'>RECORDID</td>
  <td class='detail'>integer</td>
  <td class='detail' align='right'>10</td>
  <td class='detail' align='center'></td>
@@ -169,8 +169,40 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
  <td class='comment detail'></td>
 </tr>
 </table>
-<p title='6 columns'>Analyzed at Mon Jul 01 09:44 PDT 2013<p/>
+<p title='6 columns'>Analyzed at Mon Jul 01 12:49 PDT 2013<p/>
 </td></tr></table>
+<div class='indent'>
+<b>Indexes:</b>
+<table class='dataTable' border='1' rules='groups'><colgroup><colgroup><colgroup><colgroup>
+<thead>
+ <tr>
+  <th>Column(s)</th>
+  <th>Type</th>
+  <th>Sort</th>
+  <th class='constraint' style='text-align:left;'>Constraint Name</th>
+ </tr>
+</thead>
+<tbody>
+ <tr>
+  <td class='indexedColumn'>RECORDID</td>
+  <td class='detail'>Performance</td>
+  <td class='detail' style='text-align:left;'><span title='Ascending'>Asc</span></td>
+  <td class='constraint' style='text-align:left;'>MEMORECORDID</td>
+ </tr>
+ <tr>
+  <td class='indexedColumn'>TABLEID</td>
+  <td class='detail'>Performance</td>
+  <td class='detail' style='text-align:left;'><span title='Ascending'>Asc</span></td>
+  <td class='constraint' style='text-align:left;'>MEMOTABLEID</td>
+ </tr>
+ <tr>
+  <td class='indexedColumn'>ID</td>
+  <td class='detail'>Must be unique</td>
+  <td class='detail' style='text-align:left;'><span title='Ascending'>Asc</span></td>
+  <td class='constraint' style='text-align:left;'>RDB$PRIMARY80</td>
+ </tr>
+</table>
+</div>
 </div>
 </body>
 </html>

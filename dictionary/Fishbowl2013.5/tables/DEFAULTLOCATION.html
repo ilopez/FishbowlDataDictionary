@@ -102,8 +102,8 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 </tr>
 </thead>
 <tbody valign='top'>
-<tr class='odd'>
- <td class='indexedColumn' title='Indexed'>ID</td>
+<tr class='even'>
+ <td class='primaryKey' title='Primary Key'>ID</td>
  <td class='detail'>integer</td>
  <td class='detail' align='right'>10</td>
  <td class='detail' align='center' title='nullable'>&nbsp;&radic;&nbsp;</td>
@@ -113,28 +113,8 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
  <td class='detail'> </td>
  <td class='comment detail'></td>
 </tr>
-<tr class='even'>
- <td class='detail'>PARTID</td>
- <td class='detail'>integer</td>
- <td class='detail' align='right'>10</td>
- <td class='detail' align='center'></td>
- <td class='detail' align='center'></td>
- <td class='detail'></td>
- <td class='detail'></td>
- <td class='detail'>
-  <table border='0' width='100%' cellspacing='0' cellpadding='0'>
-   <tr class='relative even' valign='top'>
-    <td class='relatedTable detail' title="DEFAULTLOCATION.PARTID refs PART.ID via INTEG_1047"><a href='PART.html'>PART</a><span class='relatedKey'>.ID</span>
-    </td>
-    <td class='constraint detail'>INTEG_1047<span title='Restrict delete:
- Parent cannot be deleted if children exist'>&nbsp;R</span></td>
-   </tr>
-  </table>
- </td>
- <td class='comment detail'></td>
-</tr>
 <tr class='odd'>
- <td class='detail'>LOCATIONID</td>
+ <td class='indexedColumn' title='Indexed'>PARTID</td>
  <td class='detail'>integer</td>
  <td class='detail' align='right'>10</td>
  <td class='detail' align='center'></td>
@@ -144,9 +124,9 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
  <td class='detail'>
   <table border='0' width='100%' cellspacing='0' cellpadding='0'>
    <tr class='relative odd' valign='top'>
-    <td class='relatedTable detail' title="DEFAULTLOCATION.LOCATIONID refs LOCATION.ID via INTEG_1049"><a href='LOCATION.html'>LOCATION</a><span class='relatedKey'>.ID</span>
+    <td class='relatedTable detail' title="DEFAULTLOCATION.PARTID refs PART.ID via INTEG_1047"><a href='PART.html'>PART</a><span class='relatedKey'>.ID</span>
     </td>
-    <td class='constraint detail'>INTEG_1049<span title='Restrict delete:
+    <td class='constraint detail'>INTEG_1047<span title='Restrict delete:
  Parent cannot be deleted if children exist'>&nbsp;R</span></td>
    </tr>
   </table>
@@ -154,7 +134,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
  <td class='comment detail'></td>
 </tr>
 <tr class='even'>
- <td class='detail'>LOCATIONGROUPID</td>
+ <td class='indexedColumn' title='Indexed'>LOCATIONID</td>
  <td class='detail'>integer</td>
  <td class='detail' align='right'>10</td>
  <td class='detail' align='center'></td>
@@ -164,6 +144,26 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
  <td class='detail'>
   <table border='0' width='100%' cellspacing='0' cellpadding='0'>
    <tr class='relative even' valign='top'>
+    <td class='relatedTable detail' title="DEFAULTLOCATION.LOCATIONID refs LOCATION.ID via INTEG_1049"><a href='LOCATION.html'>LOCATION</a><span class='relatedKey'>.ID</span>
+    </td>
+    <td class='constraint detail'>INTEG_1049<span title='Restrict delete:
+ Parent cannot be deleted if children exist'>&nbsp;R</span></td>
+   </tr>
+  </table>
+ </td>
+ <td class='comment detail'></td>
+</tr>
+<tr class='odd'>
+ <td class='indexedColumn' title='Indexed'>LOCATIONGROUPID</td>
+ <td class='detail'>integer</td>
+ <td class='detail' align='right'>10</td>
+ <td class='detail' align='center'></td>
+ <td class='detail' align='center'></td>
+ <td class='detail'></td>
+ <td class='detail'></td>
+ <td class='detail'>
+  <table border='0' width='100%' cellspacing='0' cellpadding='0'>
+   <tr class='relative odd' valign='top'>
     <td class='relatedTable detail' title="DEFAULTLOCATION.LOCATIONGROUPID refs LOCATIONGROUP.ID via INTEG_1051"><a href='LOCATIONGROUP.html'>LOCATIONGROUP</a><span class='relatedKey'>.ID</span>
     </td>
     <td class='constraint detail'>INTEG_1051<span title='Restrict delete:
@@ -174,27 +174,55 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
  <td class='comment detail'></td>
 </tr>
 </table>
-<p title='4 columns'>Analyzed at Mon Jul 01 09:44 PDT 2013<p/>
+<p title='4 columns'>Analyzed at Mon Jul 01 12:49 PDT 2013<p/>
 </td></tr></table>
 <div class='indent'>
 <b>Indexes:</b>
-<table class='dataTable' border='1' rules='groups'><colgroup><colgroup><colgroup><colgroup><colgroup>
+<table class='dataTable' border='1' rules='groups'><colgroup><colgroup><colgroup><colgroup>
 <thead>
  <tr>
   <th>Column(s)</th>
   <th>Type</th>
   <th>Sort</th>
   <th class='constraint' style='text-align:left;'>Constraint Name</th>
-  <th>Anomalies</th>
  </tr>
 </thead>
 <tbody>
  <tr>
-  <td class='indexedColumn'>ID</td>
-  <td class='detail'>Must be unique</td>
+  <td class='indexedColumn'>LOCATIONGROUPID</td>
+  <td class='detail'>Performance</td>
   <td class='detail' style='text-align:left;'><span title='Ascending'>Asc</span></td>
-  <td class='constraint' style='text-align:left;'>RDB$PRIMARY55</td>
-  <td class='detail'>This unique column is also nullable</td>
+  <td class='constraint' style='text-align:left;'>DEFAULTLOCATIONLOCATIONGROUPID</td>
+ </tr>
+ <tr>
+  <td class='indexedColumn'>LOCATIONID</td>
+  <td class='detail'>Performance</td>
+  <td class='detail' style='text-align:left;'><span title='Ascending'>Asc</span></td>
+  <td class='constraint' style='text-align:left;'>DEFAULTLOCATIONLOCATIONID</td>
+ </tr>
+ <tr>
+  <td class='indexedColumn'>PARTID</td>
+  <td class='detail'>Performance</td>
+  <td class='detail' style='text-align:left;'><span title='Ascending'>Asc</span></td>
+  <td class='constraint' style='text-align:left;'>DEFAULTLOCATIONPARTID</td>
+ </tr>
+ <tr>
+  <td class='indexedColumn'>PARTID</td>
+  <td class='detail'>Performance</td>
+  <td class='detail' style='text-align:left;'><span title='Ascending'>Asc</span></td>
+  <td class='constraint' style='text-align:left;'>RDB$FOREIGN511</td>
+ </tr>
+ <tr>
+  <td class='indexedColumn'>LOCATIONID</td>
+  <td class='detail'>Performance</td>
+  <td class='detail' style='text-align:left;'><span title='Ascending'>Asc</span></td>
+  <td class='constraint' style='text-align:left;'>RDB$FOREIGN512</td>
+ </tr>
+ <tr>
+  <td class='indexedColumn'>LOCATIONGROUPID</td>
+  <td class='detail'>Performance</td>
+  <td class='detail' style='text-align:left;'><span title='Ascending'>Asc</span></td>
+  <td class='constraint' style='text-align:left;'>RDB$FOREIGN513</td>
  </tr>
 </table>
 </div>
@@ -209,46 +237,45 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 </map>
   <a name='diagram'><img id='oneDegreeImg' src='../diagrams/DEFAULTLOCATION.1degree.png' usemap='#oneDegreeRelationshipsDiagram' class='diagram' border='0' alt='' align='left'></a>
 <map id="twoDegreesRelationshipsDiagram" name="twoDegreesRelationshipsDiagram">
-<area shape="rect" id="node1" href="ADDRESS.html" title="ADDRESS" alt="" coords="620,842,727,922">
-<area shape="rect" id="node3" href="LOCATIONGROUP.html" title="LOCATIONGROUP" alt="" coords="335,809,516,979">
-<area shape="rect" id="node41" href="QBCLASS.html" title="QBCLASS" alt="" coords="183,1325,287,1405">
-<area shape="rect" id="node4" href="BOMITEM.html" title="BOMITEM" alt="" coords="907,1754,1013,1834">
-<area shape="rect" id="node6" href="BOM.html" title="BOM" alt="" coords="376,1689,475,1769">
-<area shape="rect" id="node8" href="PART.html" title="PART" alt="" coords="563,1955,784,3033">
-<area shape="rect" id="node10" href="UOM.html" title="UOM" alt="" coords="181,2129,288,2209">
-<area shape="rect" id="node24" href="TAXRATE.html" title="TAXRATE" alt="" coords="181,1589,288,1669">
-<area shape="rect" id="node48" href="ASACCOUNT.html" title="ASACCOUNT" alt="" coords="7,3018,135,3098">
-<area shape="rect" id="node52" href="PRODUCT.html" title="PRODUCT" alt="" coords="371,1991,480,2071">
-<area shape="rect" id="node58" href="PARTTYPE.html" title="PARTTYPE" alt="" coords="371,1786,480,1866">
-<area shape="rect" id="node11" href="BOMITEMTOLOCATION.html" title="BOMITEMTOLOCATION" alt="" coords="1135,605,1329,685">
-<area shape="rect" id="node15" href="LOCATION.html" title="LOCATION" alt="" coords="571,114,776,511">
-<area shape="rect" id="node22" href="CUSTOMER.html" title="CUSTOMER" alt="" coords="367,1555,484,1635">
-<area shape="rect" id="node36" title="null.VENDOR" alt="" coords="9,1521,132,1601">
-<area shape="rect" id="node39" href="LOCATIONTYPE.html" title="LOCATIONTYPE" alt="" coords="352,135,499,215">
-<area shape="rect" id="node16" href="BOMTOLOCATION.html" title="BOMTOLOCATION" alt="" coords="879,442,1041,522">
-<area shape="rect" id="node20" href="COSTLAYER.html" title="COSTLAYER" alt="" coords="899,2179,1021,2259">
-<area shape="rect" id="node25" href="DEFAULTLOCATION.html" title="DEFAULTLOCATION" alt="" coords="831,672,1089,825">
-<area shape="rect" id="node29" href="INVENTORYLOG.html" title="INVENTORYLOG" alt="" coords="885,198,1035,278">
-<area shape="rect" id="node42" href="MO.html" title="MO" alt="" coords="917,539,1003,619">
-<area shape="rect" id="node46" href="SO.html" title="SO" alt="" coords="620,1303,727,1383">
-<area shape="rect" id="node62" href="PARTCOST.html" title="PARTCOST" alt="" coords="903,2277,1017,2357">
-<area shape="rect" id="node64" href="PARTREORDER.html" title="PARTREORDER" alt="" coords="887,1559,1033,1639">
-<area shape="rect" id="node67" href="PARTTOTRACKING.html" title="PARTTOTRACKING" alt="" coords="875,2082,1045,2162">
-<area shape="rect" id="node69" href="PICK.html" title="PICK" alt="" coords="624,1206,723,1286">
-<area shape="rect" id="node71" href="PICKITEM.html" title="PICKITEM" alt="" coords="908,1985,1012,2065">
-<area shape="rect" id="node75" href="PO.html" title="PO" alt="" coords="620,1437,727,1517">
-<area shape="rect" id="node87" href="RECEIPT.html" title="RECEIPT" alt="" coords="620,1109,727,1189">
-<area shape="rect" id="node89" href="RECEIPTITEM.html" title="RECEIPTITEM" alt="" coords="893,1657,1027,1737">
-<area shape="rect" id="node96" href="RMA.html" title="RMA" alt="" coords="624,1534,723,1614">
-<area shape="rect" id="node99" href="SHIP.html" title="SHIP" alt="" coords="624,939,723,1019">
-<area shape="rect" id="node105" href="TAG.html" title="TAG" alt="" coords="1373,867,1472,947">
-<area shape="rect" id="node109" href="WOITEM.html" title="WOITEM" alt="" coords="1180,1641,1284,1721">
-<area shape="rect" id="node120" href="WO.html" title="WO" alt="" coords="911,1365,1009,1445">
-<area shape="rect" id="node112" href="USERTOLG.html" title="USERTOLG" alt="" coords="616,709,731,789">
-<area shape="rect" id="node114" href="VENDORCOSTRULE.html" title="VENDORCOSTRULE" alt="" coords="871,1851,1049,1931">
-<area shape="rect" id="node117" href="WATCH.html" title="WATCH" alt="" coords="913,1462,1007,1542">
-<area shape="rect" id="node128" href="XO.html" title="XO" alt="" coords="1516,435,1615,515">
-<area shape="rect" id="node132" href="XOITEM.html" title="XOITEM" alt="" coords="1659,3054,1763,3134">
+<area shape="rect" id="node1" href="ADDRESS.html" title="ADDRESS" alt="" coords="467,565,573,645">
+<area shape="rect" id="node3" href="LOCATIONGROUP.html" title="LOCATIONGROUP" alt="" coords="181,632,363,803">
+<area shape="rect" id="node41" href="QBCLASS.html" title="QBCLASS" alt="" coords="19,835,123,915">
+<area shape="rect" id="node4" href="BOMITEM.html" title="BOMITEM" alt="" coords="727,2300,833,2380">
+<area shape="rect" id="node6" href="BOM.html" title="BOM" alt="" coords="223,2827,321,2907">
+<area shape="rect" id="node8" href="PART.html" title="PART" alt="" coords="409,1617,631,2695">
+<area shape="rect" id="node10" href="UOM.html" title="UOM" alt="" coords="219,2207,325,2287">
+<area shape="rect" id="node24" href="TAXRATE.html" title="TAXRATE" alt="" coords="215,1339,329,1419">
+<area shape="rect" id="node46" href="ASACCOUNT.html" title="ASACCOUNT" alt="" coords="7,2293,135,2373">
+<area shape="rect" id="node50" href="PRODUCT.html" title="PRODUCT" alt="" coords="725,2743,835,2823">
+<area shape="rect" id="node56" href="PARTTYPE.html" title="PARTTYPE" alt="" coords="217,1569,327,1649">
+<area shape="rect" id="node11" href="BOMITEMTOLOCATION.html" title="BOMITEMTOLOCATION" alt="" coords="961,769,1156,849">
+<area shape="rect" id="node15" href="LOCATION.html" title="LOCATION" alt="" coords="677,320,883,717">
+<area shape="rect" id="node22" href="CUSTOMER.html" title="CUSTOMER" alt="" coords="461,904,579,984">
+<area shape="rect" id="node36" href="VENDOR.html" title="VENDOR" alt="" coords="17,1339,124,1419">
+<area shape="rect" id="node39" href="LOCATIONTYPE.html" title="LOCATIONTYPE" alt="" coords="447,263,593,343">
+<area shape="rect" id="node16" href="BOMTOLOCATION.html" title="BOMTOLOCATION" alt="" coords="977,867,1140,947">
+<area shape="rect" id="node20" href="COSTLAYER.html" title="COSTLAYER" alt="" coords="719,1588,841,1668">
+<area shape="rect" id="node25" href="DEFAULTLOCATION.html" title="DEFAULTLOCATION" alt="" coords="929,154,1188,307">
+<area shape="rect" id="node29" href="INVENTORYLOG.html" title="INVENTORYLOG" alt="" coords="984,421,1133,501">
+<area shape="rect" id="node42" href="MO.html" title="MO" alt="" coords="477,41,563,121">
+<area shape="rect" id="node60" href="PARTCOST.html" title="PARTCOST" alt="" coords="723,1685,837,1765">
+<area shape="rect" id="node62" href="PARTREORDER.html" title="PARTREORDER" alt="" coords="707,904,853,984">
+<area shape="rect" id="node65" href="PARTTOTRACKING.html" title="PARTTOTRACKING" alt="" coords="695,1819,865,1899">
+<area shape="rect" id="node67" href="PICK.html" title="PICK" alt="" coords="471,1171,569,1251">
+<area shape="rect" id="node69" href="PICKITEM.html" title="PICKITEM" alt="" coords="728,1357,832,1437">
+<area shape="rect" id="node73" href="PO.html" title="PO" alt="" coords="467,1268,573,1348">
+<area shape="rect" id="node78" href="POITEM.html" title="POITEM" alt="" coords="728,1065,832,1145">
+<area shape="rect" id="node92" href="RECEIPT.html" title="RECEIPT" alt="" coords="467,1037,573,1117">
+<area shape="rect" id="node94" href="RECEIPTITEM.html" title="RECEIPTITEM" alt="" coords="713,1163,847,1243">
+<area shape="rect" id="node101" href="RMA.html" title="RMA" alt="" coords="731,735,829,815">
+<area shape="rect" id="node104" href="SHIP.html" title="SHIP" alt="" coords="471,699,569,779">
+<area shape="rect" id="node106" href="TAG.html" title="TAG" alt="" coords="1384,912,1483,992">
+<area shape="rect" id="node110" href="WOITEM.html" title="WOITEM" alt="" coords="1235,1215,1339,1295">
+<area shape="rect" id="node122" href="WO.html" title="WO" alt="" coords="1009,324,1108,404">
+<area shape="rect" id="node113" href="USERTOLG.html" title="USERTOLG" alt="" coords="463,396,577,476">
+<area shape="rect" id="node116" href="VENDORCOSTRULE.html" title="VENDORCOSTRULE" alt="" coords="691,1455,869,1535">
+<area shape="rect" id="node119" href="WATCH.html" title="WATCH" alt="" coords="733,1260,827,1340">
+<area shape="rect" id="node130" href="XO.html" title="XO" alt="" coords="1527,79,1625,159">
 </map>
 
   <a name='diagram'><img id='twoDegreesImg' src='../diagrams/DEFAULTLOCATION.2degrees.png' usemap='#twoDegreesRelationshipsDiagram' class='diagram' border='0' alt='' align='left'></a>

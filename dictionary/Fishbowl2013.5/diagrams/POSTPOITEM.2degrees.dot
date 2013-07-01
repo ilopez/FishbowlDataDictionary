@@ -19,24 +19,59 @@ digraph "twoDegreesRelationshipsDiagram" {
   edge [
     arrowsize="0.8"
   ];
+  "CUSTOMER":"elipses":w -> "TAXRATE":"elipses":e [arrowhead=none dir=back arrowtail=crowodot];
+  "PART":"elipses":w -> "UOM":"elipses":e [arrowhead=none dir=back arrowtail=crowodot];
+  "PART":"elipses":w -> "TAXRATE":"elipses":e [arrowhead=none dir=back arrowtail=crowodot];
+  "PART":"elipses":w -> "UOM":"elipses":e [arrowhead=none dir=back arrowtail=crowodot];
+  "PART":"elipses":w -> "UOM":"elipses":e [arrowhead=none dir=back arrowtail=crowodot];
+  "PO":"elipses":w -> "QBCLASS":"elipses":e [arrowhead=none dir=back arrowtail=crowodot];
+  "PO":"elipses":w -> "TAXRATE":"elipses":e [arrowhead=none dir=back arrowtail=crowodot];
+  "POITEM":"CUSTOMERID":w -> "CUSTOMER":"elipses":e [arrowhead=none dir=back arrowtail=crowodot];
+  "POITEM":"PARTID":w -> "PART":"elipses":e [arrowhead=none dir=back arrowtail=crowodot];
+  "POITEM":"POID":w -> "PO":"elipses":e [arrowhead=none dir=back arrowtail=crowodot];
+  "POITEM":"QBCLASSID":w -> "QBCLASS":"elipses":e [arrowhead=none dir=back arrowtail=crowodot];
+  "POITEM":"STATUSID":w -> "POITEMSTATUS":"elipses":e [arrowhead=none dir=back arrowtail=crowodot];
+  "POITEM":"TAXID":w -> "TAXRATE":"elipses":e [arrowhead=none dir=back arrowtail=crowodot];
+  "POITEM":"TYPEID":w -> "POITEMTYPE":"elipses":e [arrowhead=none dir=back arrowtail=crowodot];
+  "POITEM":"UOMID":w -> "UOM":"elipses":e [arrowhead=none dir=back arrowtail=crowodot];
   "POSTPO":"POID":w -> "PO":"elipses":e [arrowhead=none dir=back arrowtail=crowodot];
   "POSTPO":"STATUSID":w -> "POSTORDERSTATUS":"elipses":e [arrowhead=none dir=back arrowtail=crowodot];
-  "POSTPOITEM":"POITEMID":w -> "null.POITEM":"ID":e [arrowhead=none dir=back arrowtail=crowodot];
+  "POSTPOITEM":"POITEMID":w -> "POITEM":"ID":e [arrowhead=none dir=back arrowtail=crowodot];
   "POSTPOITEM":"POSTPOID":w -> "POSTPO":"ID":e [arrowhead=none dir=back arrowtail=crowodot];
+  "CUSTOMER" [
+    label=<
+    <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
+      <TR><TD COLSPAN="3" BGCOLOR="#9bab96" ALIGN="CENTER">CUSTOMER</TD></TR>
+      <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">&lt; 8</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">9 &gt;</TD></TR>
+    </TABLE>>
+    URL="CUSTOMER.html"
+    tooltip="CUSTOMER"
+  ];
+  "PART" [
+    label=<
+    <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
+      <TR><TD COLSPAN="3" BGCOLOR="#9bab96" ALIGN="CENTER">PART</TD></TR>
+      <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">&lt; 12</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">15 &gt;</TD></TR>
+    </TABLE>>
+    URL="PART.html"
+    tooltip="PART"
+  ];
   "PO" [
     label=<
     <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
       <TR><TD COLSPAN="3" BGCOLOR="#9bab96" ALIGN="CENTER">PO</TD></TR>
       <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
-      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">&lt; 11</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">1 &gt;</TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">&lt; 11</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">2 &gt;</TD></TR>
     </TABLE>>
     URL="PO.html"
     tooltip="PO"
   ];
-  "null.POITEM" [
+  "POITEM" [
     label=<
     <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
-      <TR><TD COLSPAN="3" BGCOLOR="#9bab96" ALIGN="CENTER">null.POITEM</TD></TR>
+      <TR><TD COLSPAN="3" BGCOLOR="#9bab96" ALIGN="CENTER">POITEM</TD></TR>
       <TR><TD PORT="ID" COLSPAN="3" BGCOLOR="#bed1b8" ALIGN="LEFT">ID</TD></TR>
       <TR><TD PORT="PARTID" COLSPAN="3" ALIGN="LEFT">PARTID</TD></TR>
       <TR><TD PORT="POID" COLSPAN="3" ALIGN="LEFT">POID</TD></TR>
@@ -62,9 +97,30 @@ digraph "twoDegreesRelationshipsDiagram" {
       <TR><TD PORT="CUSTOMERID" COLSPAN="3" ALIGN="LEFT">CUSTOMERID</TD></TR>
       <TR><TD PORT="TAXID" COLSPAN="3" ALIGN="LEFT">TAXID</TD></TR>
       <TR><TD PORT="TAXRATE" COLSPAN="3" ALIGN="LEFT">TAXRATE</TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">&lt; 8</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">1 &gt;</TD></TR>
+    </TABLE>>
+    URL="POITEM.html"
+    tooltip="POITEM"
+  ];
+  "POITEMSTATUS" [
+    label=<
+    <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
+      <TR><TD COLSPAN="3" BGCOLOR="#9bab96" ALIGN="CENTER">POITEMSTATUS</TD></TR>
+      <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
       <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">1 &gt;</TD></TR>
     </TABLE>>
-    tooltip="null.POITEM"
+    URL="POITEMSTATUS.html"
+    tooltip="POITEMSTATUS"
+  ];
+  "POITEMTYPE" [
+    label=<
+    <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
+      <TR><TD COLSPAN="3" BGCOLOR="#9bab96" ALIGN="CENTER">POITEMTYPE</TD></TR>
+      <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">1 &gt;</TD></TR>
+    </TABLE>>
+    URL="POITEMTYPE.html"
+    tooltip="POITEMTYPE"
   ];
   "POSTORDERSTATUS" [
     label=<
@@ -117,5 +173,35 @@ digraph "twoDegreesRelationshipsDiagram" {
     </TABLE>>
     URL="POSTPOITEM.html"
     tooltip="POSTPOITEM"
+  ];
+  "QBCLASS" [
+    label=<
+    <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
+      <TR><TD COLSPAN="3" BGCOLOR="#9bab96" ALIGN="CENTER">QBCLASS</TD></TR>
+      <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">7 &gt;</TD></TR>
+    </TABLE>>
+    URL="QBCLASS.html"
+    tooltip="QBCLASS"
+  ];
+  "TAXRATE" [
+    label=<
+    <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
+      <TR><TD COLSPAN="3" BGCOLOR="#9bab96" ALIGN="CENTER">TAXRATE</TD></TR>
+      <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">&lt; 4</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">10 &gt;</TD></TR>
+    </TABLE>>
+    URL="TAXRATE.html"
+    tooltip="TAXRATE"
+  ];
+  "UOM" [
+    label=<
+    <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
+      <TR><TD COLSPAN="3" BGCOLOR="#9bab96" ALIGN="CENTER">UOM</TD></TR>
+      <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">&lt; 1</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">17 &gt;</TD></TR>
+    </TABLE>>
+    URL="UOM.html"
+    tooltip="UOM"
   ];
 }

@@ -20,19 +20,18 @@ digraph "twoDegreesRelationshipsDiagram" {
     arrowsize="0.8"
   ];
   "ASSOCPRICE":"elipses":w -> "PRODUCT":"ID":e [arrowhead=none dir=back arrowtail=crowodot];
+  "CUSTOMERPARTS":"elipses":w -> "PRODUCT":"ID":e [arrowhead=none dir=back arrowtail=crowodot];
   "ITEMADJUST":"elipses":w -> "ASACCOUNT":"elipses":e [arrowhead=none dir=back arrowtail=crowodot];
   "ITEMADJUST":"elipses":w -> "ASACCOUNT":"elipses":e [arrowhead=none dir=back arrowtail=crowodot];
   "ITEMADJUST":"elipses":w -> "TAXRATE":"elipses":e [arrowhead=none dir=back arrowtail=crowodot];
   "KITITEM":"DISCOUNTID":w -> "ITEMADJUST":"elipses":e [arrowhead=none dir=back arrowtail=crowodot];
-  "KITITEM":"KITITEMTYPEID":w -> "KITITEMTYPE":"elipses":e [arrowhead=none dir=back arrowtail=crowodot];
+  "KITITEM":"KITITEMTYPEID":w -> "null.KITITEMTYPE":"elipses":e [arrowhead=none dir=back arrowtail=crowodot];
   "KITITEM":"KITPRODUCTID":w -> "PRODUCT":"ID":e [arrowhead=none dir=back arrowtail=crowodot];
   "KITITEM":"KITTYPEID":w -> "KITTYPE":"elipses":e [arrowhead=none dir=back arrowtail=crowodot];
   "KITITEM":"PRODUCTID":w -> "PRODUCT":"ID":e [arrowhead=none dir=back arrowtail=crowodot];
   "KITITEM":"SOITEMTYPEID":w -> "SOITEMTYPE":"ID.type":e [arrowhead=none dir=back arrowtail=crowodot];
   "KITITEM":"TAXRATEID":w -> "TAXRATE":"elipses":e [arrowhead=none dir=back arrowtail=crowodot];
   "KITITEM":"UOMID":w -> "UOM":"elipses":e [arrowhead=none dir=back arrowtail=crowodot];
-  "KITOPTION":"elipses":w -> "KITITEM":"ID":e [arrowhead=none dir=back arrowtail=crowodot];
-  "KITOPTION":"elipses":w -> "PRODUCT":"ID":e [arrowhead=none dir=back arrowtail=crowodot];
   "PART":"elipses":w -> "ASACCOUNT":"elipses":e [arrowhead=none dir=back arrowtail=crowodot];
   "PART":"elipses":w -> "ASACCOUNT":"elipses":e [arrowhead=none dir=back arrowtail=crowodot];
   "PART":"elipses":w -> "PRODUCT":"ID":e [arrowhead=none dir=back arrowtail=crowodot];
@@ -57,11 +56,9 @@ digraph "twoDegreesRelationshipsDiagram" {
   "RMAITEM":"elipses":w -> "PRODUCT":"ID":e [arrowhead=none dir=back arrowtail=crowodot];
   "RMAITEM":"elipses":w -> "PRODUCT":"ID":e [arrowhead=none dir=back arrowtail=crowodot];
   "RMAITEM":"elipses":w -> "UOM":"elipses":e [arrowhead=none dir=back arrowtail=crowodot];
-  "SO":"elipses":w -> "QBCLASS":"elipses":e [arrowhead=none dir=back arrowtail=crowodot];
-  "SO":"elipses":w -> "TAXRATE":"elipses":e [arrowhead=none dir=back arrowtail=crowodot];
   "SOITEM":"PRODUCTID":w -> "PRODUCT":"ID":e [arrowhead=none dir=back arrowtail=crowodot];
   "SOITEM":"QBCLASSID":w -> "QBCLASS":"elipses":e [arrowhead=none dir=back arrowtail=crowodot];
-  "SOITEM":"SOID":w -> "SO":"elipses":e [arrowhead=none dir=back arrowtail=crowodot];
+  "SOITEM":"SOID":w -> "null.SO":"elipses":e [arrowhead=none dir=back arrowtail=crowodot];
   "SOITEM":"STATUSID":w -> "SOITEMSTATUS":"elipses":e [arrowhead=none dir=back arrowtail=crowodot];
   "SOITEM":"TAXID":w -> "TAXRATE":"elipses":e [arrowhead=none dir=back arrowtail=crowodot];
   "SOITEM":"TYPEID":w -> "SOITEMTYPE":"ID.type":e [arrowhead=none dir=back arrowtail=crowodot];
@@ -87,6 +84,16 @@ digraph "twoDegreesRelationshipsDiagram" {
     </TABLE>>
     URL="ASSOCPRICE.html"
     tooltip="ASSOCPRICE"
+  ];
+  "CUSTOMERPARTS" [
+    label=<
+    <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
+      <TR><TD COLSPAN="3" BGCOLOR="#9bab96" ALIGN="CENTER">CUSTOMERPARTS</TD></TR>
+      <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">&lt; 3</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD></TR>
+    </TABLE>>
+    URL="CUSTOMERPARTS.html"
+    tooltip="CUSTOMERPARTS"
   ];
   "ITEMADJUST" [
     label=<
@@ -130,30 +137,19 @@ digraph "twoDegreesRelationshipsDiagram" {
       <TR><TD PORT="MINQTY" COLSPAN="3" ALIGN="LEFT">MINQTY</TD></TR>
       <TR><TD PORT="MAXQTY" COLSPAN="3" ALIGN="LEFT">MAXQTY</TD></TR>
       <TR><TD PORT="QTYPRICEADJUSTMENT" COLSPAN="3" ALIGN="LEFT">QTYPRICEADJUSTMENT</TD></TR>
-      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">&lt; 8</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">1 &gt;</TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">&lt; 8</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD></TR>
     </TABLE>>
     URL="KITITEM.html"
     tooltip="KITITEM"
   ];
-  "KITITEMTYPE" [
+  "null.KITITEMTYPE" [
     label=<
     <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
-      <TR><TD COLSPAN="3" BGCOLOR="#9bab96" ALIGN="CENTER">KITITEMTYPE</TD></TR>
+      <TR><TD COLSPAN="3" BGCOLOR="#9bab96" ALIGN="CENTER">null.KITITEMTYPE</TD></TR>
       <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
       <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">1 &gt;</TD></TR>
     </TABLE>>
-    URL="KITITEMTYPE.html"
-    tooltip="KITITEMTYPE"
-  ];
-  "KITOPTION" [
-    label=<
-    <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
-      <TR><TD COLSPAN="3" BGCOLOR="#9bab96" ALIGN="CENTER">KITOPTION</TD></TR>
-      <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
-      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">&lt; 2</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD></TR>
-    </TABLE>>
-    URL="KITOPTION.html"
-    tooltip="KITOPTION"
+    tooltip="null.KITITEMTYPE"
   ];
   "KITTYPE" [
     label=<
@@ -258,29 +254,28 @@ digraph "twoDegreesRelationshipsDiagram" {
     URL="RMAITEM.html"
     tooltip="RMAITEM"
   ];
-  "SO" [
+  "null.SO" [
     label=<
     <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
-      <TR><TD COLSPAN="3" BGCOLOR="#9bab96" ALIGN="CENTER">SO</TD></TR>
+      <TR><TD COLSPAN="3" BGCOLOR="#9bab96" ALIGN="CENTER">null.SO</TD></TR>
       <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
-      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">&lt; 12</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">4 &gt;</TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">4 &gt;</TD></TR>
     </TABLE>>
-    URL="SO.html"
-    tooltip="SO"
+    tooltip="null.SO"
   ];
   "SOITEM" [
     label=<
     <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
       <TR><TD COLSPAN="3" BGCOLOR="#9bab96" ALIGN="CENTER">SOITEM</TD></TR>
       <TR><TD PORT="ID" COLSPAN="3" BGCOLOR="#bed1b8" ALIGN="LEFT">ID</TD></TR>
-      <TR><TD PORT="PRODUCTID" COLSPAN="3" ALIGN="LEFT">PRODUCTID</TD></TR>
-      <TR><TD PORT="SOID" COLSPAN="3" ALIGN="LEFT">SOID</TD></TR>
+      <TR><TD PORT="PRODUCTID" COLSPAN="3" BGCOLOR="#f4f7da" ALIGN="LEFT">PRODUCTID</TD></TR>
+      <TR><TD PORT="SOID" COLSPAN="3" BGCOLOR="#f4f7da" ALIGN="LEFT">SOID</TD></TR>
       <TR><TD PORT="TYPEID" COLSPAN="3" BGCOLOR="#f4f7da" ALIGN="LEFT">TYPEID</TD></TR>
       <TR><TD PORT="STATUSID" COLSPAN="3" BGCOLOR="#f4f7da" ALIGN="LEFT">STATUSID</TD></TR>
-      <TR><TD PORT="UOMID" COLSPAN="3" ALIGN="LEFT">UOMID</TD></TR>
+      <TR><TD PORT="UOMID" COLSPAN="3" BGCOLOR="#f4f7da" ALIGN="LEFT">UOMID</TD></TR>
       <TR><TD PORT="SOLINEITEM" COLSPAN="3" ALIGN="LEFT">SOLINEITEM</TD></TR>
       <TR><TD PORT="DESCRIPTION" COLSPAN="3" ALIGN="LEFT">DESCRIPTION</TD></TR>
-      <TR><TD PORT="PRODUCTNUM" COLSPAN="3" ALIGN="LEFT">PRODUCTNUM</TD></TR>
+      <TR><TD PORT="PRODUCTNUM" COLSPAN="3" BGCOLOR="#f4f7da" ALIGN="LEFT">PRODUCTNUM</TD></TR>
       <TR><TD PORT="CUSTOMERPARTNUM" COLSPAN="3" ALIGN="LEFT">CUSTOMERPARTNUM</TD></TR>
       <TR><TD PORT="TAXABLEFLAG" COLSPAN="3" ALIGN="LEFT">TAXABLEFLAG</TD></TR>
       <TR><TD PORT="DATELASTFULFILLMENT" COLSPAN="3" ALIGN="LEFT">DATELASTFULFILLMENT</TD></TR>
@@ -293,14 +288,14 @@ digraph "twoDegreesRelationshipsDiagram" {
       <TR><TD PORT="QTYTOFULFILL" COLSPAN="3" ALIGN="LEFT">QTYTOFULFILL</TD></TR>
       <TR><TD PORT="QTYFULFILLED" COLSPAN="3" ALIGN="LEFT">QTYFULFILLED</TD></TR>
       <TR><TD PORT="QTYPICKED" COLSPAN="3" ALIGN="LEFT">QTYPICKED</TD></TR>
-      <TR><TD PORT="ITEMADJUSTID" COLSPAN="3" ALIGN="LEFT">ITEMADJUSTID</TD></TR>
+      <TR><TD PORT="ITEMADJUSTID" COLSPAN="3" BGCOLOR="#f4f7da" ALIGN="LEFT">ITEMADJUSTID</TD></TR>
       <TR><TD PORT="ADJUSTPERCENTAGE" COLSPAN="3" ALIGN="LEFT">ADJUSTPERCENTAGE</TD></TR>
       <TR><TD PORT="UNITPRICE" COLSPAN="3" ALIGN="LEFT">UNITPRICE</TD></TR>
       <TR><TD PORT="TOTALPRICE" COLSPAN="3" ALIGN="LEFT">TOTALPRICE</TD></TR>
       <TR><TD PORT="ADJUSTAMOUNT" COLSPAN="3" ALIGN="LEFT">ADJUSTAMOUNT</TD></TR>
       <TR><TD PORT="TOTALCOST" COLSPAN="3" ALIGN="LEFT">TOTALCOST</TD></TR>
       <TR><TD PORT="DATELASTMODIFIED" COLSPAN="3" ALIGN="LEFT">DATELASTMODIFIED</TD></TR>
-      <TR><TD PORT="TAXID" COLSPAN="3" ALIGN="LEFT">TAXID</TD></TR>
+      <TR><TD PORT="TAXID" COLSPAN="3" BGCOLOR="#f4f7da" ALIGN="LEFT">TAXID</TD></TR>
       <TR><TD PORT="TAXRATE" COLSPAN="3" ALIGN="LEFT">TAXRATE</TD></TR>
       <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">&lt; 7</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">2 &gt;</TD></TR>
     </TABLE>>
@@ -343,7 +338,7 @@ digraph "twoDegreesRelationshipsDiagram" {
     <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
       <TR><TD COLSPAN="3" BGCOLOR="#9bab96" ALIGN="CENTER">TAXRATE</TD></TR>
       <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
-      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">&lt; 4</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">9 &gt;</TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">&lt; 4</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">10 &gt;</TD></TR>
     </TABLE>>
     URL="TAXRATE.html"
     tooltip="TAXRATE"

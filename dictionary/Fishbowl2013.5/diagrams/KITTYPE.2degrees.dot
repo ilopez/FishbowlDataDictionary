@@ -21,15 +21,13 @@ digraph "twoDegreesRelationshipsDiagram" {
   ];
   "ITEMADJUST":"elipses":w -> "TAXRATE":"elipses":e [arrowhead=none dir=back arrowtail=crowodot];
   "KITITEM":"DISCOUNTID":w -> "ITEMADJUST":"elipses":e [arrowhead=none dir=back arrowtail=crowodot];
-  "KITITEM":"KITITEMTYPEID":w -> "KITITEMTYPE":"elipses":e [arrowhead=none dir=back arrowtail=crowodot];
+  "KITITEM":"KITITEMTYPEID":w -> "null.KITITEMTYPE":"elipses":e [arrowhead=none dir=back arrowtail=crowodot];
   "KITITEM":"KITPRODUCTID":w -> "PRODUCT":"elipses":e [arrowhead=none dir=back arrowtail=crowodot];
   "KITITEM":"KITTYPEID":w -> "KITTYPE":"ID.type":e [arrowhead=none dir=back arrowtail=crowodot];
   "KITITEM":"PRODUCTID":w -> "PRODUCT":"elipses":e [arrowhead=none dir=back arrowtail=crowodot];
   "KITITEM":"SOITEMTYPEID":w -> "SOITEMTYPE":"elipses":e [arrowhead=none dir=back arrowtail=crowodot];
   "KITITEM":"TAXRATEID":w -> "TAXRATE":"elipses":e [arrowhead=none dir=back arrowtail=crowodot];
   "KITITEM":"UOMID":w -> "UOM":"elipses":e [arrowhead=none dir=back arrowtail=crowodot];
-  "KITOPTION":"elipses":w -> "KITITEM":"ID":e [arrowhead=none dir=back arrowtail=crowodot];
-  "KITOPTION":"elipses":w -> "PRODUCT":"elipses":e [arrowhead=none dir=back arrowtail=crowodot];
   "PRODUCT":"elipses":w -> "SOITEMTYPE":"elipses":e [arrowhead=none dir=back arrowtail=crowodot];
   "PRODUCT":"elipses":w -> "UOM":"elipses":e [arrowhead=none dir=back arrowtail=crowodot];
   "PRODUCT":"elipses":w -> "TAXRATE":"elipses":e [arrowhead=none dir=back arrowtail=crowodot];
@@ -67,30 +65,19 @@ digraph "twoDegreesRelationshipsDiagram" {
       <TR><TD PORT="MINQTY" COLSPAN="3" ALIGN="LEFT">MINQTY</TD></TR>
       <TR><TD PORT="MAXQTY" COLSPAN="3" ALIGN="LEFT">MAXQTY</TD></TR>
       <TR><TD PORT="QTYPRICEADJUSTMENT" COLSPAN="3" ALIGN="LEFT">QTYPRICEADJUSTMENT</TD></TR>
-      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">&lt; 8</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">1 &gt;</TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">&lt; 8</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD></TR>
     </TABLE>>
     URL="KITITEM.html"
     tooltip="KITITEM"
   ];
-  "KITITEMTYPE" [
+  "null.KITITEMTYPE" [
     label=<
     <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
-      <TR><TD COLSPAN="3" BGCOLOR="#9bab96" ALIGN="CENTER">KITITEMTYPE</TD></TR>
+      <TR><TD COLSPAN="3" BGCOLOR="#9bab96" ALIGN="CENTER">null.KITITEMTYPE</TD></TR>
       <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
       <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">1 &gt;</TD></TR>
     </TABLE>>
-    URL="KITITEMTYPE.html"
-    tooltip="KITITEMTYPE"
-  ];
-  "KITOPTION" [
-    label=<
-    <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
-      <TR><TD COLSPAN="3" BGCOLOR="#9bab96" ALIGN="CENTER">KITOPTION</TD></TR>
-      <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
-      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">&lt; 2</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD></TR>
-    </TABLE>>
-    URL="KITOPTION.html"
-    tooltip="KITOPTION"
+    tooltip="null.KITITEMTYPE"
   ];
   "KITTYPE" [
     label=<
@@ -128,7 +115,7 @@ digraph "twoDegreesRelationshipsDiagram" {
     <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
       <TR><TD COLSPAN="3" BGCOLOR="#9bab96" ALIGN="CENTER">TAXRATE</TD></TR>
       <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
-      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">&lt; 4</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">9 &gt;</TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">&lt; 4</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">10 &gt;</TD></TR>
     </TABLE>>
     URL="TAXRATE.html"
     tooltip="TAXRATE"

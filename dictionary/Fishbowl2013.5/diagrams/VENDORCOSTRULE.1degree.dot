@@ -21,7 +21,7 @@ digraph "oneDegreeRelationshipsDiagram" {
   ];
   "VENDORCOSTRULE":"PARTID":w -> "PART":"ID":e [arrowhead=none dir=back arrowtail=crowodot];
   "VENDORCOSTRULE":"USERID":w -> "SYSUSER":"ID":e [arrowhead=none dir=back arrowtail=crowodot];
-  "VENDORCOSTRULE":"VENDORID":w -> "null.VENDOR":"ID":e [arrowhead=none dir=back arrowtail=crowodot];
+  "VENDORCOSTRULE":"VENDORID":w -> "VENDOR":"ID":e [arrowhead=none dir=back arrowtail=crowodot];
   "PART" [
     label=<
     <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
@@ -87,15 +87,15 @@ digraph "oneDegreeRelationshipsDiagram" {
       <TR><TD PORT="INITIALS" COLSPAN="3" ALIGN="LEFT">INITIALS</TD></TR>
       <TR><TD PORT="USERPWD" COLSPAN="3" ALIGN="LEFT">USERPWD</TD></TR>
       <TR><TD PORT="ACTIVEFLAG" COLSPAN="3" ALIGN="LEFT">ACTIVEFLAG</TD></TR>
-      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">22 &gt;</TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">23 &gt;</TD></TR>
     </TABLE>>
     URL="SYSUSER.html"
     tooltip="SYSUSER"
   ];
-  "null.VENDOR" [
+  "VENDOR" [
     label=<
     <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
-      <TR><TD COLSPAN="3" BGCOLOR="#9bab96" ALIGN="CENTER">null.VENDOR</TD></TR>
+      <TR><TD COLSPAN="3" BGCOLOR="#9bab96" ALIGN="CENTER">VENDOR</TD></TR>
       <TR><TD PORT="ID" COLSPAN="3" BGCOLOR="#bed1b8" ALIGN="LEFT">ID</TD></TR>
       <TR><TD PORT="ACCOUNTID" COLSPAN="3" ALIGN="LEFT">ACCOUNTID</TD></TR>
       <TR><TD PORT="STATUSID" COLSPAN="3" ALIGN="LEFT">STATUSID</TD></TR>
@@ -119,9 +119,10 @@ digraph "oneDegreeRelationshipsDiagram" {
       <TR><TD PORT="TAXRATEID" COLSPAN="3" ALIGN="LEFT">TAXRATEID</TD></TR>
       <TR><TD PORT="CURRENCYID" COLSPAN="3" ALIGN="LEFT">CURRENCYID</TD></TR>
       <TR><TD PORT="CURRENCYRATE" COLSPAN="3" ALIGN="LEFT">CURRENCYRATE</TD></TR>
-      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">5 &gt;</TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">&lt; 7</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">5 &gt;</TD></TR>
     </TABLE>>
-    tooltip="null.VENDOR"
+    URL="VENDOR.html"
+    tooltip="VENDOR"
   ];
   "VENDORCOSTRULE" [
     label=<

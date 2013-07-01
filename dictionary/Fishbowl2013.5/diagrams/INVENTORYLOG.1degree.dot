@@ -23,10 +23,11 @@ digraph "oneDegreeRelationshipsDiagram" {
   "INVENTORYLOG":"ENDLOCATIONID":w -> "LOCATION":"ID":e [arrowhead=none dir=back arrowtail=crowodot];
   "INVENTORYLOG":"LOCATIONGROUPID":w -> "LOCATIONGROUP":"ID":e [arrowhead=none dir=back arrowtail=crowodot];
   "INVENTORYLOG":"PARTID":w -> "PART":"ID":e [arrowhead=none dir=back arrowtail=crowodot];
-  "INVENTORYLOG":"TYPEID":w -> "INVENTORYLOGTYPE":"ID":e [arrowhead=none dir=back arrowtail=crowodot];
+  "INVENTORYLOG":"TYPEID":w -> "null.INVENTORYLOGTYPE":"ID":e [arrowhead=none dir=back arrowtail=crowodot];
   "INVENTORYLOG":"USERID":w -> "SYSUSER":"ID":e [arrowhead=none dir=back arrowtail=crowodot];
   "INVENTORYLOGTOCOSTLAYER":"INVENTORYLOGID":w -> "INVENTORYLOG":"ID.type":e [arrowhead=none dir=back arrowtail=crowodot];
   "LOCATION":"LOCATIONGROUPID":w -> "LOCATIONGROUP":"ID":e [arrowhead=none dir=back arrowtail=crowodot];
+  "TIINVENTORYLOG":"INVENTORYLOGID":w -> "INVENTORYLOG":"ID.type":e [arrowhead=none dir=back arrowtail=crowodot];
   "INVENTORYLOG" [
     label=<
     <TABLE BORDER="2" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
@@ -49,7 +50,7 @@ digraph "oneDegreeRelationshipsDiagram" {
       <TR><TD PORT="QTYONHAND" COLSPAN="2" ALIGN="LEFT">QTYONHAND</TD><TD PORT="QTYONHAND.type" ALIGN="LEFT">double precision[15]</TD></TR>
       <TR><TD PORT="DATECREATED" COLSPAN="2" ALIGN="LEFT">DATECREATED</TD><TD PORT="DATECREATED.type" ALIGN="LEFT">timestamp[19]</TD></TR>
       <TR><TD PORT="COST" COLSPAN="2" ALIGN="LEFT">COST</TD><TD PORT="COST.type" ALIGN="LEFT">double precision[15]</TD></TR>
-      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">&lt; 6</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">1 &gt;</TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">&lt; 6</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">2 &gt;</TD></TR>
     </TABLE>>
     URL="INVENTORYLOG.html"
     tooltip="INVENTORYLOG"
@@ -67,17 +68,16 @@ digraph "oneDegreeRelationshipsDiagram" {
     URL="INVENTORYLOGTOCOSTLAYER.html"
     tooltip="INVENTORYLOGTOCOSTLAYER"
   ];
-  "INVENTORYLOGTYPE" [
+  "null.INVENTORYLOGTYPE" [
     label=<
     <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
-      <TR><TD COLSPAN="3" BGCOLOR="#9bab96" ALIGN="CENTER">INVENTORYLOGTYPE</TD></TR>
+      <TR><TD COLSPAN="3" BGCOLOR="#9bab96" ALIGN="CENTER">null.INVENTORYLOGTYPE</TD></TR>
       <TR><TD PORT="ID" COLSPAN="3" BGCOLOR="#bed1b8" ALIGN="LEFT">ID</TD></TR>
-      <TR><TD PORT="NAME" COLSPAN="3" BGCOLOR="#f4f7da" ALIGN="LEFT">NAME</TD></TR>
+      <TR><TD PORT="NAME" COLSPAN="3" ALIGN="LEFT">NAME</TD></TR>
       <TR><TD PORT="DESCRIPTION" COLSPAN="3" ALIGN="LEFT">DESCRIPTION</TD></TR>
       <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">1 &gt;</TD></TR>
     </TABLE>>
-    URL="INVENTORYLOGTYPE.html"
-    tooltip="INVENTORYLOGTYPE"
+    tooltip="null.INVENTORYLOGTYPE"
   ];
   "LOCATION" [
     label=<
@@ -112,7 +112,7 @@ digraph "oneDegreeRelationshipsDiagram" {
       <TR><TD PORT="ACTIVEFLAG" COLSPAN="3" ALIGN="LEFT">ACTIVEFLAG</TD></TR>
       <TR><TD PORT="QBCLASSID" COLSPAN="3" ALIGN="LEFT">QBCLASSID</TD></TR>
       <TR><TD PORT="DATELASTMODIFIED" COLSPAN="3" ALIGN="LEFT">DATELASTMODIFIED</TD></TR>
-      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">&lt; 1</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">19 &gt;</TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">&lt; 1</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">18 &gt;</TD></TR>
     </TABLE>>
     URL="LOCATIONGROUP.html"
     tooltip="LOCATIONGROUP"
@@ -182,9 +182,26 @@ digraph "oneDegreeRelationshipsDiagram" {
       <TR><TD PORT="INITIALS" COLSPAN="3" ALIGN="LEFT">INITIALS</TD></TR>
       <TR><TD PORT="USERPWD" COLSPAN="3" ALIGN="LEFT">USERPWD</TD></TR>
       <TR><TD PORT="ACTIVEFLAG" COLSPAN="3" ALIGN="LEFT">ACTIVEFLAG</TD></TR>
-      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">22 &gt;</TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">23 &gt;</TD></TR>
     </TABLE>>
     URL="SYSUSER.html"
     tooltip="SYSUSER"
+  ];
+  "TIINVENTORYLOG" [
+    label=<
+    <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
+      <TR><TD COLSPAN="3" BGCOLOR="#9bab96" ALIGN="CENTER">TIINVENTORYLOG</TD></TR>
+      <TR><TD PORT="ID" COLSPAN="3" BGCOLOR="#bed1b8" ALIGN="LEFT">ID</TD></TR>
+      <TR><TD PORT="INVENTORYLOGID" COLSPAN="3" ALIGN="LEFT">INVENTORYLOGID</TD></TR>
+      <TR><TD PORT="INFO" COLSPAN="3" ALIGN="LEFT">INFO</TD></TR>
+      <TR><TD PORT="INFODATE" COLSPAN="3" ALIGN="LEFT">INFODATE</TD></TR>
+      <TR><TD PORT="PARTTRACKINGID" COLSPAN="3" ALIGN="LEFT">PARTTRACKINGID</TD></TR>
+      <TR><TD PORT="INFODOUBLE" COLSPAN="3" ALIGN="LEFT">INFODOUBLE</TD></TR>
+      <TR><TD PORT="INFOINTEGER" COLSPAN="3" ALIGN="LEFT">INFOINTEGER</TD></TR>
+      <TR><TD PORT="QTY" COLSPAN="3" ALIGN="LEFT">QTY</TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">&lt; 2</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">1 &gt;</TD></TR>
+    </TABLE>>
+    URL="TIINVENTORYLOG.html"
+    tooltip="TIINVENTORYLOG"
   ];
 }

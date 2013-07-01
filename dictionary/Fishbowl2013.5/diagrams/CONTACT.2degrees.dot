@@ -27,13 +27,14 @@ digraph "twoDegreesRelationshipsDiagram" {
   "CONTACT":"TYPEID":w -> "CONTACTTYPE":"ID":e [arrowhead=none dir=back arrowtail=crowodot];
   "CUSTOMER":"elipses":w -> "ACCOUNT":"ID":e [arrowhead=none dir=back arrowtail=crowodot];
   "TAG":"elipses":w -> "ACCOUNT":"ID":e [arrowhead=none dir=back arrowtail=crowodot];
+  "VENDOR":"elipses":w -> "ACCOUNT":"ID":e [arrowhead=none dir=back arrowtail=crowodot];
   "ACCOUNT" [
     label=<
     <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
       <TR><TD COLSPAN="3" BGCOLOR="#9bab96" ALIGN="CENTER">ACCOUNT</TD></TR>
       <TR><TD PORT="ID" COLSPAN="3" BGCOLOR="#bed1b8" ALIGN="LEFT">ID</TD></TR>
       <TR><TD PORT="TYPEID" COLSPAN="3" BGCOLOR="#f4f7da" ALIGN="LEFT">TYPEID</TD></TR>
-      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">&lt; 1</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">6 &gt;</TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">&lt; 1</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">7 &gt;</TD></TR>
     </TABLE>>
     URL="ACCOUNT.html"
     tooltip="ACCOUNT"
@@ -83,9 +84,9 @@ digraph "twoDegreesRelationshipsDiagram" {
     <TABLE BORDER="2" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
       <TR><TD COLSPAN="3" BGCOLOR="#9bab96" ALIGN="CENTER">CONTACT</TD></TR>
       <TR><TD PORT="ID" COLSPAN="2" BGCOLOR="#bed1b8" ALIGN="LEFT">ID</TD><TD PORT="ID.type" ALIGN="LEFT">integer[10]</TD></TR>
-      <TR><TD PORT="ACCOUNTID" COLSPAN="2" ALIGN="LEFT">ACCOUNTID</TD><TD PORT="ACCOUNTID.type" ALIGN="LEFT">integer[10]</TD></TR>
+      <TR><TD PORT="ACCOUNTID" COLSPAN="2" BGCOLOR="#f4f7da" ALIGN="LEFT">ACCOUNTID</TD><TD PORT="ACCOUNTID.type" ALIGN="LEFT">integer[10]</TD></TR>
       <TR><TD PORT="ADDRESSID" COLSPAN="2" ALIGN="LEFT">ADDRESSID</TD><TD PORT="ADDRESSID.type" ALIGN="LEFT">integer[10]</TD></TR>
-      <TR><TD PORT="TYPEID" COLSPAN="2" ALIGN="LEFT">TYPEID</TD><TD PORT="TYPEID.type" ALIGN="LEFT">integer[10]</TD></TR>
+      <TR><TD PORT="TYPEID" COLSPAN="2" BGCOLOR="#f4f7da" ALIGN="LEFT">TYPEID</TD><TD PORT="TYPEID.type" ALIGN="LEFT">integer[10]</TD></TR>
       <TR><TD PORT="DATUS" COLSPAN="2" ALIGN="LEFT">DATUS</TD><TD PORT="DATUS.type" ALIGN="LEFT">varchar[64]</TD></TR>
       <TR><TD PORT="DEFAULTFLAG" COLSPAN="2" ALIGN="LEFT">DEFAULTFLAG</TD><TD PORT="DEFAULTFLAG.type" ALIGN="LEFT">smallint[5]</TD></TR>
       <TR><TD PORT="CONTACTNAME" COLSPAN="2" ALIGN="LEFT">CONTACTNAME</TD><TD PORT="CONTACTNAME.type" ALIGN="LEFT">varchar[30]</TD></TR>
@@ -99,7 +100,7 @@ digraph "twoDegreesRelationshipsDiagram" {
     <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
       <TR><TD COLSPAN="3" BGCOLOR="#9bab96" ALIGN="CENTER">CONTACTTYPE</TD></TR>
       <TR><TD PORT="ID" COLSPAN="3" BGCOLOR="#bed1b8" ALIGN="LEFT">ID</TD></TR>
-      <TR><TD PORT="NAME" COLSPAN="3" BGCOLOR="#f4f7da" ALIGN="LEFT">NAME</TD></TR>
+      <TR><TD PORT="NAME" COLSPAN="3" ALIGN="LEFT">NAME</TD></TR>
       <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">1 &gt;</TD></TR>
     </TABLE>>
     URL="CONTACTTYPE.html"
@@ -110,7 +111,7 @@ digraph "twoDegreesRelationshipsDiagram" {
     <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
       <TR><TD COLSPAN="3" BGCOLOR="#9bab96" ALIGN="CENTER">CUSTOMER</TD></TR>
       <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
-      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">&lt; 8</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">8 &gt;</TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">&lt; 8</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">9 &gt;</TD></TR>
     </TABLE>>
     URL="CUSTOMER.html"
     tooltip="CUSTOMER"
@@ -120,9 +121,19 @@ digraph "twoDegreesRelationshipsDiagram" {
     <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
       <TR><TD COLSPAN="3" BGCOLOR="#9bab96" ALIGN="CENTER">TAG</TD></TR>
       <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
-      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">&lt; 5</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">5 &gt;</TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">&lt; 5</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">6 &gt;</TD></TR>
     </TABLE>>
     URL="TAG.html"
     tooltip="TAG"
+  ];
+  "VENDOR" [
+    label=<
+    <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
+      <TR><TD COLSPAN="3" BGCOLOR="#9bab96" ALIGN="CENTER">VENDOR</TD></TR>
+      <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">&lt; 7</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">5 &gt;</TD></TR>
+    </TABLE>>
+    URL="VENDOR.html"
+    tooltip="VENDOR"
   ];
 }

@@ -112,6 +112,12 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
  <td class='detail'>
   <table border='0' width='100%' cellspacing='0' cellpadding='0'>
    <tr class='relative odd' valign='top'>
+    <td class='relatedTable detail' title="POITEM.POID refs PO.ID via INTEG_479"><a href='POITEM.html'>POITEM</a><span class='relatedKey'>.POID</span>
+    </td>
+    <td class='constraint detail'>INTEG_479<span title='Restrict delete:
+ Parent cannot be deleted if children exist'>&nbsp;R</span></td>
+   </tr>
+   <tr class='relative odd' valign='top'>
     <td class='relatedTable detail' title="POSTPO.POID refs PO.ID via INTEG_1259"><a href='POSTPO.html'>POSTPO</a><span class='relatedKey'>.POID</span>
     </td>
     <td class='constraint detail'>INTEG_1259<span title='Restrict delete:
@@ -173,7 +179,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
  <td class='detail'>
   <table border='0' width='100%' cellspacing='0' cellpadding='0'>
    <tr class='relative even' valign='top'>
-    <td class='relatedTable detail' title="PO.PAYMENTTERMSID refs PAYMENTTERMS.ID in null via INTEG_430"><a href=''>PAYMENTTERMS</a><span class='relatedKey'>.ID</span>
+    <td class='relatedTable detail' title="PO.PAYMENTTERMSID refs PAYMENTTERMS.ID via INTEG_430"><a href='PAYMENTTERMS.html'>PAYMENTTERMS</a><span class='relatedKey'>.ID</span>
     </td>
     <td class='constraint detail'>INTEG_430<span title='Restrict delete:
  Parent cannot be deleted if children exist'>&nbsp;R</span></td>
@@ -277,7 +283,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
  <td class='detail'>
   <table border='0' width='100%' cellspacing='0' cellpadding='0'>
    <tr class='relative odd' valign='top'>
-    <td class='relatedTable detail' title="PO.STATUSID refs POSTATUS.ID in null via INTEG_436"><a href=''>POSTATUS</a><span class='relatedKey'>.ID</span>
+    <td class='relatedTable detail' title="PO.STATUSID refs POSTATUS.ID via INTEG_436"><a href='POSTATUS.html'>POSTATUS</a><span class='relatedKey'>.ID</span>
     </td>
     <td class='constraint detail'>INTEG_436<span title='Restrict delete:
  Parent cannot be deleted if children exist'>&nbsp;R</span></td>
@@ -297,7 +303,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
  <td class='detail'>
   <table border='0' width='100%' cellspacing='0' cellpadding='0'>
    <tr class='relative even' valign='top'>
-    <td class='relatedTable detail' title="PO.VENDORID refs VENDOR.ID in null via INTEG_438"><a href=''>VENDOR</a><span class='relatedKey'>.ID</span>
+    <td class='relatedTable detail' title="PO.VENDORID refs VENDOR.ID via INTEG_438"><a href='VENDOR.html'>VENDOR</a><span class='relatedKey'>.ID</span>
     </td>
     <td class='constraint detail'>INTEG_438<span title='Restrict delete:
  Parent cannot be deleted if children exist'>&nbsp;R</span></td>
@@ -706,7 +712,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
  <td class='comment detail'></td>
 </tr>
 </table>
-<p title='45 columns'>Analyzed at Mon Jul 01 09:44 PDT 2013<p/>
+<p title='45 columns'>Analyzed at Mon Jul 01 12:49 PDT 2013<p/>
 </td></tr></table>
 <div class='indent'>
 <b>Indexes:</b>
@@ -912,69 +918,76 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 <br><form action='get'><b>Close relationships</b><span class='degrees' id='degrees' title='Detail diminishes with increased separation from PO'>
 &nbsp;within <label for='oneDegree'><input type='radio' name='degrees' id='oneDegree' checked>one</label>  <label for='twoDegrees'><input type='radio' name='degrees' id='twoDegrees'>two degrees</label> of separation</span><b>:</b></form>
 <map id="oneDegreeRelationshipsDiagram" name="oneDegreeRelationshipsDiagram">
-<area shape="rect" id="node1" href="LOCATIONGROUP.html" title="LOCATIONGROUP" alt="" coords="300,1612,481,1783">
-<area shape="rect" id="node3" href="QBCLASS.html" title="QBCLASS" alt="" coords="35,1678,216,1917">
-<area shape="rect" id="node4" href="PO.html" title="PO" alt="" coords="536,585,864,1668">
-<area shape="rect" id="node6" href="CARRIER.html" title="CARRIER" alt="" coords="324,5,457,198">
-<area shape="rect" id="node8" href="CURRENCY.html" title="CURRENCY" alt="" coords="289,1800,492,2061">
-<area shape="rect" id="node10" href="FOBPOINT.html" title="FOBPOINT" alt="" coords="337,214,444,317">
-<area shape="rect" id="node13" title="null.PAYMENTTERMS" alt="" coords="300,333,481,707">
-<area shape="rect" id="node16" href="SHIPTERMS.html" title="SHIPTERMS" alt="" coords="328,724,453,849">
-<area shape="rect" id="node18" title="null.POSTATUS" alt="" coords="321,985,460,1087">
-<area shape="rect" id="node20" href="TAXRATE.html" title="TAXRATE" alt="" coords="300,1175,481,1595">
-<area shape="rect" id="node22" href="POTYPE.html" title="POTYPE" alt="" coords="341,866,440,969">
-<area shape="rect" id="node24" title="null.VENDOR" alt="" coords="7,1077,244,1656">
-<area shape="rect" id="node25" href="POSTPO.html" title="POSTPO" alt="" coords="909,565,1091,872">
+<area shape="rect" id="node1" href="LOCATIONGROUP.html" title="LOCATIONGROUP" alt="" coords="537,817,719,988">
+<area shape="rect" id="node3" href="QBCLASS.html" title="QBCLASS" alt="" coords="281,727,463,966">
+<area shape="rect" id="node4" href="PO.html" title="PO" alt="" coords="764,25,1092,1108">
+<area shape="rect" id="node6" href="CARRIER.html" title="CARRIER" alt="" coords="40,1046,173,1239">
+<area shape="rect" id="node8" href="CURRENCY.html" title="CURRENCY" alt="" coords="5,1504,208,1765">
+<area shape="rect" id="node10" href="FOBPOINT.html" title="FOBPOINT" alt="" coords="575,73,681,175">
+<area shape="rect" id="node13" href="PAYMENTTERMS.html" title="PAYMENTTERMS" alt="" coords="16,214,197,589">
+<area shape="rect" id="node16" href="SHIPTERMS.html" title="SHIPTERMS" alt="" coords="44,705,169,831">
+<area shape="rect" id="node18" href="POSTATUS.html" title="POSTATUS" alt="" coords="571,382,685,485">
+<area shape="rect" id="node20" href="TAXRATE.html" title="TAXRATE" alt="" coords="537,1133,719,1553">
+<area shape="rect" id="node22" href="POTYPE.html" title="POTYPE" alt="" coords="579,263,677,366">
+<area shape="rect" id="node24" href="VENDOR.html" title="VENDOR" alt="" coords="253,983,491,1561">
+<area shape="rect" id="node25" href="POITEM.html" title="POITEM" alt="" coords="1136,611,1403,1235">
+<area shape="rect" id="node29" href="POSTPO.html" title="POSTPO" alt="" coords="1179,5,1360,312">
 </map>
   <a name='diagram'><img id='oneDegreeImg' src='../diagrams/PO.1degree.png' usemap='#oneDegreeRelationshipsDiagram' class='diagram' border='0' alt='' align='left'></a>
 <map id="twoDegreesRelationshipsDiagram" name="twoDegreesRelationshipsDiagram">
-<area shape="rect" id="node1" href="ADDRESS.html" title="ADDRESS" alt="" coords="793,2736,900,2816">
-<area shape="rect" id="node3" href="LOCATIONGROUP.html" title="LOCATIONGROUP" alt="" coords="519,2532,700,2703">
-<area shape="rect" id="node52" href="QBCLASS.html" title="QBCLASS" alt="" coords="291,2601,472,2840">
-<area shape="rect" id="node4" href="BOMITEMTOLOCATION.html" title="BOMITEMTOLOCATION" alt="" coords="1059,3135,1253,3215">
-<area shape="rect" id="node7" href="LOCATION.html" title="LOCATION" alt="" coords="792,2978,901,3058">
-<area shape="rect" id="node17" href="CUSTOMER.html" title="CUSTOMER" alt="" coords="551,1380,668,1460">
-<area shape="rect" id="node49" title="null.VENDOR" alt="" coords="7,740,244,1319">
-<area shape="rect" id="node8" href="BOMTOLOCATION.html" title="BOMTOLOCATION" alt="" coords="1075,2843,1237,2923">
-<area shape="rect" id="node11" href="COMPANY.html" title="COMPANY" alt="" coords="556,912,663,992">
-<area shape="rect" id="node13" href="CARRIER.html" title="CARRIER" alt="" coords="315,925,448,1118">
-<area shape="rect" id="node14" href="CURRENCY.html" title="CURRENCY" alt="" coords="745,1676,948,1938">
-<area shape="rect" id="node16" href="SYSUSER.html" title="SYSUSER" alt="" coords="552,1856,667,1936">
-<area shape="rect" id="node20" title="null.PAYMENTTERMS" alt="" coords="291,1157,472,1532">
-<area shape="rect" id="node22" href="SHIPTERMS.html" title="SHIPTERMS" alt="" coords="319,1548,444,1674">
-<area shape="rect" id="node24" href="TAXRATE.html" title="TAXRATE" alt="" coords="291,74,472,494">
-<area shape="rect" id="node38" href="ASACCOUNT.html" title="ASACCOUNT" alt="" coords="61,635,189,715">
-<area shape="rect" id="node100" href="ORDERTYPE.html" title="ORDERTYPE" alt="" coords="63,396,188,476">
-<area shape="rect" id="node143" href="TAXRATETYPE.html" title="TAXRATETYPE" alt="" coords="55,279,196,359">
-<area shape="rect" id="node25" href="DEFAULTLOCATION.html" title="DEFAULTLOCATION" alt="" coords="1069,2940,1243,3020">
-<area shape="rect" id="node29" href="PART.html" title="PART" alt="" coords="552,635,667,715">
-<area shape="rect" id="node44" href="PRODUCT.html" title="PRODUCT" alt="" coords="792,394,901,474">
-<area shape="rect" id="node30" href="INVENTORYLOG.html" title="INVENTORYLOG" alt="" coords="1081,2571,1231,2651">
-<area shape="rect" id="node36" href="ITEMADJUST.html" title="ITEMADJUST" alt="" coords="547,502,672,582">
-<area shape="rect" id="node41" href="KITITEM.html" title="KITITEM" alt="" coords="1104,306,1208,386">
-<area shape="rect" id="node53" href="MO.html" title="MO" alt="" coords="1113,2396,1199,2476">
-<area shape="rect" id="node57" href="SO.html" title="SO" alt="" coords="793,1082,900,1162">
-<area shape="rect" id="node76" href="FOBPOINT.html" title="FOBPOINT" alt="" coords="556,1081,663,1184">
-<area shape="rect" id="node66" href="PARTREORDER.html" title="PARTREORDER" alt="" coords="773,1384,920,1464">
-<area shape="rect" id="node69" href="PICK.html" title="PICK" alt="" coords="797,2531,896,2611">
-<area shape="rect" id="node72" href="PO.html" title="PO" alt="" coords="992,1103,1320,2186">
-<area shape="rect" id="node82" title="null.POSTATUS" alt="" coords="777,2412,916,2514">
-<area shape="rect" id="node85" href="POTYPE.html" title="POTYPE" alt="" coords="797,2293,896,2396">
-<area shape="rect" id="node87" href="POSTPO.html" title="POSTPO" alt="" coords="1365,1843,1547,2150">
-<area shape="rect" id="node90" href="POSTORDERSTATUS.html" title="POSTORDERSTATUS" alt="" coords="1063,2668,1249,2748">
-<area shape="rect" id="node91" href="POSTPOITEM.html" title="POSTPOITEM" alt="" coords="1592,1842,1723,1922">
-<area shape="rect" id="node97" href="RECEIPT.html" title="RECEIPT" alt="" coords="793,1287,900,1367">
-<area shape="rect" id="node102" href="RECEIPTITEM.html" title="RECEIPTITEM" alt="" coords="1089,910,1223,990">
-<area shape="rect" id="node108" href="RMA.html" title="RMA" alt="" coords="797,1579,896,1659">
-<area shape="rect" id="node112" href="RMAITEM.html" title="RMAITEM" alt="" coords="1104,450,1208,530">
-<area shape="rect" id="node117" href="SHIP.html" title="SHIP" alt="" coords="797,876,896,956">
-<area shape="rect" id="node123" href="SHIPCARTON.html" title="SHIPCARTON" alt="" coords="1091,715,1221,795">
-<area shape="rect" id="node135" href="SOITEM.html" title="SOITEM" alt="" coords="1104,812,1208,892">
-<area shape="rect" id="node145" href="USERTOLG.html" title="USERTOLG" alt="" coords="789,2196,904,2276">
-<area shape="rect" id="node148" href="VENDORCOSTRULE.html" title="VENDORCOSTRULE" alt="" coords="757,707,936,787">
-<area shape="rect" id="node152" href="WATCH.html" title="WATCH" alt="" coords="800,1482,893,1562">
-<area shape="rect" id="node156" href="WO.html" title="WO" alt="" coords="1107,3038,1205,3118">
-<area shape="rect" id="node162" href="XO.html" title="XO" alt="" coords="797,2099,896,2179">
+<area shape="rect" id="node1" href="ADDRESS.html" title="ADDRESS" alt="" coords="1113,3116,1220,3196">
+<area shape="rect" id="node3" href="ACCOUNT.html" title="ACCOUNT" alt="" coords="291,2394,400,2474">
+<area shape="rect" id="node5" href="LOCATIONGROUP.html" title="LOCATIONGROUP" alt="" coords="776,2797,957,2968">
+<area shape="rect" id="node58" href="QBCLASS.html" title="QBCLASS" alt="" coords="520,2218,701,2456">
+<area shape="rect" id="node6" href="BOMITEMTOLOCATION.html" title="BOMITEMTOLOCATION" alt="" coords="1641,3153,1836,3233">
+<area shape="rect" id="node9" href="LOCATION.html" title="LOCATION" alt="" coords="1413,2972,1523,3052">
+<area shape="rect" id="node20" href="CUSTOMER.html" title="CUSTOMER" alt="" coords="1108,2330,1225,2410">
+<area shape="rect" id="node55" href="VENDOR.html" title="VENDOR" alt="" coords="492,1294,729,1873">
+<area shape="rect" id="node10" href="BOMTOLOCATION.html" title="BOMTOLOCATION" alt="" coords="1657,2861,1820,2941">
+<area shape="rect" id="node13" href="COMPANY.html" title="COMPANY" alt="" coords="557,2121,664,2201">
+<area shape="rect" id="node16" href="CARRIER.html" title="CARRIER" alt="" coords="279,1048,412,1242">
+<area shape="rect" id="node17" href="CURRENCY.html" title="CURRENCY" alt="" coords="244,1782,447,2044">
+<area shape="rect" id="node19" href="SYSUSER.html" title="SYSUSER" alt="" coords="45,2712,160,2792">
+<area shape="rect" id="node24" href="PAYMENTTERMS.html" title="PAYMENTTERMS" alt="" coords="255,1391,436,1766">
+<area shape="rect" id="node26" href="SHIPTERMS.html" title="SHIPTERMS" alt="" coords="283,2061,408,2186">
+<area shape="rect" id="node28" href="TAXRATE.html" title="TAXRATE" alt="" coords="776,1487,957,1907">
+<area shape="rect" id="node77" href="PAYMENTTERMSTYPE.html" title="PAYMENTTERMSTYPE" alt="" coords="5,1413,200,1493">
+<area shape="rect" id="node42" href="ASACCOUNT.html" title="ASACCOUNT" alt="" coords="547,1988,675,2068">
+<area shape="rect" id="node124" href="ORDERTYPE.html" title="ORDERTYPE" alt="" coords="548,254,673,334">
+<area shape="rect" id="node161" href="TAXRATETYPE.html" title="TAXRATETYPE" alt="" coords="540,1890,681,1970">
+<area shape="rect" id="node29" href="DEFAULTLOCATION.html" title="DEFAULTLOCATION" alt="" coords="1652,2764,1825,2844">
+<area shape="rect" id="node33" href="PART.html" title="PART" alt="" coords="1411,2193,1525,2273">
+<area shape="rect" id="node48" href="PRODUCT.html" title="PRODUCT" alt="" coords="1112,1993,1221,2073">
+<area shape="rect" id="node52" href="UOM.html" title="UOM" alt="" coords="813,1976,920,2056">
+<area shape="rect" id="node34" href="INVENTORYLOG.html" title="INVENTORYLOG" alt="" coords="1664,3056,1813,3136">
+<area shape="rect" id="node40" href="ITEMADJUST.html" title="ITEMADJUST" alt="" coords="1104,1716,1229,1796">
+<area shape="rect" id="node45" href="KITITEM.html" title="KITITEM" alt="" coords="1420,1896,1516,1976">
+<area shape="rect" id="node172" href="VENDORSTATUS.html" title="VENDORSTATUS" alt="" coords="268,1294,423,1374">
+<area shape="rect" id="node59" href="MO.html" title="MO" alt="" coords="1124,2561,1209,2641">
+<area shape="rect" id="node73" href="PARTREORDER.html" title="PARTREORDER" alt="" coords="1665,2478,1812,2558">
+<area shape="rect" id="node78" href="PICK.html" title="PICK" alt="" coords="1117,3249,1216,3329">
+<area shape="rect" id="node81" href="PO.html" title="PO" alt="" coords="1003,230,1331,1313">
+<area shape="rect" id="node85" href="FOBPOINT.html" title="FOBPOINT" alt="" coords="813,262,920,364">
+<area shape="rect" id="node91" href="POSTATUS.html" title="POSTATUS" alt="" coords="809,571,924,674">
+<area shape="rect" id="node94" href="POTYPE.html" title="POTYPE" alt="" coords="817,452,916,555">
+<area shape="rect" id="node96" href="POITEM.html" title="POITEM" alt="" coords="1605,982,1872,1606">
+<area shape="rect" id="node102" href="POITEMSTATUS.html" title="POITEMSTATUS" alt="" coords="1395,1109,1541,1189">
+<area shape="rect" id="node105" href="POITEMTYPE.html" title="POITEMTYPE" alt="" coords="1405,1012,1531,1092">
+<area shape="rect" id="node107" href="POSTPO.html" title="POSTPO" alt="" coords="1648,464,1829,770">
+<area shape="rect" id="node110" href="POSTORDERSTATUS.html" title="POSTORDERSTATUS" alt="" coords="1375,530,1561,610">
+<area shape="rect" id="node111" href="POSTPOITEM.html" title="POSTPOITEM" alt="" coords="1916,722,2047,802">
+<area shape="rect" id="node121" href="RECEIPT.html" title="RECEIPT" alt="" coords="1113,1402,1220,1482">
+<area shape="rect" id="node126" href="RECEIPTITEM.html" title="RECEIPTITEM" alt="" coords="1672,1729,1805,1809">
+<area shape="rect" id="node133" href="RMA.html" title="RMA" alt="" coords="1419,2398,1517,2478">
+<area shape="rect" id="node137" href="RMAITEM.html" title="RMAITEM" alt="" coords="1687,2066,1791,2146">
+<area shape="rect" id="node143" href="SHIP.html" title="SHIP" alt="" coords="1117,133,1216,213">
+<area shape="rect" id="node149" href="SHIPCARTON.html" title="SHIPCARTON" alt="" coords="1403,65,1533,145">
+<area shape="rect" id="node153" href="SOITEM.html" title="SOITEM" alt="" coords="1416,1993,1520,2073">
+<area shape="rect" id="node163" href="USERTOLG.html" title="USERTOLG" alt="" coords="1109,2464,1224,2544">
+<area shape="rect" id="node174" href="VENDORCOSTRULE.html" title="VENDORCOSTRULE" alt="" coords="1649,2193,1828,2273">
+<area shape="rect" id="node178" href="WATCH.html" title="WATCH" alt="" coords="1692,3250,1785,3330">
+<area shape="rect" id="node182" href="WO.html" title="WO" alt="" coords="1689,2958,1788,3038">
+<area shape="rect" id="node188" href="XO.html" title="XO" alt="" coords="1117,2694,1216,2774">
 </map>
 
   <a name='diagram'><img id='twoDegreesImg' src='../diagrams/PO.2degrees.png' usemap='#twoDegreesRelationshipsDiagram' class='diagram' border='0' alt='' align='left'></a>

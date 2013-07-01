@@ -26,6 +26,7 @@ digraph "twoDegreesRelationshipsDiagram" {
   "TAG":"TYPEID":w -> "TAGTYPE":"ID.type":e [arrowhead=none dir=back arrowtail=crowodot];
   "TAG":"WOITEMID":w -> "WOITEM":"elipses":e [arrowhead=none dir=back arrowtail=crowodot];
   "TRACKINGDATE":"elipses":w -> "TAG":"ID":e [arrowhead=none dir=back arrowtail=crowodot];
+  "TRACKINGDECIMAL":"elipses":w -> "TAG":"ID":e [arrowhead=none dir=back arrowtail=crowodot];
   "TRACKINGINTEGER":"elipses":w -> "TAG":"ID":e [arrowhead=none dir=back arrowtail=crowodot];
   "TRACKINGTEXT":"elipses":w -> "TAG":"ID":e [arrowhead=none dir=back arrowtail=crowodot];
   "WOITEM":"elipses":w -> "PART":"elipses":e [arrowhead=none dir=back arrowtail=crowodot];
@@ -35,7 +36,7 @@ digraph "twoDegreesRelationshipsDiagram" {
     <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
       <TR><TD COLSPAN="3" BGCOLOR="#9bab96" ALIGN="CENTER">ACCOUNT</TD></TR>
       <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
-      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">&lt; 1</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">6 &gt;</TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">&lt; 1</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">7 &gt;</TD></TR>
     </TABLE>>
     URL="ACCOUNT.html"
     tooltip="ACCOUNT"
@@ -75,21 +76,21 @@ digraph "twoDegreesRelationshipsDiagram" {
     <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
       <TR><TD COLSPAN="3" BGCOLOR="#9bab96" ALIGN="CENTER">TAG</TD></TR>
       <TR><TD PORT="ID" COLSPAN="3" BGCOLOR="#bed1b8" ALIGN="LEFT">ID</TD></TR>
-      <TR><TD PORT="NUM" COLSPAN="3" ALIGN="LEFT">NUM</TD></TR>
-      <TR><TD PORT="PARTID" COLSPAN="3" ALIGN="LEFT">PARTID</TD></TR>
-      <TR><TD PORT="LOCATIONID" COLSPAN="3" ALIGN="LEFT">LOCATIONID</TD></TR>
-      <TR><TD PORT="DATECREATED" COLSPAN="3" ALIGN="LEFT">DATECREATED</TD></TR>
+      <TR><TD PORT="NUM" COLSPAN="3" BGCOLOR="#f4f7da" ALIGN="LEFT">NUM</TD></TR>
+      <TR><TD PORT="PARTID" COLSPAN="3" BGCOLOR="#f4f7da" ALIGN="LEFT">PARTID</TD></TR>
+      <TR><TD PORT="LOCATIONID" COLSPAN="3" BGCOLOR="#f4f7da" ALIGN="LEFT">LOCATIONID</TD></TR>
+      <TR><TD PORT="DATECREATED" COLSPAN="3" BGCOLOR="#f4f7da" ALIGN="LEFT">DATECREATED</TD></TR>
       <TR><TD PORT="DATELASTCYCLECOUNT" COLSPAN="3" ALIGN="LEFT">DATELASTCYCLECOUNT</TD></TR>
       <TR><TD PORT="SERIALIZEDFLAG" COLSPAN="3" ALIGN="LEFT">SERIALIZEDFLAG</TD></TR>
       <TR><TD PORT="USEDFLAG" COLSPAN="3" ALIGN="LEFT">USEDFLAG</TD></TR>
-      <TR><TD PORT="TYPEID" COLSPAN="3" ALIGN="LEFT">TYPEID</TD></TR>
+      <TR><TD PORT="TYPEID" COLSPAN="3" BGCOLOR="#f4f7da" ALIGN="LEFT">TYPEID</TD></TR>
       <TR><TD PORT="DATELASTMODIFIED" COLSPAN="3" ALIGN="LEFT">DATELASTMODIFIED</TD></TR>
-      <TR><TD PORT="ACCOUNTID" COLSPAN="3" ALIGN="LEFT">ACCOUNTID</TD></TR>
+      <TR><TD PORT="ACCOUNTID" COLSPAN="3" BGCOLOR="#f4f7da" ALIGN="LEFT">ACCOUNTID</TD></TR>
       <TR><TD PORT="QTY" COLSPAN="3" ALIGN="LEFT">QTY</TD></TR>
       <TR><TD PORT="QTYCOMMITTED" COLSPAN="3" ALIGN="LEFT">QTYCOMMITTED</TD></TR>
-      <TR><TD PORT="WOITEMID" COLSPAN="3" ALIGN="LEFT">WOITEMID</TD></TR>
+      <TR><TD PORT="WOITEMID" COLSPAN="3" BGCOLOR="#f4f7da" ALIGN="LEFT">WOITEMID</TD></TR>
       <TR><TD PORT="TRACKINGENCODING" COLSPAN="3" ALIGN="LEFT">TRACKINGENCODING</TD></TR>
-      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">&lt; 5</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">5 &gt;</TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">&lt; 5</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">6 &gt;</TD></TR>
     </TABLE>>
     URL="TAG.html"
     tooltip="TAG"
@@ -114,6 +115,16 @@ digraph "twoDegreesRelationshipsDiagram" {
     </TABLE>>
     URL="TRACKINGDATE.html"
     tooltip="TRACKINGDATE"
+  ];
+  "TRACKINGDECIMAL" [
+    label=<
+    <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
+      <TR><TD COLSPAN="3" BGCOLOR="#9bab96" ALIGN="CENTER">TRACKINGDECIMAL</TD></TR>
+      <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">&lt; 2</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD></TR>
+    </TABLE>>
+    URL="TRACKINGDECIMAL.html"
+    tooltip="TRACKINGDECIMAL"
   ];
   "TRACKINGINTEGER" [
     label=<
@@ -150,7 +161,7 @@ digraph "twoDegreesRelationshipsDiagram" {
     <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
       <TR><TD COLSPAN="3" BGCOLOR="#9bab96" ALIGN="CENTER">XO</TD></TR>
       <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
-      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">&lt; 7</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">2 &gt;</TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">&lt; 7</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">1 &gt;</TD></TR>
     </TABLE>>
     URL="XO.html"
     tooltip="XO"

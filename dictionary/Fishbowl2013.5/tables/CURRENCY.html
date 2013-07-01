@@ -102,7 +102,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 </tr>
 </thead>
 <tbody valign='top'>
-<tr class='even'>
+<tr class='odd'>
  <td class='primaryKey' title='Primary Key'>ID</td>
  <td class='detail'>integer</td>
  <td class='detail' align='right'>10</td>
@@ -111,10 +111,16 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
  <td class='detail'></td>
  <td class='detail'>
   <table border='0' width='100%' cellspacing='0' cellpadding='0'>
-   <tr class='relative even' valign='top'>
+   <tr class='relative odd' valign='top'>
     <td class='relatedTable detail' title="PO.CURRENCYID refs CURRENCY.ID via INTEG_1155"><a href='PO.html'>PO</a><span class='relatedKey'>.CURRENCYID</span>
     </td>
     <td class='constraint detail'>INTEG_1155<span title='Restrict delete:
+ Parent cannot be deleted if children exist'>&nbsp;R</span></td>
+   </tr>
+   <tr class='relative odd' valign='top'>
+    <td class='relatedTable detail' title="VENDOR.CURRENCYID refs CURRENCY.ID via INTEG_1166"><a href='VENDOR.html'>VENDOR</a><span class='relatedKey'>.CURRENCYID</span>
+    </td>
+    <td class='constraint detail'>INTEG_1166<span title='Restrict delete:
  Parent cannot be deleted if children exist'>&nbsp;R</span></td>
    </tr>
   </table>
@@ -122,7 +128,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
  <td class='detail'> </td>
  <td class='comment detail'></td>
 </tr>
-<tr class='odd'>
+<tr class='even'>
  <td class='indexedColumn' title='Indexed'>NAME</td>
  <td class='detail'>varchar</td>
  <td class='detail' align='right'>255</td>
@@ -133,7 +139,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
  <td class='detail'> </td>
  <td class='comment detail'></td>
 </tr>
-<tr class='even'>
+<tr class='odd'>
  <td class='detail'>CODE</td>
  <td class='detail'>varchar</td>
  <td class='detail' align='right'>255</td>
@@ -144,7 +150,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
  <td class='detail'> </td>
  <td class='comment detail'></td>
 </tr>
-<tr class='odd'>
+<tr class='even'>
  <td class='detail'>RATE</td>
  <td class='detail'>double precision</td>
  <td class='detail' align='right'>15</td>
@@ -155,7 +161,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
  <td class='detail'> </td>
  <td class='comment detail'></td>
 </tr>
-<tr class='even'>
+<tr class='odd'>
  <td class='detail'>ACTIVEFLAG</td>
  <td class='detail'>smallint</td>
  <td class='detail' align='right'>5</td>
@@ -166,8 +172,8 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
  <td class='detail'> </td>
  <td class='comment detail'></td>
 </tr>
-<tr class='odd'>
- <td class='detail'>LASTCHANGEDUSERID</td>
+<tr class='even'>
+ <td class='indexedColumn' title='Indexed'>LASTCHANGEDUSERID</td>
  <td class='detail'>integer</td>
  <td class='detail' align='right'>10</td>
  <td class='detail' align='center'></td>
@@ -176,7 +182,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
  <td class='detail'></td>
  <td class='detail'>
   <table border='0' width='100%' cellspacing='0' cellpadding='0'>
-   <tr class='relative odd' valign='top'>
+   <tr class='relative even' valign='top'>
     <td class='relatedTable detail' title="CURRENCY.LASTCHANGEDUSERID refs SYSUSER.ID via INTEG_1069"><a href='SYSUSER.html'>SYSUSER</a><span class='relatedKey'>.ID</span>
     </td>
     <td class='constraint detail'>INTEG_1069<span title='Restrict delete:
@@ -186,7 +192,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
  </td>
  <td class='comment detail'></td>
 </tr>
-<tr class='even'>
+<tr class='odd'>
  <td class='detail'>DATECREATED</td>
  <td class='detail'>timestamp</td>
  <td class='detail' align='right'>19</td>
@@ -197,7 +203,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
  <td class='detail'> </td>
  <td class='comment detail'></td>
 </tr>
-<tr class='odd'>
+<tr class='even'>
  <td class='detail'>DATELASTMODIFIED</td>
  <td class='detail'>timestamp</td>
  <td class='detail' align='right'>19</td>
@@ -208,7 +214,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
  <td class='detail'> </td>
  <td class='comment detail'></td>
 </tr>
-<tr class='even'>
+<tr class='odd'>
  <td class='detail'>SYMBOL</td>
  <td class='detail'>integer</td>
  <td class='detail' align='right'>10</td>
@@ -220,7 +226,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
  <td class='comment detail'></td>
 </tr>
 </table>
-<p title='9 columns'>Analyzed at Mon Jul 01 09:44 PDT 2013<p/>
+<p title='9 columns'>Analyzed at Mon Jul 01 12:49 PDT 2013<p/>
 </td></tr></table>
 <div class='indent'>
 <b>Indexes:</b>
@@ -236,32 +242,32 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 </thead>
 <tbody>
  <tr>
-  <td class='indexedColumn'></td>
+  <td class='indexedColumn'>LASTCHANGEDUSERID</td>
   <td class='detail'>Performance</td>
-  <td class='detail' style='text-align:left;'></td>
-  <td class='constraint' style='text-align:left;'>COUNTRYCONSTABBREVIATION</td>
+  <td class='detail' style='text-align:left;'><span title='Ascending'>Asc</span></td>
+  <td class='constraint' style='text-align:left;'>CURRENCYLASTCHANGEDUSE</td>
   <td>&nbsp;</td>
  </tr>
  <tr>
-  <td class='indexedColumn'>NAME</td>
+  <td class='indexedColumn'>LASTCHANGEDUSERID</td>
   <td class='detail'>Performance</td>
   <td class='detail' style='text-align:left;'><span title='Ascending'>Asc</span></td>
-  <td class='constraint' style='text-align:left;'>COUNTRYCONSTNAME</td>
+  <td class='constraint' style='text-align:left;'>RDB$FOREIGN129</td>
   <td>&nbsp;</td>
- </tr>
- <tr>
-  <td class='indexedColumn'>NAME</td>
-  <td class='detail'>Must be unique</td>
-  <td class='detail' style='text-align:left;'><span title='Ascending'>Asc</span></td>
-  <td class='constraint' style='text-align:left;'>RDB$521</td>
-  <td class='detail'>This unique column is also nullable</td>
  </tr>
  <tr>
   <td class='indexedColumn'>ID</td>
   <td class='detail'>Must be unique</td>
   <td class='detail' style='text-align:left;'><span title='Ascending'>Asc</span></td>
-  <td class='constraint' style='text-align:left;'>RDB$PRIMARY14</td>
+  <td class='constraint' style='text-align:left;'>RDB$PRIMARY127</td>
   <td>&nbsp;</td>
+ </tr>
+ <tr>
+  <td class='indexedColumn'>NAME</td>
+  <td class='detail'>Must be unique</td>
+  <td class='detail' style='text-align:left;'><span title='Ascending'>Asc</span></td>
+  <td class='constraint' style='text-align:left;'>UNIQUENAME</td>
+  <td class='detail'>This unique column is also nullable</td>
  </tr>
 </table>
 </div>
@@ -269,47 +275,54 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 <br><form action='get'><b>Close relationships</b><span class='degrees' id='degrees' title='Detail diminishes with increased separation from CURRENCY'>
 &nbsp;within <label for='oneDegree'><input type='radio' name='degrees' id='oneDegree' checked>one</label>  <label for='twoDegrees'><input type='radio' name='degrees' id='twoDegrees'>two degrees</label> of separation</span><b>:</b></form>
 <map id="oneDegreeRelationshipsDiagram" name="oneDegreeRelationshipsDiagram">
-<area shape="rect" id="node1" href="CURRENCY.html" title="CURRENCY" alt="" coords="180,979,524,1245">
-<area shape="rect" id="node3" href="SYSUSER.html" title="SYSUSER" alt="" coords="7,1096,135,1312">
-<area shape="rect" id="node4" href="PO.html" title="PO" alt="" coords="568,5,755,1083">
+<area shape="rect" id="node1" href="CURRENCY.html" title="CURRENCY" alt="" coords="180,813,524,1080">
+<area shape="rect" id="node3" href="SYSUSER.html" title="SYSUSER" alt="" coords="7,931,135,1147">
+<area shape="rect" id="node4" href="PO.html" title="PO" alt="" coords="852,5,1039,1083">
+<area shape="rect" id="node7" href="VENDOR.html" title="VENDOR" alt="" coords="569,295,807,873">
 </map>
   <a name='diagram'><img id='oneDegreeImg' src='../diagrams/CURRENCY.1degree.png' usemap='#oneDegreeRelationshipsDiagram' class='diagram' border='0' alt='' align='left'></a>
 <map id="twoDegreesRelationshipsDiagram" name="twoDegreesRelationshipsDiagram">
-<area shape="rect" id="node1" href="BOM.html" title="BOM" alt="" coords="485,687,584,767">
-<area shape="rect" id="node3" href="SYSUSER.html" title="SYSUSER" alt="" coords="173,1016,301,1232">
-<area shape="rect" id="node4" href="CALCATEGORY.html" title="CALCATEGORY" alt="" coords="461,589,608,669">
-<area shape="rect" id="node6" href="CALEVENT.html" title="CALEVENT" alt="" coords="789,720,899,800">
-<area shape="rect" id="node9" href="CURRENCY.html" title="CURRENCY" alt="" coords="363,953,707,1220">
-<area shape="rect" id="node11" href="FBSCHEDULE.html" title="FBSCHEDULE" alt="" coords="468,5,601,85">
-<area shape="rect" id="node13" href="INVENTORYLOG.html" title="INVENTORYLOG" alt="" coords="460,1237,609,1317">
-<area shape="rect" id="node15" href="LOCATIONGROUP.html" title="LOCATIONGROUP" alt="" coords="156,1627,319,1707">
-<area shape="rect" id="node18" href="QBCLASS.html" title="QBCLASS" alt="" coords="7,1561,111,1641">
-<area shape="rect" id="node19" href="MO.html" title="MO" alt="" coords="492,784,577,864">
-<area shape="rect" id="node23" href="ORDERHISTORY.html" title="ORDERHISTORY" alt="" coords="457,103,612,183">
-<area shape="rect" id="node25" href="PICK.html" title="PICK" alt="" coords="485,1335,584,1415">
-<area shape="rect" id="node28" href="PO.html" title="PO" alt="" coords="751,2109,937,3187">
-<area shape="rect" id="node30" href="CARRIER.html" title="CARRIER" alt="" coords="185,2052,289,2132">
-<area shape="rect" id="node33" href="FOBPOINT.html" title="FOBPOINT" alt="" coords="184,2152,291,2232">
-<area shape="rect" id="node36" title="null.PAYMENTTERMS" alt="" coords="444,2319,625,2399">
-<area shape="rect" id="node39" href="SHIPTERMS.html" title="SHIPTERMS" alt="" coords="476,2416,593,2496">
-<area shape="rect" id="node41" title="null.POSTATUS" alt="" coords="465,2611,604,2691">
-<area shape="rect" id="node43" href="TAXRATE.html" title="TAXRATE" alt="" coords="481,2936,588,3016">
-<area shape="rect" id="node45" href="POTYPE.html" title="POTYPE" alt="" coords="485,2513,584,2593">
-<area shape="rect" id="node47" title="null.VENDOR" alt="" coords="176,2676,299,2756">
-<area shape="rect" id="node48" href="POSTPO.html" title="POSTPO" alt="" coords="983,2108,1087,2188">
-<area shape="rect" id="node50" href="PRICINGRULE.html" title="PRICINGRULE" alt="" coords="468,200,601,280">
-<area shape="rect" id="node52" href="RECEIPT.html" title="RECEIPT" alt="" coords="481,1529,588,1609">
-<area shape="rect" id="node55" href="RMA.html" title="RMA" alt="" coords="485,1627,584,1707">
-<area shape="rect" id="node58" href="SHIP.html" title="SHIP" alt="" coords="485,2052,584,2132">
-<area shape="rect" id="node64" href="USERGROUPREL.html" title="USERGROUPREL" alt="" coords="456,297,613,377">
-<area shape="rect" id="node66" href="USERLOG.html" title="USERLOG" alt="" coords="481,395,588,475">
-<area shape="rect" id="node68" href="USERPROPERTIES.html" title="USERPROPERTIES" alt="" coords="449,492,620,572">
-<area shape="rect" id="node70" href="USERTOLG.html" title="USERTOLG" alt="" coords="477,1724,592,1804">
-<area shape="rect" id="node73" href="VENDORCOSTRULE.html" title="VENDORCOSTRULE" alt="" coords="445,2221,624,2301">
-<area shape="rect" id="node76" href="WATCH.html" title="WATCH" alt="" coords="488,1821,581,1901">
-<area shape="rect" id="node79" href="WO.html" title="WO" alt="" coords="485,1432,584,1512">
-<area shape="rect" id="node83" href="WOASSIGNEDUSERS.html" title="WOASSIGNEDUSERS" alt="" coords="751,1159,937,1239">
-<area shape="rect" id="node86" href="XO.html" title="XO" alt="" coords="485,1955,584,2035">
+<area shape="rect" id="node1" href="BOM.html" title="BOM" alt="" coords="303,2109,401,2189">
+<area shape="rect" id="node3" href="SYSUSER.html" title="SYSUSER" alt="" coords="7,1001,135,1217">
+<area shape="rect" id="node4" href="CALCATEGORY.html" title="CALCATEGORY" alt="" coords="279,139,425,219">
+<area shape="rect" id="node6" href="CALEVENT.html" title="CALEVENT" alt="" coords="633,308,743,388">
+<area shape="rect" id="node9" href="CURRENCY.html" title="CURRENCY" alt="" coords="180,1717,524,1984">
+<area shape="rect" id="node11" href="CUSTOMERPARTS.html" title="CUSTOMERPARTS" alt="" coords="269,5,435,85">
+<area shape="rect" id="node13" href="FBSCHEDULE.html" title="FBSCHEDULE" alt="" coords="285,236,419,316">
+<area shape="rect" id="node15" href="INVENTORYLOG.html" title="INVENTORYLOG" alt="" coords="1084,2344,1233,2424">
+<area shape="rect" id="node17" href="LOCATION.html" title="LOCATION" alt="" coords="891,2311,1000,2391">
+<area shape="rect" id="node20" href="LOCATIONGROUP.html" title="LOCATIONGROUP" alt="" coords="271,2207,433,2287">
+<area shape="rect" id="node23" href="VENDOR.html" title="VENDOR" alt="" coords="569,1145,807,1724">
+<area shape="rect" id="node26" href="QBCLASS.html" title="QBCLASS" alt="" coords="19,2509,123,2589">
+<area shape="rect" id="node38" href="CARRIER.html" title="CARRIER" alt="" coords="300,697,404,777">
+<area shape="rect" id="node44" href="PAYMENTTERMS.html" title="PAYMENTTERMS" alt="" coords="273,831,431,911">
+<area shape="rect" id="node47" href="SHIPTERMS.html" title="SHIPTERMS" alt="" coords="293,1425,411,1505">
+<area shape="rect" id="node51" href="TAXRATE.html" title="TAXRATE" alt="" coords="295,1620,409,1700">
+<area shape="rect" id="node88" href="ACCOUNT.html" title="ACCOUNT" alt="" coords="297,1328,407,1408">
+<area shape="rect" id="node94" href="VENDORSTATUS.html" title="VENDORSTATUS" alt="" coords="275,1523,429,1603">
+<area shape="rect" id="node27" href="MO.html" title="MO" alt="" coords="645,2311,731,2391">
+<area shape="rect" id="node31" href="ORDERHISTORY.html" title="ORDERHISTORY" alt="" coords="275,333,429,413">
+<area shape="rect" id="node33" href="PICK.html" title="PICK" alt="" coords="639,1875,737,1955">
+<area shape="rect" id="node36" href="PO.html" title="PO" alt="" coords="852,849,1039,1927">
+<area shape="rect" id="node41" href="FOBPOINT.html" title="FOBPOINT" alt="" coords="299,564,405,644">
+<area shape="rect" id="node49" href="POSTATUS.html" title="POSTATUS" alt="" coords="631,1048,745,1128">
+<area shape="rect" id="node53" href="POTYPE.html" title="POTYPE" alt="" coords="639,951,737,1031">
+<area shape="rect" id="node55" href="POITEM.html" title="POITEM" alt="" coords="1107,1940,1211,2020">
+<area shape="rect" id="node59" href="POSTPO.html" title="POSTPO" alt="" coords="1107,848,1211,928">
+<area shape="rect" id="node61" href="PRICINGRULE.html" title="PRICINGRULE" alt="" coords="285,431,419,511">
+<area shape="rect" id="node63" href="RECEIPT.html" title="RECEIPT" alt="" coords="635,2044,741,2124">
+<area shape="rect" id="node66" href="RMA.html" title="RMA" alt="" coords="639,2444,737,2524">
+<area shape="rect" id="node69" href="RMAITEM.html" title="RMAITEM" alt="" coords="893,2092,997,2172">
+<area shape="rect" id="node72" href="SHIP.html" title="SHIP" alt="" coords="639,612,737,692">
+<area shape="rect" id="node78" href="USERGROUPREL.html" title="USERGROUPREL" alt="" coords="273,1000,431,1080">
+<area shape="rect" id="node80" href="USERLOG.html" title="USERLOG" alt="" coords="299,1097,405,1177">
+<area shape="rect" id="node82" href="USERPROPERTIES.html" title="USERPROPERTIES" alt="" coords="267,1195,437,1275">
+<area shape="rect" id="node84" href="USERTOLG.html" title="USERTOLG" alt="" coords="631,2141,745,2221">
+<area shape="rect" id="node96" href="VENDORCOSTRULE.html" title="VENDORCOSTRULE" alt="" coords="856,732,1035,812">
+<area shape="rect" id="node99" href="WATCH.html" title="WATCH" alt="" coords="641,1741,735,1821">
+<area shape="rect" id="node102" href="WO.html" title="WO" alt="" coords="1109,2581,1208,2661">
+<area shape="rect" id="node107" href="WOASSIGNEDUSERS.html" title="WOASSIGNEDUSERS" alt="" coords="1279,1327,1465,1407">
+<area shape="rect" id="node110" href="XO.html" title="XO" alt="" coords="639,817,737,897">
 </map>
 
   <a name='diagram'><img id='twoDegreesImg' src='../diagrams/CURRENCY.2degrees.png' usemap='#twoDegreesRelationshipsDiagram' class='diagram' border='0' alt='' align='left'></a>

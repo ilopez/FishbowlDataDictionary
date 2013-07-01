@@ -109,7 +109,16 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
  <td class='detail' align='center'></td>
  <td class='detail' align='center'></td>
  <td class='detail'></td>
- <td class='detail'></td>
+ <td class='detail'>
+  <table border='0' width='100%' cellspacing='0' cellpadding='0'>
+   <tr class='relative odd' valign='top'>
+    <td class='relatedTable detail' title="PAYMENTTERMS.TYPEID refs PAYMENTTERMSTYPE.ID via INTEG_253"><a href='PAYMENTTERMS.html'>PAYMENTTERMS</a><span class='relatedKey'>.TYPEID</span>
+    </td>
+    <td class='constraint detail'>INTEG_253<span title='Restrict delete:
+ Parent cannot be deleted if children exist'>&nbsp;R</span></td>
+   </tr>
+  </table>
+</td>
  <td class='detail'> </td>
  <td class='comment detail'></td>
 </tr>
@@ -125,7 +134,45 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
  <td class='comment detail'></td>
 </tr>
 </table>
-<p title='2 columns'>Analyzed at Mon Jul 01 09:44 PDT 2013<p/>
+<p title='2 columns'>Analyzed at Mon Jul 01 12:49 PDT 2013<p/>
+</td></tr></table>
+<div class='indent'>
+<b>Indexes:</b>
+<table class='dataTable' border='1' rules='groups'><colgroup><colgroup><colgroup><colgroup>
+<thead>
+ <tr>
+  <th>Column(s)</th>
+  <th>Type</th>
+  <th>Sort</th>
+  <th class='constraint' style='text-align:left;'>Constraint Name</th>
+ </tr>
+</thead>
+<tbody>
+ <tr>
+  <td class='indexedColumn'>ID</td>
+  <td class='detail'>Must be unique</td>
+  <td class='detail' style='text-align:left;'><span title='Ascending'>Asc</span></td>
+  <td class='constraint' style='text-align:left;'>RDB$PRIMARY13</td>
+ </tr>
+</table>
+</div>
+<table width='100%' border='0'><tr><td class='container'>
+<br><form action='get'><b>Close relationships</b><span class='degrees' id='degrees' title='Detail diminishes with increased separation from PAYMENTTERMSTYPE'>
+&nbsp;within <label for='oneDegree'><input type='radio' name='degrees' id='oneDegree' checked>one</label>  <label for='twoDegrees'><input type='radio' name='degrees' id='twoDegrees'>two degrees</label> of separation</span><b>:</b></form>
+<map id="oneDegreeRelationshipsDiagram" name="oneDegreeRelationshipsDiagram">
+<area shape="rect" id="node1" href="PAYMENTTERMS.html" title="PAYMENTTERMS" alt="" coords="275,5,456,379">
+<area shape="rect" id="node3" href="PAYMENTTERMSTYPE.html" title="PAYMENTTERMSTYPE" alt="" coords="5,25,229,133">
+</map>
+  <a name='diagram'><img id='oneDegreeImg' src='../diagrams/PAYMENTTERMSTYPE.1degree.png' usemap='#oneDegreeRelationshipsDiagram' class='diagram' border='0' alt='' align='left'></a>
+<map id="twoDegreesRelationshipsDiagram" name="twoDegreesRelationshipsDiagram">
+<area shape="rect" id="node1" href="CUSTOMER.html" title="CUSTOMER" alt="" coords="503,5,620,85">
+<area shape="rect" id="node3" href="PAYMENTTERMS.html" title="PAYMENTTERMS" alt="" coords="275,71,456,446">
+<area shape="rect" id="node5" href="PAYMENTTERMSTYPE.html" title="PAYMENTTERMSTYPE" alt="" coords="5,91,229,199">
+<area shape="rect" id="node6" href="PO.html" title="PO" alt="" coords="665,105,772,185">
+<area shape="rect" id="node9" href="VENDOR.html" title="VENDOR" alt="" coords="508,139,615,219">
+</map>
+
+  <a name='diagram'><img id='twoDegreesImg' src='../diagrams/PAYMENTTERMSTYPE.2degrees.png' usemap='#twoDegreesRelationshipsDiagram' class='diagram' border='0' alt='' align='left'></a>
 </td></tr></table>
 </div>
 </body>

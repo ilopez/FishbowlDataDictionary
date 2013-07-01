@@ -50,7 +50,7 @@ digraph "twoDegreesRelationshipsDiagram" {
   "INVENTORYLOG":"elipses":w -> "PART":"ID":e [arrowhead=none dir=back arrowtail=crowodot];
   "INVENTORYLOG":"elipses":w -> "SYSUSER":"elipses":e [arrowhead=none dir=back arrowtail=crowodot];
   "LOCATION":"DEFAULTCUSTOMERID":w -> "CUSTOMER":"elipses":e [arrowhead=none dir=back arrowtail=crowodot];
-  "LOCATION":"DEFAULTVENDORID":w -> "null.VENDOR":"elipses":e [arrowhead=none dir=back arrowtail=crowodot];
+  "LOCATION":"DEFAULTVENDORID":w -> "VENDOR":"elipses":e [arrowhead=none dir=back arrowtail=crowodot];
   "LOCATION":"LOCATIONGROUPID":w -> "LOCATIONGROUP":"elipses":e [arrowhead=none dir=back arrowtail=crowodot];
   "LOCATION":"TYPEID":w -> "LOCATIONTYPE":"elipses":e [arrowhead=none dir=back arrowtail=crowodot];
   "PART":"ADJUSTMENTACCOUNTID":w -> "ASACCOUNT":"elipses":e [arrowhead=none dir=back arrowtail=crowodot];
@@ -72,6 +72,10 @@ digraph "twoDegreesRelationshipsDiagram" {
   "PARTTOTRACKING":"elipses":w -> "PARTTRACKING":"elipses":e [arrowhead=none dir=back arrowtail=crowodot];
   "PICKITEM":"elipses":w -> "PART":"ID":e [arrowhead=none dir=back arrowtail=crowodot];
   "PICKITEM":"elipses":w -> "UOM":"elipses":e [arrowhead=none dir=back arrowtail=crowodot];
+  "POITEM":"elipses":w -> "CUSTOMER":"elipses":e [arrowhead=none dir=back arrowtail=crowodot];
+  "POITEM":"elipses":w -> "PART":"ID":e [arrowhead=none dir=back arrowtail=crowodot];
+  "POITEM":"elipses":w -> "TAXRATE":"elipses":e [arrowhead=none dir=back arrowtail=crowodot];
+  "POITEM":"elipses":w -> "UOM":"elipses":e [arrowhead=none dir=back arrowtail=crowodot];
   "POSTWOITEM":"elipses":w -> "WOITEM":"ID":e [arrowhead=none dir=back arrowtail=crowodot];
   "POSTXO":"elipses":w -> "XO":"ID":e [arrowhead=none dir=back arrowtail=crowodot];
   "PRODUCT":"elipses":w -> "ASACCOUNT":"elipses":e [arrowhead=none dir=back arrowtail=crowodot];
@@ -95,16 +99,21 @@ digraph "twoDegreesRelationshipsDiagram" {
   "TAG":"TYPEID":w -> "TAGTYPE":"ID":e [arrowhead=none dir=back arrowtail=crowodot];
   "TAG":"WOITEMID":w -> "WOITEM":"ID":e [arrowhead=none dir=back arrowtail=crowodot];
   "TAXRATE":"elipses":w -> "ASACCOUNT":"elipses":e [arrowhead=none dir=back arrowtail=crowodot];
-  "TAXRATE":"elipses":w -> "null.VENDOR":"elipses":e [arrowhead=none dir=back arrowtail=crowodot];
+  "TAXRATE":"elipses":w -> "VENDOR":"elipses":e [arrowhead=none dir=back arrowtail=crowodot];
   "TRACKINGDATE":"PARTTRACKINGID":w -> "PARTTRACKING":"elipses":e [arrowhead=none dir=back arrowtail=crowodot];
   "TRACKINGDATE":"TAGID":w -> "TAG":"ID.type":e [arrowhead=none dir=back arrowtail=crowodot];
+  "TRACKINGDECIMAL":"PARTTRACKINGID":w -> "PARTTRACKING":"elipses":e [arrowhead=none dir=back arrowtail=crowodot];
+  "TRACKINGDECIMAL":"TAGID":w -> "TAG":"ID.type":e [arrowhead=none dir=back arrowtail=crowodot];
   "TRACKINGINTEGER":"PARTTRACKINGID":w -> "PARTTRACKING":"elipses":e [arrowhead=none dir=back arrowtail=crowodot];
   "TRACKINGINTEGER":"TAGID":w -> "TAG":"ID.type":e [arrowhead=none dir=back arrowtail=crowodot];
   "TRACKINGTEXT":"PARTTRACKINGID":w -> "PARTTRACKING":"elipses":e [arrowhead=none dir=back arrowtail=crowodot];
   "TRACKINGTEXT":"TAGID":w -> "TAG":"ID.type":e [arrowhead=none dir=back arrowtail=crowodot];
+  "VENDOR":"elipses":w -> "ACCOUNT":"ID":e [arrowhead=none dir=back arrowtail=crowodot];
+  "VENDOR":"elipses":w -> "CARRIER":"elipses":e [arrowhead=none dir=back arrowtail=crowodot];
+  "VENDOR":"elipses":w -> "TAXRATE":"elipses":e [arrowhead=none dir=back arrowtail=crowodot];
   "VENDORCOSTRULE":"elipses":w -> "PART":"ID":e [arrowhead=none dir=back arrowtail=crowodot];
   "VENDORCOSTRULE":"elipses":w -> "SYSUSER":"elipses":e [arrowhead=none dir=back arrowtail=crowodot];
-  "VENDORCOSTRULE":"elipses":w -> "null.VENDOR":"elipses":e [arrowhead=none dir=back arrowtail=crowodot];
+  "VENDORCOSTRULE":"elipses":w -> "VENDOR":"elipses":e [arrowhead=none dir=back arrowtail=crowodot];
   "WATCH":"elipses":w -> "PART":"ID":e [arrowhead=none dir=back arrowtail=crowodot];
   "WATCH":"elipses":w -> "LOCATIONGROUP":"elipses":e [arrowhead=none dir=back arrowtail=crowodot];
   "WATCH":"elipses":w -> "SYSUSER":"elipses":e [arrowhead=none dir=back arrowtail=crowodot];
@@ -125,16 +134,13 @@ digraph "twoDegreesRelationshipsDiagram" {
   "XO":"STATUSID":w -> "XOSTATUS":"elipses":e [arrowhead=none dir=back arrowtail=crowodot];
   "XO":"TYPEID":w -> "XOTYPE":"elipses":e [arrowhead=none dir=back arrowtail=crowodot];
   "XO":"USERID":w -> "SYSUSER":"elipses":e [arrowhead=none dir=back arrowtail=crowodot];
-  "XOITEM":"elipses":w -> "PART":"ID":e [arrowhead=none dir=back arrowtail=crowodot];
-  "XOITEM":"elipses":w -> "UOM":"elipses":e [arrowhead=none dir=back arrowtail=crowodot];
-  "XOITEM":"elipses":w -> "XO":"ID":e [arrowhead=none dir=back arrowtail=crowodot];
   "ACCOUNT" [
     label=<
     <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
       <TR><TD COLSPAN="3" BGCOLOR="#9bab96" ALIGN="CENTER">ACCOUNT</TD></TR>
       <TR><TD PORT="ID" COLSPAN="3" BGCOLOR="#bed1b8" ALIGN="LEFT">ID</TD></TR>
       <TR><TD PORT="TYPEID" COLSPAN="3" BGCOLOR="#f4f7da" ALIGN="LEFT">TYPEID</TD></TR>
-      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">&lt; 1</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">6 &gt;</TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">&lt; 1</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">7 &gt;</TD></TR>
     </TABLE>>
     URL="ACCOUNT.html"
     tooltip="ACCOUNT"
@@ -274,7 +280,7 @@ digraph "twoDegreesRelationshipsDiagram" {
     <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
       <TR><TD COLSPAN="3" BGCOLOR="#9bab96" ALIGN="CENTER">CUSTOMER</TD></TR>
       <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
-      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">&lt; 8</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">8 &gt;</TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">&lt; 8</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">9 &gt;</TD></TR>
     </TABLE>>
     URL="CUSTOMER.html"
     tooltip="CUSTOMER"
@@ -294,7 +300,7 @@ digraph "twoDegreesRelationshipsDiagram" {
     <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
       <TR><TD COLSPAN="3" BGCOLOR="#9bab96" ALIGN="CENTER">INVENTORYLOG</TD></TR>
       <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
-      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">&lt; 6</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">1 &gt;</TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">&lt; 6</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">2 &gt;</TD></TR>
     </TABLE>>
     URL="INVENTORYLOG.html"
     tooltip="INVENTORYLOG"
@@ -328,7 +334,7 @@ digraph "twoDegreesRelationshipsDiagram" {
     <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
       <TR><TD COLSPAN="3" BGCOLOR="#9bab96" ALIGN="CENTER">LOCATIONGROUP</TD></TR>
       <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
-      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">&lt; 1</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">19 &gt;</TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">&lt; 1</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">18 &gt;</TD></TR>
     </TABLE>>
     URL="LOCATIONGROUP.html"
     tooltip="LOCATIONGROUP"
@@ -441,7 +447,7 @@ digraph "twoDegreesRelationshipsDiagram" {
     <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
       <TR><TD COLSPAN="3" BGCOLOR="#9bab96" ALIGN="CENTER">PARTTRACKING</TD></TR>
       <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
-      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">&lt; 1</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">8 &gt;</TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">&lt; 1</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">10 &gt;</TD></TR>
     </TABLE>>
     URL="PARTTRACKING.html"
     tooltip="PARTTRACKING"
@@ -465,6 +471,16 @@ digraph "twoDegreesRelationshipsDiagram" {
     </TABLE>>
     URL="PICKITEM.html"
     tooltip="PICKITEM"
+  ];
+  "POITEM" [
+    label=<
+    <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
+      <TR><TD COLSPAN="3" BGCOLOR="#9bab96" ALIGN="CENTER">POITEM</TD></TR>
+      <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">&lt; 8</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">1 &gt;</TD></TR>
+    </TABLE>>
+    URL="POITEM.html"
+    tooltip="POITEM"
   ];
   "POSTWOITEM" [
     label=<
@@ -512,7 +528,7 @@ digraph "twoDegreesRelationshipsDiagram" {
       <TR><TD COLSPAN="3" BGCOLOR="#9bab96" ALIGN="CENTER">SERIAL</TD></TR>
       <TR><TD PORT="ID" COLSPAN="3" BGCOLOR="#bed1b8" ALIGN="LEFT">ID</TD></TR>
       <TR><TD PORT="COMMITTEDFLAG" COLSPAN="3" ALIGN="LEFT">COMMITTEDFLAG</TD></TR>
-      <TR><TD PORT="TAGID" COLSPAN="3" BGCOLOR="#f4f7da" ALIGN="LEFT">TAGID</TD></TR>
+      <TR><TD PORT="TAGID" COLSPAN="3" ALIGN="LEFT">TAGID</TD></TR>
       <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">&lt; 1</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">1 &gt;</TD></TR>
     </TABLE>>
     URL="SERIAL.html"
@@ -533,7 +549,7 @@ digraph "twoDegreesRelationshipsDiagram" {
     <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
       <TR><TD COLSPAN="3" BGCOLOR="#9bab96" ALIGN="CENTER">SYSUSER</TD></TR>
       <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
-      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">22 &gt;</TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">23 &gt;</TD></TR>
     </TABLE>>
     URL="SYSUSER.html"
     tooltip="SYSUSER"
@@ -543,21 +559,21 @@ digraph "twoDegreesRelationshipsDiagram" {
     <TABLE BORDER="2" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
       <TR><TD COLSPAN="3" BGCOLOR="#9bab96" ALIGN="CENTER">TAG</TD></TR>
       <TR><TD PORT="ID" COLSPAN="2" BGCOLOR="#bed1b8" ALIGN="LEFT">ID</TD><TD PORT="ID.type" ALIGN="LEFT">integer[10]</TD></TR>
-      <TR><TD PORT="NUM" COLSPAN="2" ALIGN="LEFT">NUM</TD><TD PORT="NUM.type" ALIGN="LEFT">integer[10]</TD></TR>
-      <TR><TD PORT="PARTID" COLSPAN="2" ALIGN="LEFT">PARTID</TD><TD PORT="PARTID.type" ALIGN="LEFT">integer[10]</TD></TR>
-      <TR><TD PORT="LOCATIONID" COLSPAN="2" ALIGN="LEFT">LOCATIONID</TD><TD PORT="LOCATIONID.type" ALIGN="LEFT">integer[10]</TD></TR>
-      <TR><TD PORT="DATECREATED" COLSPAN="2" ALIGN="LEFT">DATECREATED</TD><TD PORT="DATECREATED.type" ALIGN="LEFT">timestamp[19]</TD></TR>
+      <TR><TD PORT="NUM" COLSPAN="2" BGCOLOR="#f4f7da" ALIGN="LEFT">NUM</TD><TD PORT="NUM.type" ALIGN="LEFT">integer[10]</TD></TR>
+      <TR><TD PORT="PARTID" COLSPAN="2" BGCOLOR="#f4f7da" ALIGN="LEFT">PARTID</TD><TD PORT="PARTID.type" ALIGN="LEFT">integer[10]</TD></TR>
+      <TR><TD PORT="LOCATIONID" COLSPAN="2" BGCOLOR="#f4f7da" ALIGN="LEFT">LOCATIONID</TD><TD PORT="LOCATIONID.type" ALIGN="LEFT">integer[10]</TD></TR>
+      <TR><TD PORT="DATECREATED" COLSPAN="2" BGCOLOR="#f4f7da" ALIGN="LEFT">DATECREATED</TD><TD PORT="DATECREATED.type" ALIGN="LEFT">timestamp[19]</TD></TR>
       <TR><TD PORT="DATELASTCYCLECOUNT" COLSPAN="2" ALIGN="LEFT">DATELASTCYCLECOUNT</TD><TD PORT="DATELASTCYCLECOUNT.type" ALIGN="LEFT">timestamp[19]</TD></TR>
       <TR><TD PORT="SERIALIZEDFLAG" COLSPAN="2" ALIGN="LEFT">SERIALIZEDFLAG</TD><TD PORT="SERIALIZEDFLAG.type" ALIGN="LEFT">smallint[5]</TD></TR>
       <TR><TD PORT="USEDFLAG" COLSPAN="2" ALIGN="LEFT">USEDFLAG</TD><TD PORT="USEDFLAG.type" ALIGN="LEFT">smallint[5]</TD></TR>
-      <TR><TD PORT="TYPEID" COLSPAN="2" ALIGN="LEFT">TYPEID</TD><TD PORT="TYPEID.type" ALIGN="LEFT">integer[10]</TD></TR>
+      <TR><TD PORT="TYPEID" COLSPAN="2" BGCOLOR="#f4f7da" ALIGN="LEFT">TYPEID</TD><TD PORT="TYPEID.type" ALIGN="LEFT">integer[10]</TD></TR>
       <TR><TD PORT="DATELASTMODIFIED" COLSPAN="2" ALIGN="LEFT">DATELASTMODIFIED</TD><TD PORT="DATELASTMODIFIED.type" ALIGN="LEFT">timestamp[19]</TD></TR>
-      <TR><TD PORT="ACCOUNTID" COLSPAN="2" ALIGN="LEFT">ACCOUNTID</TD><TD PORT="ACCOUNTID.type" ALIGN="LEFT">integer[10]</TD></TR>
+      <TR><TD PORT="ACCOUNTID" COLSPAN="2" BGCOLOR="#f4f7da" ALIGN="LEFT">ACCOUNTID</TD><TD PORT="ACCOUNTID.type" ALIGN="LEFT">integer[10]</TD></TR>
       <TR><TD PORT="QTY" COLSPAN="2" ALIGN="LEFT">QTY</TD><TD PORT="QTY.type" ALIGN="LEFT">double precision[15]</TD></TR>
       <TR><TD PORT="QTYCOMMITTED" COLSPAN="2" ALIGN="LEFT">QTYCOMMITTED</TD><TD PORT="QTYCOMMITTED.type" ALIGN="LEFT">double precision[15]</TD></TR>
-      <TR><TD PORT="WOITEMID" COLSPAN="2" ALIGN="LEFT">WOITEMID</TD><TD PORT="WOITEMID.type" ALIGN="LEFT">integer[10]</TD></TR>
+      <TR><TD PORT="WOITEMID" COLSPAN="2" BGCOLOR="#f4f7da" ALIGN="LEFT">WOITEMID</TD><TD PORT="WOITEMID.type" ALIGN="LEFT">integer[10]</TD></TR>
       <TR><TD PORT="TRACKINGENCODING" COLSPAN="2" ALIGN="LEFT">TRACKINGENCODING</TD><TD PORT="TRACKINGENCODING.type" ALIGN="LEFT">varchar[30]</TD></TR>
-      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">&lt; 5</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">5 &gt;</TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">&lt; 5</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">6 &gt;</TD></TR>
     </TABLE>>
     URL="TAG.html"
     tooltip="TAG"
@@ -578,7 +594,7 @@ digraph "twoDegreesRelationshipsDiagram" {
     <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
       <TR><TD COLSPAN="3" BGCOLOR="#9bab96" ALIGN="CENTER">TAXRATE</TD></TR>
       <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
-      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">&lt; 4</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">9 &gt;</TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">&lt; 4</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">10 &gt;</TD></TR>
     </TABLE>>
     URL="TAXRATE.html"
     tooltip="TAXRATE"
@@ -589,12 +605,25 @@ digraph "twoDegreesRelationshipsDiagram" {
       <TR><TD COLSPAN="3" BGCOLOR="#9bab96" ALIGN="CENTER">TRACKINGDATE</TD></TR>
       <TR><TD PORT="ID" COLSPAN="3" BGCOLOR="#bed1b8" ALIGN="LEFT">ID</TD></TR>
       <TR><TD PORT="PARTTRACKINGID" COLSPAN="3" BGCOLOR="#f4f7da" ALIGN="LEFT">PARTTRACKINGID</TD></TR>
-      <TR><TD PORT="TAGID" COLSPAN="3" BGCOLOR="#f4f7da" ALIGN="LEFT">TAGID</TD></TR>
-      <TR><TD PORT="INFO" COLSPAN="3" BGCOLOR="#f4f7da" ALIGN="LEFT">INFO</TD></TR>
+      <TR><TD PORT="TAGID" COLSPAN="3" ALIGN="LEFT">TAGID</TD></TR>
+      <TR><TD PORT="INFO" COLSPAN="3" ALIGN="LEFT">INFO</TD></TR>
       <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">&lt; 2</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD></TR>
     </TABLE>>
     URL="TRACKINGDATE.html"
     tooltip="TRACKINGDATE"
+  ];
+  "TRACKINGDECIMAL" [
+    label=<
+    <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
+      <TR><TD COLSPAN="3" BGCOLOR="#9bab96" ALIGN="CENTER">TRACKINGDECIMAL</TD></TR>
+      <TR><TD PORT="ID" COLSPAN="3" BGCOLOR="#bed1b8" ALIGN="LEFT">ID</TD></TR>
+      <TR><TD PORT="PARTTRACKINGID" COLSPAN="3" BGCOLOR="#f4f7da" ALIGN="LEFT">PARTTRACKINGID</TD></TR>
+      <TR><TD PORT="TAGID" COLSPAN="3" ALIGN="LEFT">TAGID</TD></TR>
+      <TR><TD PORT="INFO" COLSPAN="3" ALIGN="LEFT">INFO</TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">&lt; 2</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD></TR>
+    </TABLE>>
+    URL="TRACKINGDECIMAL.html"
+    tooltip="TRACKINGDECIMAL"
   ];
   "TRACKINGINTEGER" [
     label=<
@@ -602,7 +631,7 @@ digraph "twoDegreesRelationshipsDiagram" {
       <TR><TD COLSPAN="3" BGCOLOR="#9bab96" ALIGN="CENTER">TRACKINGINTEGER</TD></TR>
       <TR><TD PORT="ID" COLSPAN="3" BGCOLOR="#bed1b8" ALIGN="LEFT">ID</TD></TR>
       <TR><TD PORT="PARTTRACKINGID" COLSPAN="3" BGCOLOR="#f4f7da" ALIGN="LEFT">PARTTRACKINGID</TD></TR>
-      <TR><TD PORT="TAGID" COLSPAN="3" BGCOLOR="#f4f7da" ALIGN="LEFT">TAGID</TD></TR>
+      <TR><TD PORT="TAGID" COLSPAN="3" ALIGN="LEFT">TAGID</TD></TR>
       <TR><TD PORT="INFO" COLSPAN="3" BGCOLOR="#f4f7da" ALIGN="LEFT">INFO</TD></TR>
       <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">&lt; 2</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD></TR>
     </TABLE>>
@@ -615,7 +644,7 @@ digraph "twoDegreesRelationshipsDiagram" {
       <TR><TD COLSPAN="3" BGCOLOR="#9bab96" ALIGN="CENTER">TRACKINGTEXT</TD></TR>
       <TR><TD PORT="ID" COLSPAN="3" BGCOLOR="#bed1b8" ALIGN="LEFT">ID</TD></TR>
       <TR><TD PORT="PARTTRACKINGID" COLSPAN="3" BGCOLOR="#f4f7da" ALIGN="LEFT">PARTTRACKINGID</TD></TR>
-      <TR><TD PORT="TAGID" COLSPAN="3" BGCOLOR="#f4f7da" ALIGN="LEFT">TAGID</TD></TR>
+      <TR><TD PORT="TAGID" COLSPAN="3" ALIGN="LEFT">TAGID</TD></TR>
       <TR><TD PORT="INFO" COLSPAN="3" BGCOLOR="#f4f7da" ALIGN="LEFT">INFO</TD></TR>
       <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">&lt; 2</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD></TR>
     </TABLE>>
@@ -632,14 +661,15 @@ digraph "twoDegreesRelationshipsDiagram" {
     URL="UOM.html"
     tooltip="UOM"
   ];
-  "null.VENDOR" [
+  "VENDOR" [
     label=<
     <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
-      <TR><TD COLSPAN="3" BGCOLOR="#9bab96" ALIGN="CENTER">null.VENDOR</TD></TR>
+      <TR><TD COLSPAN="3" BGCOLOR="#9bab96" ALIGN="CENTER">VENDOR</TD></TR>
       <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
-      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">5 &gt;</TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">&lt; 7</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">5 &gt;</TD></TR>
     </TABLE>>
-    tooltip="null.VENDOR"
+    URL="VENDOR.html"
+    tooltip="VENDOR"
   ];
   "VENDORCOSTRULE" [
     label=<
@@ -697,10 +727,10 @@ digraph "twoDegreesRelationshipsDiagram" {
     <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
       <TR><TD COLSPAN="3" BGCOLOR="#9bab96" ALIGN="CENTER">XO</TD></TR>
       <TR><TD PORT="ID" COLSPAN="3" BGCOLOR="#bed1b8" ALIGN="LEFT">ID</TD></TR>
-      <TR><TD PORT="TYPEID" COLSPAN="3" ALIGN="LEFT">TYPEID</TD></TR>
-      <TR><TD PORT="STATUSID" COLSPAN="3" ALIGN="LEFT">STATUSID</TD></TR>
-      <TR><TD PORT="NUM" COLSPAN="3" ALIGN="LEFT">NUM</TD></TR>
-      <TR><TD PORT="FROMLGID" COLSPAN="3" ALIGN="LEFT">FROMLGID</TD></TR>
+      <TR><TD PORT="TYPEID" COLSPAN="3" BGCOLOR="#f4f7da" ALIGN="LEFT">TYPEID</TD></TR>
+      <TR><TD PORT="STATUSID" COLSPAN="3" BGCOLOR="#f4f7da" ALIGN="LEFT">STATUSID</TD></TR>
+      <TR><TD PORT="NUM" COLSPAN="3" BGCOLOR="#f4f7da" ALIGN="LEFT">NUM</TD></TR>
+      <TR><TD PORT="FROMLGID" COLSPAN="3" BGCOLOR="#f4f7da" ALIGN="LEFT">FROMLGID</TD></TR>
       <TR><TD PORT="FROMATTN" COLSPAN="3" ALIGN="LEFT">FROMATTN</TD></TR>
       <TR><TD PORT="FROMNAME" COLSPAN="3" ALIGN="LEFT">FROMNAME</TD></TR>
       <TR><TD PORT="FROMADDRESS" COLSPAN="3" ALIGN="LEFT">FROMADDRESS</TD></TR>
@@ -708,7 +738,7 @@ digraph "twoDegreesRelationshipsDiagram" {
       <TR><TD PORT="FROMZIP" COLSPAN="3" ALIGN="LEFT">FROMZIP</TD></TR>
       <TR><TD PORT="FROMSTATEID" COLSPAN="3" ALIGN="LEFT">FROMSTATEID</TD></TR>
       <TR><TD PORT="FROMCOUNTRYID" COLSPAN="3" ALIGN="LEFT">FROMCOUNTRYID</TD></TR>
-      <TR><TD PORT="SHIPTOLGID" COLSPAN="3" ALIGN="LEFT">SHIPTOLGID</TD></TR>
+      <TR><TD PORT="SHIPTOLGID" COLSPAN="3" BGCOLOR="#f4f7da" ALIGN="LEFT">SHIPTOLGID</TD></TR>
       <TR><TD PORT="SHIPTOATTN" COLSPAN="3" ALIGN="LEFT">SHIPTOATTN</TD></TR>
       <TR><TD PORT="SHIPTONAME" COLSPAN="3" ALIGN="LEFT">SHIPTONAME</TD></TR>
       <TR><TD PORT="SHIPTOADDRESS" COLSPAN="3" ALIGN="LEFT">SHIPTOADDRESS</TD></TR>
@@ -716,33 +746,23 @@ digraph "twoDegreesRelationshipsDiagram" {
       <TR><TD PORT="SHIPTOZIP" COLSPAN="3" ALIGN="LEFT">SHIPTOZIP</TD></TR>
       <TR><TD PORT="SHIPTOCOUNTRYID" COLSPAN="3" ALIGN="LEFT">SHIPTOCOUNTRYID</TD></TR>
       <TR><TD PORT="SHIPTOSTATEID" COLSPAN="3" ALIGN="LEFT">SHIPTOSTATEID</TD></TR>
-      <TR><TD PORT="MAINLOCATIONTAGID" COLSPAN="3" ALIGN="LEFT">MAINLOCATIONTAGID</TD></TR>
+      <TR><TD PORT="MAINLOCATIONTAGID" COLSPAN="3" BGCOLOR="#f4f7da" ALIGN="LEFT">MAINLOCATIONTAGID</TD></TR>
       <TR><TD PORT="OWNERISFROM" COLSPAN="3" ALIGN="LEFT">OWNERISFROM</TD></TR>
       <TR><TD PORT="USERID" COLSPAN="3" BGCOLOR="#f4f7da" ALIGN="LEFT">USERID</TD></TR>
       <TR><TD PORT="REVISIONNUM" COLSPAN="3" ALIGN="LEFT">REVISIONNUM</TD></TR>
       <TR><TD PORT="DATELASTMODIFIED" COLSPAN="3" ALIGN="LEFT">DATELASTMODIFIED</TD></TR>
-      <TR><TD PORT="DATECREATED" COLSPAN="3" ALIGN="LEFT">DATECREATED</TD></TR>
-      <TR><TD PORT="DATEISSUED" COLSPAN="3" ALIGN="LEFT">DATEISSUED</TD></TR>
-      <TR><TD PORT="DATECONFIRMED" COLSPAN="3" ALIGN="LEFT">DATECONFIRMED</TD></TR>
-      <TR><TD PORT="DATEFIRSTSHIP" COLSPAN="3" ALIGN="LEFT">DATEFIRSTSHIP</TD></TR>
-      <TR><TD PORT="DATECOMPLETED" COLSPAN="3" ALIGN="LEFT">DATECOMPLETED</TD></TR>
-      <TR><TD PORT="DATESCHEDULED" COLSPAN="3" ALIGN="LEFT">DATESCHEDULED</TD></TR>
-      <TR><TD PORT="CARRIERID" COLSPAN="3" ALIGN="LEFT">CARRIERID</TD></TR>
+      <TR><TD PORT="DATECREATED" COLSPAN="3" BGCOLOR="#f4f7da" ALIGN="LEFT">DATECREATED</TD></TR>
+      <TR><TD PORT="DATEISSUED" COLSPAN="3" BGCOLOR="#f4f7da" ALIGN="LEFT">DATEISSUED</TD></TR>
+      <TR><TD PORT="DATECONFIRMED" COLSPAN="3" BGCOLOR="#f4f7da" ALIGN="LEFT">DATECONFIRMED</TD></TR>
+      <TR><TD PORT="DATEFIRSTSHIP" COLSPAN="3" BGCOLOR="#f4f7da" ALIGN="LEFT">DATEFIRSTSHIP</TD></TR>
+      <TR><TD PORT="DATECOMPLETED" COLSPAN="3" BGCOLOR="#f4f7da" ALIGN="LEFT">DATECOMPLETED</TD></TR>
+      <TR><TD PORT="DATESCHEDULED" COLSPAN="3" BGCOLOR="#f4f7da" ALIGN="LEFT">DATESCHEDULED</TD></TR>
+      <TR><TD PORT="CARRIERID" COLSPAN="3" BGCOLOR="#f4f7da" ALIGN="LEFT">CARRIERID</TD></TR>
       <TR><TD PORT="NOTE" COLSPAN="3" ALIGN="LEFT">NOTE</TD></TR>
-      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">&lt; 7</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">2 &gt;</TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">&lt; 7</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">1 &gt;</TD></TR>
     </TABLE>>
     URL="XO.html"
     tooltip="XO"
-  ];
-  "XOITEM" [
-    label=<
-    <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
-      <TR><TD COLSPAN="3" BGCOLOR="#9bab96" ALIGN="CENTER">XOITEM</TD></TR>
-      <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
-      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">&lt; 5</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">1 &gt;</TD></TR>
-    </TABLE>>
-    URL="XOITEM.html"
-    tooltip="XOITEM"
   ];
   "XOSTATUS" [
     label=<

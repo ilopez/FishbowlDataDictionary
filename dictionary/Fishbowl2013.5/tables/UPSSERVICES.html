@@ -123,19 +123,13 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
     <td class='constraint detail'>INTEG_884<span title='Restrict delete:
  Parent cannot be deleted if children exist'>&nbsp;R</span></td>
    </tr>
-   <tr class='relative even' valign='top'>
-    <td class='relatedTable detail' title="SO.UPSSERVICEID refs UPSSERVICES.ID via INTEG_899"><a href='SO.html'>SO</a><span class='relatedKey'>.UPSSERVICEID</span>
-    </td>
-    <td class='constraint detail'>INTEG_899<span title='Restrict delete:
- Parent cannot be deleted if children exist'>&nbsp;R</span></td>
-   </tr>
   </table>
 </td>
  <td class='detail'> </td>
  <td class='comment detail'></td>
 </tr>
 <tr class='odd'>
- <td class='detail'>CODE</td>
+ <td class='indexedColumn' title='Indexed'>CODE</td>
  <td class='detail'>varchar</td>
  <td class='detail' align='right'>254</td>
  <td class='detail' align='center'></td>
@@ -157,7 +151,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
  <td class='comment detail'></td>
 </tr>
 <tr class='odd'>
- <td class='detail'>ORIGINATINGCOUNTRY</td>
+ <td class='indexedColumn' title='Indexed'>ORIGINATINGCOUNTRY</td>
  <td class='detail'>varchar</td>
  <td class='detail' align='right'>5</td>
  <td class='detail' align='center'></td>
@@ -168,7 +162,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
  <td class='comment detail'></td>
 </tr>
 </table>
-<p title='4 columns'>Analyzed at Mon Jul 01 09:44 PDT 2013<p/>
+<p title='4 columns'>Analyzed at Mon Jul 01 12:49 PDT 2013<p/>
 </td></tr></table>
 <div class='indent'>
 <b>Indexes:</b>
@@ -183,10 +177,16 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 </thead>
 <tbody>
  <tr>
+  <td class='indexedColumn'>CODE + ORIGINATINGCOUNTRY</td>
+  <td class='detail'>Must be unique</td>
+  <td class='detail' style='text-align:left;'><span title='Ascending'>Asc</span>/<span title='Ascending'>Asc</span></td>
+  <td class='constraint' style='text-align:left;'>CODECOUNTRY</td>
+ </tr>
+ <tr>
   <td class='indexedColumn'>ID</td>
   <td class='detail'>Must be unique</td>
   <td class='detail' style='text-align:left;'><span title='Ascending'>Asc</span></td>
-  <td class='constraint' style='text-align:left;'>RDB$PRIMARY74</td>
+  <td class='constraint' style='text-align:left;'>RDB$PRIMARY39</td>
  </tr>
 </table>
 </div>
@@ -194,46 +194,38 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 <br><form action='get'><b>Close relationships</b><span class='degrees' id='degrees' title='Detail diminishes with increased separation from UPSSERVICES'>
 &nbsp;within <label for='oneDegree'><input type='radio' name='degrees' id='oneDegree' checked>one</label>  <label for='twoDegrees'><input type='radio' name='degrees' id='twoDegrees'>two degrees</label> of separation</span><b>:</b></form>
 <map id="oneDegreeRelationshipsDiagram" name="oneDegreeRelationshipsDiagram">
-<area shape="rect" id="node1" href="CUSTOMER.html" title="CUSTOMER" alt="" coords="377,622,615,1269">
-<area shape="rect" id="node3" href="UPSSERVICES.html" title="UPSSERVICES" alt="" coords="5,1187,304,1341">
-<area shape="rect" id="node4" href="SHIP.html" title="SHIP" alt="" coords="349,5,643,606">
-<area shape="rect" id="node6" href="SO.html" title="SO" alt="" coords="689,291,879,1437">
+<area shape="rect" id="node1" href="CUSTOMER.html" title="CUSTOMER" alt="" coords="377,5,615,651">
+<area shape="rect" id="node3" href="UPSSERVICES.html" title="UPSSERVICES" alt="" coords="5,867,304,1021">
+<area shape="rect" id="node4" href="SHIP.html" title="SHIP" alt="" coords="349,667,643,1269">
 </map>
   <a name='diagram'><img id='oneDegreeImg' src='../diagrams/UPSSERVICES.1degree.png' usemap='#oneDegreeRelationshipsDiagram' class='diagram' border='0' alt='' align='left'></a>
 <map id="twoDegreesRelationshipsDiagram" name="twoDegreesRelationshipsDiagram">
-<area shape="rect" id="node1" href="CUSTOMER.html" title="CUSTOMER" alt="" coords="521,1619,759,2266">
-<area shape="rect" id="node3" href="ACCOUNT.html" title="ACCOUNT" alt="" coords="272,1687,381,1767">
-<area shape="rect" id="node5" href="CARRIER.html" title="CARRIER" alt="" coords="275,803,379,883">
-<area shape="rect" id="node7" title="null.PAYMENTTERMS" alt="" coords="236,1492,417,1572">
-<area shape="rect" id="node9" href="UPSSERVICES.html" title="UPSSERVICES" alt="" coords="177,1322,476,1475">
-<area shape="rect" id="node11" href="SHIPTERMS.html" title="SHIPTERMS" alt="" coords="268,1589,385,1669">
-<area shape="rect" id="node13" href="CUSTOMERSTATUS.html" title="CUSTOMERSTATUS" alt="" coords="237,1784,416,1864">
-<area shape="rect" id="node15" href="TAXRATE.html" title="TAXRATE" alt="" coords="273,2068,380,2148">
-<area shape="rect" id="node32" href="ORDERTYPE.html" title="ORDERTYPE" alt="" coords="7,2068,132,2148">
-<area shape="rect" id="node16" href="LOCATION.html" title="LOCATION" alt="" coords="897,2216,1007,2296">
-<area shape="rect" id="node19" href="LOCATIONGROUP.html" title="LOCATIONGROUP" alt="" coords="559,2355,721,2435">
-<area shape="rect" id="node21" href="QBCLASS.html" title="QBCLASS" alt="" coords="275,2523,379,2603">
-<area shape="rect" id="node22" href="MO.html" title="MO" alt="" coords="1203,2469,1288,2549">
-<area shape="rect" id="node26" href="SO.html" title="SO" alt="" coords="857,690,1047,1835">
-<area shape="rect" id="node28" href="SYSUSER.html" title="SYSUSER" alt="" coords="583,2452,697,2532">
-<area shape="rect" id="node50" href="FOBPOINT.html" title="FOBPOINT" alt="" coords="587,737,693,817">
-<area shape="rect" id="node73" href="PRIORITY.html" title="PRIORITY" alt="" coords="588,1487,692,1567">
-<area shape="rect" id="node77" href="SOSTATUS.html" title="SOSTATUS" alt="" coords="583,640,697,720">
-<area shape="rect" id="node80" href="SOTYPE.html" title="SOTYPE" alt="" coords="591,943,689,1023">
-<area shape="rect" id="node29" href="POST.html" title="POST" alt="" coords="909,2119,995,2199">
-<area shape="rect" id="node33" href="POSTRANSACTION.html" title="POSTRANSACTION" alt="" coords="1160,640,1331,720">
-<area shape="rect" id="node35" href="POSTSO.html" title="POSTSO" alt="" coords="1193,737,1297,817">
-<area shape="rect" id="node37" href="QUICKLIST.html" title="QUICKLIST" alt="" coords="897,1985,1007,2065">
-<area shape="rect" id="node39" href="RECEIPTITEM.html" title="RECEIPTITEM" alt="" coords="885,1888,1019,1968">
-<area shape="rect" id="node43" href="RMA.html" title="RMA" alt="" coords="903,2349,1001,2429">
-<area shape="rect" id="node47" href="SHIP.html" title="SHIP" alt="" coords="805,73,1099,674">
-<area shape="rect" id="node55" href="SHIPSTATUS.html" title="SHIPSTATUS" alt="" coords="577,208,703,288">
-<area shape="rect" id="node57" href="SHIPCARTON.html" title="SHIPCARTON" alt="" coords="1180,5,1311,85">
-<area shape="rect" id="node61" href="SHIPITEM.html" title="SHIPITEM" alt="" coords="1392,71,1496,151">
-<area shape="rect" id="node65" href="SHIPUPSDETAILS.html" title="SHIPUPSDETAILS" alt="" coords="1164,139,1327,219">
-<area shape="rect" id="node82" href="SOITEM.html" title="SOITEM" alt="" coords="1193,2595,1297,2675">
-<area shape="rect" id="node87" href="UPSRETURNSHIPMENT.html" title="UPSRETURNSHIPMENT" alt="" coords="1144,236,1347,316">
-<area shape="rect" id="node89" href="WO.html" title="WO" alt="" coords="1196,2248,1295,2328">
+<area shape="rect" id="node1" href="CUSTOMER.html" title="CUSTOMER" alt="" coords="549,214,787,860">
+<area shape="rect" id="node3" href="ACCOUNT.html" title="ACCOUNT" alt="" coords="272,236,381,316">
+<area shape="rect" id="node5" href="CARRIER.html" title="CARRIER" alt="" coords="275,820,379,900">
+<area shape="rect" id="node7" href="PAYMENTTERMS.html" title="PAYMENTTERMS" alt="" coords="248,430,405,510">
+<area shape="rect" id="node9" href="UPSSERVICES.html" title="UPSSERVICES" alt="" coords="177,1014,476,1167">
+<area shape="rect" id="node11" href="SHIPTERMS.html" title="SHIPTERMS" alt="" coords="268,528,385,608">
+<area shape="rect" id="node13" href="CUSTOMERSTATUS.html" title="CUSTOMERSTATUS" alt="" coords="237,333,416,413">
+<area shape="rect" id="node15" href="TAXRATE.html" title="TAXRATE" alt="" coords="269,138,384,218">
+<area shape="rect" id="node30" href="ORDERTYPE.html" title="ORDERTYPE" alt="" coords="7,1249,132,1329">
+<area shape="rect" id="node16" href="CUSTOMERPARTS.html" title="CUSTOMERPARTS" alt="" coords="879,665,1044,745">
+<area shape="rect" id="node19" href="SYSUSER.html" title="SYSUSER" alt="" coords="269,917,384,997">
+<area shape="rect" id="node20" href="LOCATION.html" title="LOCATION" alt="" coords="907,924,1016,1004">
+<area shape="rect" id="node23" href="LOCATIONGROUP.html" title="LOCATIONGROUP" alt="" coords="245,1184,408,1264">
+<area shape="rect" id="node24" href="POITEM.html" title="POITEM" alt="" coords="909,130,1013,210">
+<area shape="rect" id="node27" href="POST.html" title="POST" alt="" coords="919,33,1004,113">
+<area shape="rect" id="node31" href="QUICKLIST.html" title="QUICKLIST" alt="" coords="907,325,1016,405">
+<area shape="rect" id="node33" href="RECEIPTITEM.html" title="RECEIPTITEM" alt="" coords="895,228,1028,308">
+<area shape="rect" id="node37" href="RMA.html" title="RMA" alt="" coords="912,826,1011,906">
+<area shape="rect" id="node41" href="SHIP.html" title="SHIP" alt="" coords="521,1164,815,1766">
+<area shape="rect" id="node44" href="FOBPOINT.html" title="FOBPOINT" alt="" coords="273,1317,380,1397">
+<area shape="rect" id="node49" href="SHIPSTATUS.html" title="SHIPSTATUS" alt="" coords="264,1414,389,1494">
+<area shape="rect" id="node51" href="SHIPCARTON.html" title="SHIPCARTON" alt="" coords="896,1297,1027,1377">
+<area shape="rect" id="node55" href="SHIPITEM.html" title="SHIPITEM" alt="" coords="1108,1297,1212,1377">
+<area shape="rect" id="node59" href="SHIPUPSDETAILS.html" title="SHIPUPSDETAILS" alt="" coords="880,1394,1043,1474">
+<area shape="rect" id="node62" href="UPSRETURNSHIPMENT.html" title="UPSRETURNSHIPMENT" alt="" coords="860,1164,1063,1244">
+<area shape="rect" id="node64" href="WO.html" title="WO" alt="" coords="1111,957,1209,1037">
 </map>
 
   <a name='diagram'><img id='twoDegreesImg' src='../diagrams/UPSSERVICES.2degrees.png' usemap='#twoDegreesRelationshipsDiagram' class='diagram' border='0' alt='' align='left'></a>

@@ -32,10 +32,10 @@ digraph "twoDegreesRelationshipsDiagram" {
   "SHIPITEM":"elipses":w -> "ORDERTYPE":"elipses":e [arrowhead=none dir=back arrowtail=crowodot];
   "SHIPITEM":"elipses":w -> "SHIPCARTON":"elipses":e [arrowhead=none dir=back arrowtail=crowodot];
   "SHIPITEM":"elipses":w -> "SHIP":"ID":e [arrowhead=none dir=back arrowtail=crowodot];
-  "SHIPUPSDETAILS":"PAYMENTTYPE":w -> "null.UPSPAYMENTTYPE":"ID":e [arrowhead=none dir=back arrowtail=crowodot];
+  "SHIPUPSDETAILS":"PAYMENTTYPE":w -> "UPSPAYMENTTYPE":"ID":e [arrowhead=none dir=back arrowtail=crowodot];
   "SHIPUPSDETAILS":"SHIPID":w -> "SHIP":"ID":e [arrowhead=none dir=back arrowtail=crowodot];
   "SHIPUPSDETAILS":"STATEID":w -> "STATECONST":"ID":e [arrowhead=none dir=back arrowtail=crowodot];
-  "STATECONST":"COUNTRYCONSTID":w -> "COUNTRYCONST":"elipses":e [arrowhead=none dir=back arrowtail=crowodot];
+  "STATECONST":"COUNTRYCONSTID":w -> "null.COUNTRYCONST":"elipses":e [arrowhead=none dir=back arrowtail=crowodot];
   "UPSRETURNSHIPMENT":"elipses":w -> "SHIP":"ID":e [arrowhead=none dir=back arrowtail=crowodot];
   "CARRIER" [
     label=<
@@ -47,22 +47,21 @@ digraph "twoDegreesRelationshipsDiagram" {
     URL="CARRIER.html"
     tooltip="CARRIER"
   ];
-  "COUNTRYCONST" [
+  "null.COUNTRYCONST" [
     label=<
     <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
-      <TR><TD COLSPAN="3" BGCOLOR="#9bab96" ALIGN="CENTER">COUNTRYCONST</TD></TR>
+      <TR><TD COLSPAN="3" BGCOLOR="#9bab96" ALIGN="CENTER">null.COUNTRYCONST</TD></TR>
       <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
       <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">1 &gt;</TD></TR>
     </TABLE>>
-    URL="COUNTRYCONST.html"
-    tooltip="COUNTRYCONST"
+    tooltip="null.COUNTRYCONST"
   ];
   "FOBPOINT" [
     label=<
     <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
       <TR><TD COLSPAN="3" BGCOLOR="#9bab96" ALIGN="CENTER">FOBPOINT</TD></TR>
       <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
-      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">3 &gt;</TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">2 &gt;</TD></TR>
     </TABLE>>
     URL="FOBPOINT.html"
     tooltip="FOBPOINT"
@@ -72,7 +71,7 @@ digraph "twoDegreesRelationshipsDiagram" {
     <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
       <TR><TD COLSPAN="3" BGCOLOR="#9bab96" ALIGN="CENTER">LOCATIONGROUP</TD></TR>
       <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
-      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">&lt; 1</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">19 &gt;</TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">&lt; 1</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">18 &gt;</TD></TR>
     </TABLE>>
     URL="LOCATIONGROUP.html"
     tooltip="LOCATIONGROUP"
@@ -156,11 +155,11 @@ digraph "twoDegreesRelationshipsDiagram" {
       <TR><TD COLSPAN="3" BGCOLOR="#9bab96" ALIGN="CENTER">SHIPUPSDETAILS</TD></TR>
       <TR><TD PORT="ID" COLSPAN="2" BGCOLOR="#bed1b8" ALIGN="LEFT">ID</TD><TD PORT="ID.type" ALIGN="LEFT">integer[10]</TD></TR>
       <TR><TD PORT="SHIPID" COLSPAN="2" BGCOLOR="#f4f7da" ALIGN="LEFT">SHIPID</TD><TD PORT="SHIPID.type" ALIGN="LEFT">integer[10]</TD></TR>
-      <TR><TD PORT="PAYMENTTYPE" COLSPAN="2" ALIGN="LEFT">PAYMENTTYPE</TD><TD PORT="PAYMENTTYPE.type" ALIGN="LEFT">integer[10]</TD></TR>
+      <TR><TD PORT="PAYMENTTYPE" COLSPAN="2" BGCOLOR="#f4f7da" ALIGN="LEFT">PAYMENTTYPE</TD><TD PORT="PAYMENTTYPE.type" ALIGN="LEFT">integer[10]</TD></TR>
       <TR><TD PORT="ACCOUNTNUMBER" COLSPAN="2" ALIGN="LEFT">ACCOUNTNUMBER</TD><TD PORT="ACCOUNTNUMBER.type" ALIGN="LEFT">varchar[10]</TD></TR>
       <TR><TD PORT="ADDRESS" COLSPAN="2" ALIGN="LEFT">ADDRESS</TD><TD PORT="ADDRESS.type" ALIGN="LEFT">varchar[90]</TD></TR>
       <TR><TD PORT="CITY" COLSPAN="2" ALIGN="LEFT">CITY</TD><TD PORT="CITY.type" ALIGN="LEFT">varchar[30]</TD></TR>
-      <TR><TD PORT="STATEID" COLSPAN="2" ALIGN="LEFT">STATEID</TD><TD PORT="STATEID.type" ALIGN="LEFT">integer[10]</TD></TR>
+      <TR><TD PORT="STATEID" COLSPAN="2" BGCOLOR="#f4f7da" ALIGN="LEFT">STATEID</TD><TD PORT="STATEID.type" ALIGN="LEFT">integer[10]</TD></TR>
       <TR><TD PORT="ZIP" COLSPAN="2" ALIGN="LEFT">ZIP</TD><TD PORT="ZIP.type" ALIGN="LEFT">varchar[10]</TD></TR>
       <TR><TD PORT="NOTIFICATIONEMAILS" COLSPAN="2" ALIGN="LEFT">NOTIFICATIONEMAILS</TD><TD PORT="NOTIFICATIONEMAILS.type" ALIGN="LEFT">varchar[250]</TD></TR>
       <TR><TD PORT="EXCEPTIONEMAILS" COLSPAN="2" ALIGN="LEFT">EXCEPTIONEMAILS</TD><TD PORT="EXCEPTIONEMAILS.type" ALIGN="LEFT">varchar[250]</TD></TR>
@@ -177,9 +176,9 @@ digraph "twoDegreesRelationshipsDiagram" {
     <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
       <TR><TD COLSPAN="3" BGCOLOR="#9bab96" ALIGN="CENTER">STATECONST</TD></TR>
       <TR><TD PORT="ID" COLSPAN="3" BGCOLOR="#bed1b8" ALIGN="LEFT">ID</TD></TR>
-      <TR><TD PORT="COUNTRYCONSTID" COLSPAN="3" ALIGN="LEFT">COUNTRYCONSTID</TD></TR>
-      <TR><TD PORT="NAME" COLSPAN="3" ALIGN="LEFT">NAME</TD></TR>
-      <TR><TD PORT="CODE" COLSPAN="3" ALIGN="LEFT">CODE</TD></TR>
+      <TR><TD PORT="COUNTRYCONSTID" COLSPAN="3" BGCOLOR="#f4f7da" ALIGN="LEFT">COUNTRYCONSTID</TD></TR>
+      <TR><TD PORT="NAME" COLSPAN="3" BGCOLOR="#f4f7da" ALIGN="LEFT">NAME</TD></TR>
+      <TR><TD PORT="CODE" COLSPAN="3" BGCOLOR="#f4f7da" ALIGN="LEFT">CODE</TD></TR>
       <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">&lt; 1</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">1 &gt;</TD></TR>
     </TABLE>>
     URL="STATECONST.html"
@@ -190,20 +189,21 @@ digraph "twoDegreesRelationshipsDiagram" {
     <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
       <TR><TD COLSPAN="3" BGCOLOR="#9bab96" ALIGN="CENTER">SYSUSER</TD></TR>
       <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
-      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">22 &gt;</TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">23 &gt;</TD></TR>
     </TABLE>>
     URL="SYSUSER.html"
     tooltip="SYSUSER"
   ];
-  "null.UPSPAYMENTTYPE" [
+  "UPSPAYMENTTYPE" [
     label=<
     <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
-      <TR><TD COLSPAN="3" BGCOLOR="#9bab96" ALIGN="CENTER">null.UPSPAYMENTTYPE</TD></TR>
+      <TR><TD COLSPAN="3" BGCOLOR="#9bab96" ALIGN="CENTER">UPSPAYMENTTYPE</TD></TR>
       <TR><TD PORT="ID" COLSPAN="3" BGCOLOR="#bed1b8" ALIGN="LEFT">ID</TD></TR>
       <TR><TD PORT="NAME" COLSPAN="3" ALIGN="LEFT">NAME</TD></TR>
       <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">1 &gt;</TD></TR>
     </TABLE>>
-    tooltip="null.UPSPAYMENTTYPE"
+    URL="UPSPAYMENTTYPE.html"
+    tooltip="UPSPAYMENTTYPE"
   ];
   "UPSRETURNSHIPMENT" [
     label=<
@@ -220,7 +220,7 @@ digraph "twoDegreesRelationshipsDiagram" {
     <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
       <TR><TD COLSPAN="3" BGCOLOR="#9bab96" ALIGN="CENTER">UPSSERVICES</TD></TR>
       <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
-      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">3 &gt;</TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">2 &gt;</TD></TR>
     </TABLE>>
     URL="UPSSERVICES.html"
     tooltip="UPSSERVICES"

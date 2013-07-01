@@ -123,7 +123,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
  <td class='comment detail'></td>
 </tr>
 <tr class='odd'>
- <td class='detail'>DESCRIPTION</td>
+ <td class='indexedColumn' title='Indexed'>DESCRIPTION</td>
  <td class='detail'>varchar</td>
  <td class='detail' align='right'>256</td>
  <td class='detail' align='center'></td>
@@ -134,7 +134,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
  <td class='comment detail'></td>
 </tr>
 <tr class='even'>
- <td class='indexedColumn' title='Indexed'>BOMID</td>
+ <td class='detail'>BOMID</td>
  <td class='detail'>integer</td>
  <td class='detail' align='right'>10</td>
  <td class='detail' align='center'></td>
@@ -154,7 +154,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
  <td class='comment detail'></td>
 </tr>
 <tr class='odd'>
- <td class='indexedColumn' title='Indexed'>TYPEID</td>
+ <td class='detail'>TYPEID</td>
  <td class='detail'>integer</td>
  <td class='detail' align='right'>10</td>
  <td class='detail' align='center'></td>
@@ -174,7 +174,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
  <td class='comment detail'></td>
 </tr>
 <tr class='even'>
- <td class='indexedColumn' title='Indexed'>PARTID</td>
+ <td class='detail'>PARTID</td>
  <td class='detail'>integer</td>
  <td class='detail' align='right'>10</td>
  <td class='detail' align='center' title='nullable'>&nbsp;&radic;&nbsp;</td>
@@ -205,7 +205,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
  <td class='comment detail'></td>
 </tr>
 <tr class='even'>
- <td class='indexedColumn' title='Indexed'>UOMID</td>
+ <td class='detail'>UOMID</td>
  <td class='detail'>integer</td>
  <td class='detail' align='right'>10</td>
  <td class='detail' align='center' title='nullable'>&nbsp;&radic;&nbsp;</td>
@@ -379,7 +379,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
  <td class='comment detail'></td>
 </tr>
 <tr class='odd'>
- <td class='indexedColumn' title='Indexed'>BOMITEMGROUPID</td>
+ <td class='detail'>BOMITEMGROUPID</td>
  <td class='detail'>integer</td>
  <td class='detail' align='right'>10</td>
  <td class='detail' align='center' title='nullable'>&nbsp;&radic;&nbsp;</td>
@@ -410,85 +410,69 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
  <td class='comment detail'></td>
 </tr>
 </table>
-<p title='23 columns'>Analyzed at Mon Jul 01 09:44 PDT 2013<p/>
+<p title='23 columns'>Analyzed at Mon Jul 01 12:49 PDT 2013<p/>
 </td></tr></table>
 <div class='indent'>
 <b>Indexes:</b>
-<table class='dataTable' border='1' rules='groups'><colgroup><colgroup><colgroup><colgroup>
+<table class='dataTable' border='1' rules='groups'><colgroup><colgroup><colgroup><colgroup><colgroup>
 <thead>
  <tr>
   <th>Column(s)</th>
   <th>Type</th>
   <th>Sort</th>
   <th class='constraint' style='text-align:left;'>Constraint Name</th>
+  <th>Anomalies</th>
  </tr>
 </thead>
 <tbody>
  <tr>
-  <td class='indexedColumn'>BOMID</td>
+  <td class='indexedColumn'>DESCRIPTION</td>
   <td class='detail'>Performance</td>
   <td class='detail' style='text-align:left;'><span title='Ascending'>Asc</span></td>
-  <td class='constraint' style='text-align:left;'>BOMITEMBOMID</td>
+  <td class='constraint' style='text-align:left;'>BOMDESCRIPTION_IDX</td>
+  <td>&nbsp;</td>
  </tr>
  <tr>
-  <td class='indexedColumn'>BOMITEMGROUPID</td>
+  <td class='indexedColumn'></td>
   <td class='detail'>Performance</td>
-  <td class='detail' style='text-align:left;'><span title='Ascending'>Asc</span></td>
-  <td class='constraint' style='text-align:left;'>BOMITEMBOMITEMGROUPID</td>
+  <td class='detail' style='text-align:left;'></td>
+  <td class='constraint' style='text-align:left;'>BOMNUM_IDX</td>
+  <td>&nbsp;</td>
  </tr>
  <tr>
-  <td class='indexedColumn'>PARTID</td>
+  <td class='indexedColumn'></td>
   <td class='detail'>Performance</td>
-  <td class='detail' style='text-align:left;'><span title='Ascending'>Asc</span></td>
-  <td class='constraint' style='text-align:left;'>BOMITEMPARTID</td>
+  <td class='detail' style='text-align:left;'></td>
+  <td class='constraint' style='text-align:left;'>BOMUSERID</td>
+  <td>&nbsp;</td>
  </tr>
  <tr>
-  <td class='indexedColumn'>TYPEID</td>
-  <td class='detail'>Performance</td>
-  <td class='detail' style='text-align:left;'><span title='Ascending'>Asc</span></td>
-  <td class='constraint' style='text-align:left;'>BOMITEMTYPEID</td>
+  <td class='indexedColumn'></td>
+  <td class='detail'>Must be unique</td>
+  <td class='detail' style='text-align:left;'></td>
+  <td class='constraint' style='text-align:left;'>RDB$74</td>
+  <td class='detail'>These unique columns are also nullable</td>
  </tr>
  <tr>
-  <td class='indexedColumn'>UOMID</td>
+  <td class='indexedColumn'></td>
   <td class='detail'>Performance</td>
-  <td class='detail' style='text-align:left;'><span title='Ascending'>Asc</span></td>
-  <td class='constraint' style='text-align:left;'>BOMITEMUOMID</td>
+  <td class='detail' style='text-align:left;'></td>
+  <td class='constraint' style='text-align:left;'>RDB$FOREIGN75</td>
+  <td>&nbsp;</td>
  </tr>
  <tr>
-  <td class='indexedColumn'>BOMID</td>
+  <td class='indexedColumn'></td>
   <td class='detail'>Performance</td>
-  <td class='detail' style='text-align:left;'><span title='Ascending'>Asc</span></td>
-  <td class='constraint' style='text-align:left;'>RDB$FOREIGN86</td>
- </tr>
- <tr>
-  <td class='indexedColumn'>TYPEID</td>
-  <td class='detail'>Performance</td>
-  <td class='detail' style='text-align:left;'><span title='Ascending'>Asc</span></td>
-  <td class='constraint' style='text-align:left;'>RDB$FOREIGN87</td>
- </tr>
- <tr>
-  <td class='indexedColumn'>PARTID</td>
-  <td class='detail'>Performance</td>
-  <td class='detail' style='text-align:left;'><span title='Ascending'>Asc</span></td>
-  <td class='constraint' style='text-align:left;'>RDB$FOREIGN88</td>
- </tr>
- <tr>
-  <td class='indexedColumn'>UOMID</td>
-  <td class='detail'>Performance</td>
-  <td class='detail' style='text-align:left;'><span title='Ascending'>Asc</span></td>
-  <td class='constraint' style='text-align:left;'>RDB$FOREIGN89</td>
- </tr>
- <tr>
-  <td class='indexedColumn'>BOMITEMGROUPID</td>
-  <td class='detail'>Performance</td>
-  <td class='detail' style='text-align:left;'><span title='Ascending'>Asc</span></td>
-  <td class='constraint' style='text-align:left;'>RDB$FOREIGN90</td>
+  <td class='detail' style='text-align:left;'></td>
+  <td class='constraint' style='text-align:left;'>RDB$FOREIGN76</td>
+  <td>&nbsp;</td>
  </tr>
  <tr>
   <td class='indexedColumn'>ID</td>
   <td class='detail'>Must be unique</td>
   <td class='detail' style='text-align:left;'><span title='Ascending'>Asc</span></td>
-  <td class='constraint' style='text-align:left;'>RDB$PRIMARY85</td>
+  <td class='constraint' style='text-align:left;'>RDB$PRIMARY73</td>
+  <td>&nbsp;</td>
  </tr>
 </table>
 </div>
@@ -506,41 +490,41 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 </map>
   <a name='diagram'><img id='oneDegreeImg' src='../diagrams/BOMITEM.1degree.png' usemap='#oneDegreeRelationshipsDiagram' class='diagram' border='0' alt='' align='left'></a>
 <map id="twoDegreesRelationshipsDiagram" name="twoDegreesRelationshipsDiagram">
-<area shape="rect" id="node1" href="BOM.html" title="BOM" alt="" coords="432,1692,643,2135">
-<area shape="rect" id="node3" href="BOMAUTOCREATETYPE.html" title="BOMAUTOCREATETYPE" alt="" coords="181,1874,387,1954">
-<area shape="rect" id="node5" href="SYSUSER.html" title="SYSUSER" alt="" coords="227,2138,341,2218">
-<area shape="rect" id="node6" href="BOMITEM.html" title="BOMITEM" alt="" coords="955,1054,1275,1638">
-<area shape="rect" id="node9" href="BOMITEMGROUP.html" title="BOMITEMGROUP" alt="" coords="721,1835,876,2006">
-<area shape="rect" id="node11" href="PART.html" title="PART" alt="" coords="688,668,909,1746">
-<area shape="rect" id="node13" href="BOMITEMTYPE.html" title="BOMITEMTYPE" alt="" coords="729,452,868,554">
-<area shape="rect" id="node15" href="UOM.html" title="UOM" alt="" coords="201,367,367,628">
-<area shape="rect" id="node41" href="PRODUCT.html" title="PRODUCT" alt="" coords="483,571,592,651">
-<area shape="rect" id="node44" href="TAXRATE.html" title="TAXRATE" alt="" coords="231,708,337,788">
-<area shape="rect" id="node48" href="ASACCOUNT.html" title="ASACCOUNT" alt="" coords="7,1192,135,1272">
-<area shape="rect" id="node57" href="PARTTYPE.html" title="PARTTYPE" alt="" coords="483,668,592,748">
-<area shape="rect" id="node99" href="UOMTYPE.html" title="UOMTYPE" alt="" coords="17,526,124,606">
-<area shape="rect" id="node17" href="BOMITEMTOLOCATION.html" title="BOMITEMTOLOCATION" alt="" coords="1319,1804,1513,1952">
-<area shape="rect" id="node20" href="LOCATIONGROUP.html" title="LOCATIONGROUP" alt="" coords="717,2059,880,2139">
-<area shape="rect" id="node22" href="LOCATION.html" title="LOCATION" alt="" coords="1060,1922,1169,2002">
-<area shape="rect" id="node23" href="BOMTOLOCATION.html" title="BOMTOLOCATION" alt="" coords="1335,2075,1497,2155">
-<area shape="rect" id="node27" href="COSTLAYER.html" title="COSTLAYER" alt="" coords="1053,586,1176,666">
-<area shape="rect" id="node29" href="DEFAULTLOCATION.html" title="DEFAULTLOCATION" alt="" coords="1329,1707,1503,1787">
-<area shape="rect" id="node33" href="INVENTORYLOG.html" title="INVENTORYLOG" alt="" coords="1341,1978,1491,2058">
-<area shape="rect" id="node39" href="KITITEM.html" title="KITITEM" alt="" coords="747,571,851,651">
-<area shape="rect" id="node61" href="PARTCOST.html" title="PARTCOST" alt="" coords="1057,719,1172,799">
-<area shape="rect" id="node63" href="PARTREORDER.html" title="PARTREORDER" alt="" coords="1041,1752,1188,1832">
-<area shape="rect" id="node66" href="PARTTOTRACKING.html" title="PARTTOTRACKING" alt="" coords="1029,816,1200,896">
-<area shape="rect" id="node68" href="PICKITEM.html" title="PICKITEM" alt="" coords="1063,178,1167,258">
-<area shape="rect" id="node77" href="RECEIPTITEM.html" title="RECEIPTITEM" alt="" coords="1048,364,1181,444">
-<area shape="rect" id="node82" href="RMAITEM.html" title="RMAITEM" alt="" coords="747,319,851,399">
-<area shape="rect" id="node86" href="SHIPITEM.html" title="SHIPITEM" alt="" coords="485,268,589,348">
-<area shape="rect" id="node88" href="SOITEM.html" title="SOITEM" alt="" coords="747,222,851,302">
-<area shape="rect" id="node92" href="TAG.html" title="TAG" alt="" coords="1367,651,1465,731">
-<area shape="rect" id="node96" href="WOITEM.html" title="WOITEM" alt="" coords="1063,472,1167,552">
-<area shape="rect" id="node100" href="UOMCONVERSION.html" title="UOMCONVERSION" alt="" coords="455,366,620,446">
-<area shape="rect" id="node103" href="VENDORCOSTRULE.html" title="VENDORCOSTRULE" alt="" coords="1025,1655,1204,1735">
-<area shape="rect" id="node106" href="WATCH.html" title="WATCH" alt="" coords="1068,2127,1161,2207">
-<area shape="rect" id="node113" href="XOITEM.html" title="XOITEM" alt="" coords="1063,35,1167,115">
+<area shape="rect" id="node1" href="BOM.html" title="BOM" alt="" coords="432,1878,643,2321">
+<area shape="rect" id="node3" href="BOMAUTOCREATETYPE.html" title="BOMAUTOCREATETYPE" alt="" coords="181,2060,387,2140">
+<area shape="rect" id="node5" href="SYSUSER.html" title="SYSUSER" alt="" coords="227,2324,341,2404">
+<area shape="rect" id="node6" href="BOMITEM.html" title="BOMITEM" alt="" coords="955,1284,1275,1868">
+<area shape="rect" id="node9" href="BOMITEMGROUP.html" title="BOMITEMGROUP" alt="" coords="721,2056,876,2226">
+<area shape="rect" id="node11" href="PART.html" title="PART" alt="" coords="688,925,909,2002">
+<area shape="rect" id="node13" href="BOMITEMTYPE.html" title="BOMITEMTYPE" alt="" coords="729,806,868,908">
+<area shape="rect" id="node15" href="UOM.html" title="UOM" alt="" coords="201,472,367,733">
+<area shape="rect" id="node41" href="PRODUCT.html" title="PRODUCT" alt="" coords="483,610,592,690">
+<area shape="rect" id="node44" href="TAXRATE.html" title="TAXRATE" alt="" coords="227,856,341,936">
+<area shape="rect" id="node48" href="ASACCOUNT.html" title="ASACCOUNT" alt="" coords="7,1413,135,1493">
+<area shape="rect" id="node57" href="PARTTYPE.html" title="PARTTYPE" alt="" coords="483,138,592,218">
+<area shape="rect" id="node103" href="UOMTYPE.html" title="UOMTYPE" alt="" coords="17,630,124,710">
+<area shape="rect" id="node17" href="BOMITEMTOLOCATION.html" title="BOMITEMTOLOCATION" alt="" coords="1319,2151,1513,2299">
+<area shape="rect" id="node20" href="LOCATIONGROUP.html" title="LOCATIONGROUP" alt="" coords="717,2410,880,2490">
+<area shape="rect" id="node22" href="LOCATION.html" title="LOCATION" alt="" coords="1060,2410,1169,2490">
+<area shape="rect" id="node23" href="BOMTOLOCATION.html" title="BOMTOLOCATION" alt="" coords="1335,2316,1497,2396">
+<area shape="rect" id="node27" href="COSTLAYER.html" title="COSTLAYER" alt="" coords="1053,1000,1176,1080">
+<area shape="rect" id="node29" href="DEFAULTLOCATION.html" title="DEFAULTLOCATION" alt="" coords="1329,2413,1503,2493">
+<area shape="rect" id="node33" href="INVENTORYLOG.html" title="INVENTORYLOG" alt="" coords="1341,2510,1491,2590">
+<area shape="rect" id="node39" href="KITITEM.html" title="KITITEM" alt="" coords="751,637,847,717">
+<area shape="rect" id="node61" href="PARTCOST.html" title="PARTCOST" alt="" coords="1057,1097,1172,1177">
+<area shape="rect" id="node63" href="PARTREORDER.html" title="PARTREORDER" alt="" coords="1041,2144,1188,2224">
+<area shape="rect" id="node66" href="PARTTOTRACKING.html" title="PARTTOTRACKING" alt="" coords="1029,902,1200,982">
+<area shape="rect" id="node68" href="PICKITEM.html" title="PICKITEM" alt="" coords="1063,389,1167,469">
+<area shape="rect" id="node71" href="POITEM.html" title="POITEM" alt="" coords="1063,708,1167,788">
+<area shape="rect" id="node81" href="RECEIPTITEM.html" title="RECEIPTITEM" alt="" coords="1048,181,1181,261">
+<area shape="rect" id="node86" href="RMAITEM.html" title="RMAITEM" alt="" coords="747,442,851,522">
+<area shape="rect" id="node90" href="SHIPITEM.html" title="SHIPITEM" alt="" coords="485,272,589,352">
+<area shape="rect" id="node92" href="SOITEM.html" title="SOITEM" alt="" coords="747,540,851,620">
+<area shape="rect" id="node96" href="TAG.html" title="TAG" alt="" coords="1367,1162,1465,1242">
+<area shape="rect" id="node100" href="WOITEM.html" title="WOITEM" alt="" coords="1063,805,1167,885">
+<area shape="rect" id="node104" href="UOMCONVERSION.html" title="UOMCONVERSION" alt="" coords="455,369,620,449">
+<area shape="rect" id="node107" href="VENDORCOSTRULE.html" title="VENDORCOSTRULE" alt="" coords="1025,2046,1204,2126">
+<area shape="rect" id="node110" href="WATCH.html" title="WATCH" alt="" coords="1068,2241,1161,2321">
 </map>
 
   <a name='diagram'><img id='twoDegreesImg' src='../diagrams/BOMITEM.2degrees.png' usemap='#twoDegreesRelationshipsDiagram' class='diagram' border='0' alt='' align='left'></a>

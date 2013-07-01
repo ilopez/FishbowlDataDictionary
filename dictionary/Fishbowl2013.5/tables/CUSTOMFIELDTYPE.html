@@ -123,7 +123,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
  <td class='comment detail'></td>
 </tr>
 <tr class='even'>
- <td class='indexedColumn' title='Indexed'>NAME</td>
+ <td class='detail'>NAME</td>
  <td class='detail'>varchar</td>
  <td class='detail' align='right'>41</td>
  <td class='detail' align='center'></td>
@@ -145,7 +145,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
  <td class='comment detail'></td>
 </tr>
 <tr class='even'>
- <td class='indexedColumn' title='Indexed'>TABLEID</td>
+ <td class='detail'>TABLEID</td>
  <td class='detail'>integer</td>
  <td class='detail' align='right'>10</td>
  <td class='detail' align='center'></td>
@@ -165,64 +165,8 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
  <td class='comment detail'></td>
 </tr>
 </table>
-<p title='4 columns'>Analyzed at Mon Jul 01 09:44 PDT 2013<p/>
+<p title='4 columns'>Analyzed at Mon Jul 01 12:49 PDT 2013<p/>
 </td></tr></table>
-<div class='indent'>
-<b>Indexes:</b>
-<table class='dataTable' border='1' rules='groups'><colgroup><colgroup><colgroup><colgroup>
-<thead>
- <tr>
-  <th>Column(s)</th>
-  <th>Type</th>
-  <th>Sort</th>
-  <th class='constraint' style='text-align:left;'>Constraint Name</th>
- </tr>
-</thead>
-<tbody>
- <tr>
-  <td class='indexedColumn'></td>
-  <td class='detail'>Performance</td>
-  <td class='detail' style='text-align:left;'></td>
-  <td class='constraint' style='text-align:left;'>CUSTOMFIELDLISTID</td>
- </tr>
- <tr>
-  <td class='indexedColumn'>TABLEID</td>
-  <td class='detail'>Performance</td>
-  <td class='detail' style='text-align:left;'><span title='Ascending'>Asc</span></td>
-  <td class='constraint' style='text-align:left;'>CUSTOMFIELDTABLEID_IDX</td>
- </tr>
- <tr>
-  <td class='indexedColumn'>NAME + TABLEID</td>
-  <td class='detail'>Must be unique</td>
-  <td class='detail' style='text-align:left;'><span title='Ascending'>Asc</span>/<span title='Ascending'>Asc</span></td>
-  <td class='constraint' style='text-align:left;'>RDB$500</td>
- </tr>
- <tr>
-  <td class='indexedColumn'></td>
-  <td class='detail'>Performance</td>
-  <td class='detail' style='text-align:left;'></td>
-  <td class='constraint' style='text-align:left;'>RDB$FOREIGN497</td>
- </tr>
- <tr>
-  <td class='indexedColumn'>TABLEID</td>
-  <td class='detail'>Performance</td>
-  <td class='detail' style='text-align:left;'><span title='Ascending'>Asc</span></td>
-  <td class='constraint' style='text-align:left;'>RDB$FOREIGN498</td>
- </tr>
- <tr>
-  <td class='indexedColumn'></td>
-  <td class='detail'>Performance</td>
-  <td class='detail' style='text-align:left;'></td>
-  <td class='constraint' style='text-align:left;'>RDB$FOREIGN499</td>
- </tr>
- <tr>
-  <td class='indexedColumn'>ID</td>
-  <td class='detail'>Must be unique</td>
-  <td class='detail' style='text-align:left;'><span title='Ascending'>Asc</span></td>
-  <td class='constraint' style='text-align:left;'>RDB$PRIMARY496</td>
- </tr>
-</table>
-</div>
 <table width='100%' border='0'><tr><td class='container'>
 <br><form action='get'><b>Close relationships</b><span class='degrees' id='degrees' title='Detail diminishes with increased separation from CUSTOMFIELDTYPE'>
 &nbsp;within <label for='oneDegree'><input type='radio' name='degrees' id='oneDegree' checked>one</label>  <label for='twoDegrees'><input type='radio' name='degrees' id='twoDegrees'>two degrees</label> of separation</span><b>:</b></form>
@@ -233,18 +177,17 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 </map>
   <a name='diagram'><img id='oneDegreeImg' src='../diagrams/CUSTOMFIELDTYPE.1degree.png' usemap='#oneDegreeRelationshipsDiagram' class='diagram' border='0' alt='' align='left'></a>
 <map id="twoDegreesRelationshipsDiagram" name="twoDegreesRelationshipsDiagram">
-<area shape="rect" id="node1" href="COSTLAYER.html" title="COSTLAYER" alt="" coords="279,129,401,209">
-<area shape="rect" id="node3" href="TABLEREFERENCE.html" title="TABLEREFERENCE" alt="" coords="7,342,180,490">
-<area shape="rect" id="node4" href="CUSTOMDECIMAL.html" title="CUSTOMDECIMAL" alt="" coords="761,5,924,85">
-<area shape="rect" id="node6" href="CUSTOMFIELD.html" title="CUSTOMFIELD" alt="" coords="499,251,693,512">
-<area shape="rect" id="node8" href="CUSTOMFIELDTYPE.html" title="CUSTOMFIELDTYPE" alt="" coords="225,226,455,379">
-<area shape="rect" id="node10" href="CUSTOMLIST.html" title="CUSTOMLIST" alt="" coords="277,432,403,512">
-<area shape="rect" id="node13" href="CUSTOMINTEGER.html" title="CUSTOMINTEGER" alt="" coords="761,103,924,183">
-<area shape="rect" id="node15" href="CUSTOMSET.html" title="CUSTOMSET" alt="" coords="780,200,905,280">
-<area shape="rect" id="node17" href="CUSTOMTIMESTAMP.html" title="CUSTOMTIMESTAMP" alt="" coords="752,297,933,377">
-<area shape="rect" id="node19" href="CUSTOMVARCHAR.html" title="CUSTOMVARCHAR" alt="" coords="757,395,928,475">
-<area shape="rect" id="node21" href="CUSTOMVARCHARLONG.html" title="CUSTOMVARCHARLONG" alt="" coords="737,492,948,572">
-<area shape="rect" id="node23" href="OBJECTTOOBJECT.html" title="OBJECTTOOBJECT" alt="" coords="255,529,425,609">
+<area shape="rect" id="node1" href="COSTLAYER.html" title="COSTLAYER" alt="" coords="279,80,401,160">
+<area shape="rect" id="node3" href="TABLEREFERENCE.html" title="TABLEREFERENCE" alt="" coords="7,293,180,441">
+<area shape="rect" id="node4" href="CUSTOMFIELD.html" title="CUSTOMFIELD" alt="" coords="499,201,693,463">
+<area shape="rect" id="node6" href="CUSTOMFIELDTYPE.html" title="CUSTOMFIELDTYPE" alt="" coords="225,177,455,330">
+<area shape="rect" id="node8" href="CUSTOMLIST.html" title="CUSTOMLIST" alt="" coords="277,383,403,463">
+<area shape="rect" id="node11" href="CUSTOMINTEGER.html" title="CUSTOMINTEGER" alt="" coords="761,5,924,85">
+<area shape="rect" id="node13" href="CUSTOMSET.html" title="CUSTOMSET" alt="" coords="780,103,905,183">
+<area shape="rect" id="node15" href="CUSTOMTIMESTAMP.html" title="CUSTOMTIMESTAMP" alt="" coords="752,200,933,280">
+<area shape="rect" id="node17" href="CUSTOMVARCHAR.html" title="CUSTOMVARCHAR" alt="" coords="757,297,928,377">
+<area shape="rect" id="node19" href="CUSTOMVARCHARLONG.html" title="CUSTOMVARCHARLONG" alt="" coords="737,395,948,475">
+<area shape="rect" id="node21" href="OBJECTTOOBJECT.html" title="OBJECTTOOBJECT" alt="" coords="255,480,425,560">
 </map>
 
   <a name='diagram'><img id='twoDegreesImg' src='../diagrams/CUSTOMFIELDTYPE.2degrees.png' usemap='#twoDegreesRelationshipsDiagram' class='diagram' border='0' alt='' align='left'></a>

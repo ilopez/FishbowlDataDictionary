@@ -19,7 +19,7 @@ digraph "twoDegreesRelationshipsDiagram" {
   edge [
     arrowsize="0.8"
   ];
-  "POSTSO":"SOID":w -> "SO":"elipses":e [arrowhead=none dir=back arrowtail=crowodot];
+  "POSTSO":"SOID":w -> "null.SO":"elipses":e [arrowhead=none dir=back arrowtail=crowodot];
   "POSTSO":"STATUSID":w -> "POSTORDERSTATUS":"elipses":e [arrowhead=none dir=back arrowtail=crowodot];
   "POSTSOITEM":"POSTSOID":w -> "POSTSO":"ID":e [arrowhead=none dir=back arrowtail=crowodot];
   "POSTSOITEM":"SOITEMID":w -> "SOITEM":"ID":e [arrowhead=none dir=back arrowtail=crowodot];
@@ -29,11 +29,9 @@ digraph "twoDegreesRelationshipsDiagram" {
   "PRODUCT":"elipses":w -> "TAXRATE":"elipses":e [arrowhead=none dir=back arrowtail=crowodot];
   "PRODUCT":"elipses":w -> "UOM":"elipses":e [arrowhead=none dir=back arrowtail=crowodot];
   "PRODUCT":"elipses":w -> "UOM":"elipses":e [arrowhead=none dir=back arrowtail=crowodot];
-  "SO":"elipses":w -> "QBCLASS":"elipses":e [arrowhead=none dir=back arrowtail=crowodot];
-  "SO":"elipses":w -> "TAXRATE":"elipses":e [arrowhead=none dir=back arrowtail=crowodot];
   "SOITEM":"PRODUCTID":w -> "PRODUCT":"elipses":e [arrowhead=none dir=back arrowtail=crowodot];
   "SOITEM":"QBCLASSID":w -> "QBCLASS":"elipses":e [arrowhead=none dir=back arrowtail=crowodot];
-  "SOITEM":"SOID":w -> "SO":"elipses":e [arrowhead=none dir=back arrowtail=crowodot];
+  "SOITEM":"SOID":w -> "null.SO":"elipses":e [arrowhead=none dir=back arrowtail=crowodot];
   "SOITEM":"STATUSID":w -> "SOITEMSTATUS":"elipses":e [arrowhead=none dir=back arrowtail=crowodot];
   "SOITEM":"TAXID":w -> "TAXRATE":"elipses":e [arrowhead=none dir=back arrowtail=crowodot];
   "SOITEM":"TYPEID":w -> "SOITEMTYPE":"elipses":e [arrowhead=none dir=back arrowtail=crowodot];
@@ -55,14 +53,14 @@ digraph "twoDegreesRelationshipsDiagram" {
       <TR><TD COLSPAN="3" BGCOLOR="#9bab96" ALIGN="CENTER">POSTSO</TD></TR>
       <TR><TD PORT="ID" COLSPAN="3" BGCOLOR="#bed1b8" ALIGN="LEFT">ID</TD></TR>
       <TR><TD PORT="SOID" COLSPAN="3" BGCOLOR="#f4f7da" ALIGN="LEFT">SOID</TD></TR>
-      <TR><TD PORT="POSTDATE" COLSPAN="3" BGCOLOR="#f4f7da" ALIGN="LEFT">POSTDATE</TD></TR>
-      <TR><TD PORT="STATUSID" COLSPAN="3" BGCOLOR="#f4f7da" ALIGN="LEFT">STATUSID</TD></TR>
+      <TR><TD PORT="POSTDATE" COLSPAN="3" ALIGN="LEFT">POSTDATE</TD></TR>
+      <TR><TD PORT="STATUSID" COLSPAN="3" ALIGN="LEFT">STATUSID</TD></TR>
       <TR><TD PORT="EXTTXNID" COLSPAN="3" ALIGN="LEFT">EXTTXNID</TD></TR>
       <TR><TD PORT="EXTTXNHASH" COLSPAN="3" ALIGN="LEFT">EXTTXNHASH</TD></TR>
       <TR><TD PORT="EXTTXNNUMBER" COLSPAN="3" ALIGN="LEFT">EXTTXNNUMBER</TD></TR>
       <TR><TD PORT="EXTREFNUMBER" COLSPAN="3" ALIGN="LEFT">EXTREFNUMBER</TD></TR>
-      <TR><TD PORT="DATEPOSTED" COLSPAN="3" BGCOLOR="#f4f7da" ALIGN="LEFT">DATEPOSTED</TD></TR>
-      <TR><TD PORT="DATECREATED" COLSPAN="3" BGCOLOR="#f4f7da" ALIGN="LEFT">DATECREATED</TD></TR>
+      <TR><TD PORT="DATEPOSTED" COLSPAN="3" ALIGN="LEFT">DATEPOSTED</TD></TR>
+      <TR><TD PORT="DATECREATED" COLSPAN="3" ALIGN="LEFT">DATECREATED</TD></TR>
       <TR><TD PORT="DATELASTMODIFIED" COLSPAN="3" ALIGN="LEFT">DATELASTMODIFIED</TD></TR>
       <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">&lt; 2</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">1 &gt;</TD></TR>
     </TABLE>>
@@ -110,29 +108,28 @@ digraph "twoDegreesRelationshipsDiagram" {
     URL="QBCLASS.html"
     tooltip="QBCLASS"
   ];
-  "SO" [
+  "null.SO" [
     label=<
     <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
-      <TR><TD COLSPAN="3" BGCOLOR="#9bab96" ALIGN="CENTER">SO</TD></TR>
+      <TR><TD COLSPAN="3" BGCOLOR="#9bab96" ALIGN="CENTER">null.SO</TD></TR>
       <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
-      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">&lt; 12</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">4 &gt;</TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">4 &gt;</TD></TR>
     </TABLE>>
-    URL="SO.html"
-    tooltip="SO"
+    tooltip="null.SO"
   ];
   "SOITEM" [
     label=<
     <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
       <TR><TD COLSPAN="3" BGCOLOR="#9bab96" ALIGN="CENTER">SOITEM</TD></TR>
       <TR><TD PORT="ID" COLSPAN="3" BGCOLOR="#bed1b8" ALIGN="LEFT">ID</TD></TR>
-      <TR><TD PORT="PRODUCTID" COLSPAN="3" ALIGN="LEFT">PRODUCTID</TD></TR>
-      <TR><TD PORT="SOID" COLSPAN="3" ALIGN="LEFT">SOID</TD></TR>
+      <TR><TD PORT="PRODUCTID" COLSPAN="3" BGCOLOR="#f4f7da" ALIGN="LEFT">PRODUCTID</TD></TR>
+      <TR><TD PORT="SOID" COLSPAN="3" BGCOLOR="#f4f7da" ALIGN="LEFT">SOID</TD></TR>
       <TR><TD PORT="TYPEID" COLSPAN="3" BGCOLOR="#f4f7da" ALIGN="LEFT">TYPEID</TD></TR>
       <TR><TD PORT="STATUSID" COLSPAN="3" BGCOLOR="#f4f7da" ALIGN="LEFT">STATUSID</TD></TR>
-      <TR><TD PORT="UOMID" COLSPAN="3" ALIGN="LEFT">UOMID</TD></TR>
+      <TR><TD PORT="UOMID" COLSPAN="3" BGCOLOR="#f4f7da" ALIGN="LEFT">UOMID</TD></TR>
       <TR><TD PORT="SOLINEITEM" COLSPAN="3" ALIGN="LEFT">SOLINEITEM</TD></TR>
       <TR><TD PORT="DESCRIPTION" COLSPAN="3" ALIGN="LEFT">DESCRIPTION</TD></TR>
-      <TR><TD PORT="PRODUCTNUM" COLSPAN="3" ALIGN="LEFT">PRODUCTNUM</TD></TR>
+      <TR><TD PORT="PRODUCTNUM" COLSPAN="3" BGCOLOR="#f4f7da" ALIGN="LEFT">PRODUCTNUM</TD></TR>
       <TR><TD PORT="CUSTOMERPARTNUM" COLSPAN="3" ALIGN="LEFT">CUSTOMERPARTNUM</TD></TR>
       <TR><TD PORT="TAXABLEFLAG" COLSPAN="3" ALIGN="LEFT">TAXABLEFLAG</TD></TR>
       <TR><TD PORT="DATELASTFULFILLMENT" COLSPAN="3" ALIGN="LEFT">DATELASTFULFILLMENT</TD></TR>
@@ -145,14 +142,14 @@ digraph "twoDegreesRelationshipsDiagram" {
       <TR><TD PORT="QTYTOFULFILL" COLSPAN="3" ALIGN="LEFT">QTYTOFULFILL</TD></TR>
       <TR><TD PORT="QTYFULFILLED" COLSPAN="3" ALIGN="LEFT">QTYFULFILLED</TD></TR>
       <TR><TD PORT="QTYPICKED" COLSPAN="3" ALIGN="LEFT">QTYPICKED</TD></TR>
-      <TR><TD PORT="ITEMADJUSTID" COLSPAN="3" ALIGN="LEFT">ITEMADJUSTID</TD></TR>
+      <TR><TD PORT="ITEMADJUSTID" COLSPAN="3" BGCOLOR="#f4f7da" ALIGN="LEFT">ITEMADJUSTID</TD></TR>
       <TR><TD PORT="ADJUSTPERCENTAGE" COLSPAN="3" ALIGN="LEFT">ADJUSTPERCENTAGE</TD></TR>
       <TR><TD PORT="UNITPRICE" COLSPAN="3" ALIGN="LEFT">UNITPRICE</TD></TR>
       <TR><TD PORT="TOTALPRICE" COLSPAN="3" ALIGN="LEFT">TOTALPRICE</TD></TR>
       <TR><TD PORT="ADJUSTAMOUNT" COLSPAN="3" ALIGN="LEFT">ADJUSTAMOUNT</TD></TR>
       <TR><TD PORT="TOTALCOST" COLSPAN="3" ALIGN="LEFT">TOTALCOST</TD></TR>
       <TR><TD PORT="DATELASTMODIFIED" COLSPAN="3" ALIGN="LEFT">DATELASTMODIFIED</TD></TR>
-      <TR><TD PORT="TAXID" COLSPAN="3" ALIGN="LEFT">TAXID</TD></TR>
+      <TR><TD PORT="TAXID" COLSPAN="3" BGCOLOR="#f4f7da" ALIGN="LEFT">TAXID</TD></TR>
       <TR><TD PORT="TAXRATE" COLSPAN="3" ALIGN="LEFT">TAXRATE</TD></TR>
       <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">&lt; 7</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">2 &gt;</TD></TR>
     </TABLE>>
@@ -194,7 +191,7 @@ digraph "twoDegreesRelationshipsDiagram" {
     <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
       <TR><TD COLSPAN="3" BGCOLOR="#9bab96" ALIGN="CENTER">TAXRATE</TD></TR>
       <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
-      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">&lt; 4</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">9 &gt;</TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#f7f7f7">&lt; 4</TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">  </TD><TD ALIGN="RIGHT" BGCOLOR="#f7f7f7">10 &gt;</TD></TR>
     </TABLE>>
     URL="TAXRATE.html"
     tooltip="TAXRATE"

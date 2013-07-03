@@ -9,7 +9,7 @@ and (rdb$system_flag is null or rdb$system_flag = 0)
 order by 1 asc
 
 /* COMMENT ON COLUMN ACCOUNTGROUP.ID IS 'Blah blah TEST' */
-select f.rdb$relation_name, f.rdb$field_name, 'COMMENT ON COLUMN'||TRIM(f.rdb$relation_name)||'.'||TRIM(f.rdb$field_name)||' ID ''X'' ; ' as cmt
+select f.rdb$relation_name, f.rdb$field_name, 'COMMENT ON COLUMN '||TRIM(f.rdb$relation_name)||'.'||TRIM(f.rdb$field_name)||' ''X'' ; ' as cmt
 from rdb$relation_fields f
 join rdb$relations r on f.rdb$relation_name = r.rdb$relation_name
 and r.rdb$view_blr is null 
